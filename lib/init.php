@@ -5,13 +5,13 @@
 function roots_setup() {
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/roots-translations
-  load_theme_textdomain('roots', get_template_directory() . '/lang');
+  // load_theme_textdomain('roots', get_template_directory() . '/lang');
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
-  register_nav_menus(array(
-    'primary_navigation' => __('Primary Navigation', 'roots')
-  ));
+  // register_nav_menus(array(
+  //   'primary_navigation' => __('Primary Navigation', 'roots')
+  // ));
 
   // Add post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
@@ -21,10 +21,10 @@ function roots_setup() {
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
+  // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
 
   // Tell the TinyMCE editor to use a custom stylesheet
-  add_editor_style('/assets/css/editor-style.css');
+  // add_editor_style('/assets/css/editor-style.css');
 }
 add_action('after_setup_theme', 'roots_setup');
 
@@ -50,4 +50,4 @@ function roots_widgets_init() {
     'after_title'   => '</h3>',
   ));
 }
-add_action('widgets_init', 'roots_widgets_init');
+// add_action('widgets_init', 'roots_widgets_init');

@@ -6,18 +6,6 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsFileList = [
-    'assets/vendor/bootstrap/js/transition.js',
-    'assets/vendor/bootstrap/js/alert.js',
-    'assets/vendor/bootstrap/js/button.js',
-    'assets/vendor/bootstrap/js/carousel.js',
-    'assets/vendor/bootstrap/js/collapse.js',
-    'assets/vendor/bootstrap/js/dropdown.js',
-    'assets/vendor/bootstrap/js/modal.js',
-    'assets/vendor/bootstrap/js/tooltip.js',
-    'assets/vendor/bootstrap/js/popover.js',
-    'assets/vendor/bootstrap/js/scrollspy.js',
-    'assets/vendor/bootstrap/js/tab.js',
-    'assets/vendor/bootstrap/js/affix.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
   ];
@@ -33,33 +21,6 @@ module.exports = function(grunt) {
         '!assets/js/scripts.js',
         '!assets/**/*.min.*'
       ]
-    },
-    less: {
-      dev: {
-        files: {
-          'assets/css/main.css': [
-            'assets/less/main.less'
-          ]
-        },
-        options: {
-          compress: false,
-          // LESS source map
-          // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-          sourceMap: true,
-          sourceMapFilename: 'assets/css/main.css.map',
-          sourceMapRootpath: '/app/themes/roots/'
-        }
-      },
-      build: {
-        files: {
-          'assets/css/main.min.css': [
-            'assets/less/main.less'
-          ]
-        },
-        options: {
-          compress: true
-        }
-      }
     },
     concat: {
       options: {
@@ -77,22 +38,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    autoprefixer: {
-      options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
-      },
-      dev: {
-        options: {
-          map: {
-            prev: 'assets/css/'
-          }
-        },
-        src: 'assets/css/main.css'
-      },
-      build: {
-        src: 'assets/css/main.min.css'
-      }
-    },
     modernizr: {
       build: {
         devFile: 'assets/vendor/modernizr/modernizr.js',
@@ -100,7 +45,7 @@ module.exports = function(grunt) {
         files: {
           'src': [
             ['assets/js/scripts.min.js'],
-            ['assets/css/main.min.css']
+            ['assets/css/main.css']
           ]
         },
         uglify: true,
@@ -119,7 +64,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'lib/scripts.php': 'assets/{css,js}/{main,scripts}.min.{css,js}'
+          'lib/scripts.php': 'assets/{css,js}/{main,scripts}.{css,min.js}'
         }
       }
     },
