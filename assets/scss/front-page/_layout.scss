@@ -7,15 +7,20 @@ body.home {
   }
 
   section {
-    display: none;
     min-height: 100%;
-    color: white;
     padding: 40px;
     text-align: center;
-    font-family: sans-serif;
     font-size: 20px;
+    overflow: hidden;
     position: relative;
-    border: 1px solid #222;
+    background-color: white;
+
+    &.skrollable {
+      position: fixed;
+      left: $header-width;
+      right: 0;
+      z-index: $scroll-section-index;
+    }
   }
 
   .video-container {

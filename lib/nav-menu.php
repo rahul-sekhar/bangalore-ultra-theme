@@ -1,12 +1,12 @@
 <?php
 
-class Ultra_Main_Nav {
+class UltraMainNav {
   private $loaded_nav = array();
 
   public static function Instance() {
     static $inst = null;
     if ($inst === null) {
-      $inst = new Ultra_Main_Nav();
+      $inst = new UltraMainNav();
     }
     return $inst;
   }
