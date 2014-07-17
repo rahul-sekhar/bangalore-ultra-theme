@@ -1,4 +1,19 @@
 <?php
+
+// ACF setup for production
+if (WP_ENV !== 'development') {
+  define('ACF_LITE', true);
+}
+
+add_filter('acf/helpers/get_dir', 'theme_acf_get_dir', 5, 1);
+function theme_acf_get_dir( $dir ) {
+  $current_dir = dirname(__DIR__);
+
+  $dir = str_replace($current_dir, get_template_directory_uri(), $dir, $count);
+
+  return $dir;
+}
+
 /**
  * Enable theme features
  */

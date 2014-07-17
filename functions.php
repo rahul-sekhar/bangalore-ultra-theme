@@ -9,12 +9,20 @@
  *
  * @link https://github.com/roots/roots/pull/1042
  */
+
+
 $roots_includes = array(
+  'lib/config.php',          // Configuration
+
+  // Plugins
+  'lib/plugins/advanced-custom-fields/acf.php',
+  'lib/plugins/acf-repeater/acf-repeater.php',
+  'lib/plugins/acf-options-page/acf-options-page.php',
+
   'lib/utils.php',           // Utility functions
   'lib/init.php',            // Initial theme setup and constants
   'lib/wrapper.php',         // Theme wrapper class
   'lib/sidebar.php',         // Sidebar class
-  'lib/config.php',          // Configuration
   'lib/titles.php',          // Page titles
   'lib/nav.php',             // Custom nav modifications
   'lib/scripts.php',         // Scripts and stylesheets
