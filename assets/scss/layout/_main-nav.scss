@@ -1,6 +1,6 @@
 #nav {
-  font-size: 20px;
-  text-align: center;
+  font-size: 14px;
+  text-align: left;
   margin-top: 80px;
 
   ul {
@@ -9,5 +9,18 @@
 
   li {
     margin-top: 20px;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: black;
   }
 }

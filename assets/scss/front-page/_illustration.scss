@@ -1,0 +1,9 @@
+#illustration {
+  display: block;
+
+  .person {
+    background-image: image-url('person.png');
+    width: image-width('person.png');
+    height: image-height('person.png');
+  }
+}

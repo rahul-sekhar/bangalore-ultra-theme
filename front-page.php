@@ -1,3 +1,8 @@
+<section id="illustration">
+  <div class="person">
+  </div>
+</section>
+
 <section id="exhaustion">
   <p>The sweetest kind of exhaustion</p>
 </section>
