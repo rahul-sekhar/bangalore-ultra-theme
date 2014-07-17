@@ -38,6 +38,32 @@ module.exports = function(grunt) {
         }
       }
     },
+    compass: {
+      dev: {
+        options: {
+          environment: 'development',
+          outputStyle: 'expanded',
+          noLineComments: false,
+          cssDir: 'assets/css-dev',
+          sassDir: 'assets/scss',
+          imagesDir: 'assets/img',
+          javascriptsDir: 'assets/js',
+          relativeAssets: true
+        }
+      },
+      build: {
+        options: {
+          environment: 'production',
+          outputStyle: 'compressed',
+          noLineComments: true,
+          cssDir: 'assets/css',
+          sassDir: 'assets/scss',
+          imagesDir: 'assets/img',
+          javascriptsDir: 'assets/js',
+          relativeAssets: true
+        }
+      }
+    },
     modernizr: {
       build: {
         devFile: 'assets/vendor/modernizr/modernizr.js',
@@ -69,12 +95,12 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      less: {
+      compass: {
         files: [
-          'assets/less/*.less',
-          'assets/less/**/*.less'
+          'assets/scss/*.scss',
+          'assets/scss/**/*.scss'
         ],
-        tasks: ['less:dev', 'autoprefixer:dev']
+        tasks: ['compass:dev']
       },
       js: {
         files: [
@@ -87,10 +113,10 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
-          'assets/css/main.css',
+          'assets/css-dev/main.css',
           'assets/js/scripts.js',
           'templates/*.php',
           '*.php'
@@ -105,14 +131,12 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('dev', [
     'jshint',
-    'less:dev',
-    'autoprefixer:dev',
+    'compass:dev',
     'concat'
   ]);
   grunt.registerTask('build', [
     'jshint',
-    'less:build',
-    'autoprefixer:build',
+    'compass:build',
     'uglify',
     'modernizr',
     'version'
