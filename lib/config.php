@@ -14,6 +14,16 @@ function theme_acf_get_dir( $dir ) {
   return $dir;
 }
 
+// Remove the editor from pages
+function ultra_remove_editor() {
+  remove_post_type_support('page', 'editor');
+}
+add_action('admin_init', 'ultra_remove_editor');
+
+
+// Remove the wordpress admin bar
+add_filter('show_admin_bar', '__return_false');
+
 /**
  * Enable theme features
  */

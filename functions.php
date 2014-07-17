@@ -19,6 +19,9 @@ $roots_includes = array(
   'lib/plugins/acf-repeater/acf-repeater.php',
   'lib/plugins/acf-options-page/acf-options-page.php',
 
+  // ACF Fields
+  'lib/fields/pages.php',
+
   'lib/utils.php',           // Utility functions
   'lib/init.php',            // Initial theme setup and constants
   'lib/wrapper.php',         // Theme wrapper class
