@@ -22,6 +22,7 @@ $roots_includes = array(
   // ACF Fields
   'lib/fields/pages.php',
 
+  'lib/assets.php',          // Asset helpers (paths, etc)
   'lib/nav-menu.php',        // Class for the page navigation menu
   'lib/nav-helpers.php',     // Helpers for navigation
   'lib/utils.php',           // Utility functions

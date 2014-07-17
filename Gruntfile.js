@@ -10,6 +10,11 @@ module.exports = function(grunt) {
     'assets/js/_*.js'
   ];
 
+  var jsFrontPageFileList = [
+    'assets/js/front-page/plugins/*.js',
+    'assets/js/front-page/_*.js'
+  ];
+
   grunt.initConfig({
     jshint: {
       options: {
@@ -18,7 +23,9 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
+        'assets/js/front-page/*.js',
         '!assets/js/scripts.js',
+        '!assets/js/front-page.js',
         '!assets/**/*.min.*'
       ]
     },
@@ -26,15 +33,20 @@ module.exports = function(grunt) {
       options: {
         separator: ';',
       },
-      dist: {
+      main: {
         src: [jsFileList],
         dest: 'assets/js/scripts.js',
       },
+      home: {
+        src: [jsFrontPageFileList],
+        dest: 'assets/js/front-page.js',
+      }
     },
     uglify: {
       dist: {
         files: {
-          'assets/js/scripts.min.js': [jsFileList]
+          'assets/js/scripts.min.js': [jsFileList],
+          'assets/js/front-page.min.js': [jsFrontPageFileList]
         }
       }
     },
@@ -71,6 +83,7 @@ module.exports = function(grunt) {
         files: {
           'src': [
             ['assets/js/scripts.min.js'],
+            ['assets/js/front-page.min.js'],
             ['assets/css/main.css']
           ]
         },
@@ -90,7 +103,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'lib/scripts.php': 'assets/{css,js}/{main,scripts}.{css,min.js}'
+          'lib/scripts.php': 'assets/{css,js,js}/{main,scripts,front-page}.{css,min.js,.min.js}'
         }
       }
     },
@@ -105,6 +118,7 @@ module.exports = function(grunt) {
       js: {
         files: [
           jsFileList,
+          jsFrontPageFileList,
           '<%= jshint.all %>'
         ],
         tasks: ['jshint', 'concat']
@@ -118,6 +132,7 @@ module.exports = function(grunt) {
         files: [
           'assets/css-dev/main.css',
           'assets/js/scripts.js',
+          'assets/js/front-page.js',
           'templates/*.php',
           'templates/**/*.php'
         ]

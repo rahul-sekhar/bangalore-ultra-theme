@@ -6,6 +6,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+html, body {
+  height: 100%;
+}
+
 img {
   max-width: 100%;
   height: auto;
