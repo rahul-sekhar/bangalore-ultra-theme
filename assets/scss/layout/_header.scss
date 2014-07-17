@@ -1,11 +1,16 @@
 #header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $header-width;
   background-color: $grey-1;
-  height: $header-height;
-  padding: 0 40px;
+  padding: 10px 20px;
 
   h1 {
     display: inline-block;
-    line-height: $header-height;
     margin: 0;
+    font-size: 25px;
+    text-align: center;
   }
 }

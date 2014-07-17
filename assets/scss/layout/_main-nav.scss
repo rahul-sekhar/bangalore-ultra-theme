@@ -1,15 +1,13 @@
 #nav {
-  display: inline-block;
-  margin-left: 100px;
   font-size: 20px;
+  text-align: center;
+  margin-top: 80px;
 
   ul {
     @include reset-list;
   }
 
   li {
-    display: inline-block;
-    line-height: $header-height;
-    margin-right: 40px;
+    margin-top: 20px;
   }
 }
