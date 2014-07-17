@@ -119,7 +119,7 @@ module.exports = function(grunt) {
           'assets/css-dev/main.css',
           'assets/js/scripts.js',
           'templates/*.php',
-          '*.php'
+          'templates/**/*.php'
         ]
       }
     }

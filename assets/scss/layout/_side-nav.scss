@@ -1,0 +1,15 @@
+#side-nav {
+  background-color: $grey-1;
+  float: left;
+  width: $side-nav-width;
+  height: 100%;
+  padding: 20px;
+
+  ul {
+    @include reset-list;
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+}

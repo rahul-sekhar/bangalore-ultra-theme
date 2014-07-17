@@ -6,5 +6,16 @@ Designed by Shalini Sekhar
 
 @import "compass";
 
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/layout";
+
 @import "base/normalize";
 @import "base/functions";
+@import "base/general";
+@import "base/content";
+
+@import "layout/header";
+@import "layout/main-nav";
+@import "layout/side-nav";
+@import "layout/content";

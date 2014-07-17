@@ -1,0 +1,11 @@
+#header {
+  background-color: $grey-1;
+  height: $header-height;
+  padding: 0 40px;
+
+  h1 {
+    display: inline-block;
+    line-height: $header-height;
+    margin: 0;
+  }
+}
