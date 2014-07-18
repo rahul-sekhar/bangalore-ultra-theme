@@ -34,7 +34,7 @@ function ultra_front_page() {
   $page->section('impossible')
     ->event('wait')
       ->add(0)
-      ->add(200);
+      ->add(400);
 
   $page->section('bamboo', 400)
     ->event('wait')
