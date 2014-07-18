@@ -43,6 +43,7 @@ $page = ultra_front_page();
       <div class="container"
         <?php $exhaustion->point('z3', 0); ?>="width:0px; height: 0px"
         <?php $exhaustion->point('z3', 1); ?>="width:70px; height:70px;"
+        <?php $exhaustion->point('form-letters', 1); ?>="width:100px; height:100px;"
       >
         <img class="top" src="<?php image_path('zx-top.png'); ?>" alt=""
           <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
