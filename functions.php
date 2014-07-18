@@ -22,18 +22,19 @@ $roots_includes = array(
   // ACF Fields
   'lib/fields/pages.php',
 
-  'lib/assets.php',          // Asset helpers (paths, etc)
-  'lib/utils.php',           // Utility functions
-  'lib/init.php',            // Initial theme setup and constants
-  'lib/wrapper.php',         // Theme wrapper class
-  'lib/sidebar.php',         // Sidebar class
-  'lib/titles.php',          // Page titles
-  'lib/nav.php',             // Custom nav modifications
-  'lib/scripts.php',         // Scripts and stylesheets
-  'lib/extras.php',          // Custom functions
-  'lib/nav-menu.php',        // Class for the page navigation menu
-  'lib/nav-helpers.php',     // Helpers for navigation
-  'lib/front-page.php',      // Helper class for the front page
+  'lib/assets.php',             // Asset helpers (paths, etc)
+  'lib/utils.php',              // Utility functions
+  'lib/init.php',               // Initial theme setup and constants
+  'lib/wrapper.php',            // Theme wrapper class
+  'lib/sidebar.php',            // Sidebar class
+  'lib/titles.php',             // Page titles
+  'lib/nav.php',                // Custom nav modifications
+  'lib/scripts.php',            // Scripts and stylesheets
+  'lib/extras.php',             // Custom functions
+  'lib/nav-menu.php',           // Class for the page navigation menu
+  'lib/nav-helpers.php',        // Helpers for navigation
+  'lib/front-page-classes.php', // Helper class for the front page
+  'lib/front-page.php', // Constructor for the front page
 );
 
 foreach ($roots_includes as $file) {

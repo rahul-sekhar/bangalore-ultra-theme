@@ -1,42 +1,52 @@
 <?php
-$page = UltraFrontPage::Instance()
+$page = ultra_front_page();
 ?>
-<section id="exhaustion-pre" <?php echo $page->exhaustion_pre->data(); ?>>
-  <div class="person">
+<?php $exhaustion = $page->sections['exhaustion']; ?>
+<section id="exhaustion" <?php $exhaustion->data(); ?>>
+  <div class="person fit">
+    <div class="z 1"
+      <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px, 0px);"
+      <?php $exhaustion->point('z1', 2); ?>="transform:translate(100px, -100x);"
+    >
+      <img src="<?php image_path('z.png'); ?>" alt="Z"
+        <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
+        <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:25px; height:25px;"
+        <?php $exhaustion->point('z1', 2); ?>="width: 50px; height: 50px; opacity: 0;"
+      />
+    </div>
   </div>
+
+  <!-- <img class="z 2" src="<?php image_path('z.png'); ?>" alt="Z" /> -->
+  <!-- <img class="z 3" src="<?php image_path('z.png'); ?>" alt="Z" /> -->
+
+  <p class="line 1">The sweetest kind of exhaustion</p>
+
+  <p class="line 2">...is when you've tested yourself and discovered a grit and determination you didn't know you had.</p>
 </section>
 
-<section id="exhaustion" <?php echo $page->exhaustion->data(); ?>>
-  <p>The sweetest kind of exhaustion</p>
-</section>
-
-<section id="test" <?php echo $page->test->data(); ?>>
-  <p>...is when you've tested yourself and discovered a grit and determination you didn't know you had.</p>
-</section>
-
-<section id="victory" <?php echo $page->victory->data(); ?>>
+<section id="victory" <?php $page->sections['victory']->data(); ?>>
   <div class="video-container">
     <video loop>
-      <source src="<?php echo video_path('clip1.webm'); ?>" type="video/webm">
+      <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
     </video>
     <p>A deeply personal victory for each runner</p>
   </div>
 </section>
 
-<section id="impossible" <?php echo $page->impossible->data(); ?>>
+<section id="impossible" <?php $page->sections['impossible']->data(); ?>>
   <p>It always seems impossible until it's done.</p>
 </section>
 
-<section id="bamboo" <?php echo $page->bamboo->data(); ?>>
+<section id="bamboo" <?php $page->sections['bamboo']->data(); ?>>
   <div class="video-container">
     <video loop>
-      <source src="<?php echo video_path('clip2.webm'); ?>" type="video/webm">
+      <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
     </video>
     <p>A trail through bamboo</p>
   </div>
 </section>
 
-<section id="start" <?php echo $page->start->data(); ?>>
+<section id="start" <?php $page->sections['start']->data(); ?>>
   <p>
     The start &mdash;<br />
     <br />
@@ -47,15 +57,15 @@ $page = UltraFrontPage::Instance()
   </p>
 </section>
 
-<section id="start-vid" <?php echo $page->start_vid->data(); ?>>
+<section id="start-vid" <?php $page->sections['start_vid']->data(); ?>>
   <div class="video-container">
     <video loop>
-      <source src="<?php echo video_path('clip3.webm'); ?>" type="video/webm">
+      <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
     </video>
   </div>
 </section>
 
-<section id="tagline" <?php echo $page->tagline->data(); ?>>
+<section id="tagline" <?php $page->sections['tagline']->data(); ?>>
   <p>
     Bangalore ultra.<br />
     It's tough. Are you?

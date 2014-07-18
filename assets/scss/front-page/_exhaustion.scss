@@ -1,9 +1,24 @@
-#exhaustion-pre {
-  display: block;
-
+#exhaustion {
   .person {
-    background-image: image-url('person.png');
-    width: image-width('person.png');
-    height: image-height('person.png');
+    @include fit('person.png');
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
+  }
+
+  .line {
+    display: none;
+  }
+
+  .z {
+    top: 38%;
+    left: 60%;
+
+    img {
+      @include center;
+    }
   }
 }

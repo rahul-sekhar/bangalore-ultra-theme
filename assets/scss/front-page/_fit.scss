@@ -1,0 +1,13 @@
+.fit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include center;
+}
+
+@mixin fit($image) {
+  background: image-url($image) no-repeat center;
+  background-size: 100% 100%;
+  width: image-width($image);
+  height: image-height($image);
+}

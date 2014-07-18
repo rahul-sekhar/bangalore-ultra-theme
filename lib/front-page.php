@@ -1,65 +1,46 @@
 <?php
 
-class UltraFrontPage {
-  public static function Instance() {
-    static $inst = null;
-    if ($inst === null) {
-      $inst = new UltraFrontPage();
-    }
-    return $inst;
-  }
+function ultra_front_page() {
+  $page = new UltraFrontPage();
 
-  public $exhaustion_pre, $exhaustion;
+  $page->section('exhaustion')
+    ->event('z1', 0)
+      ->add(300)
+      ->add(200)
+      ->section()
 
-  private function __construct() {
-    $this->exhaustion_pre = new FrontPageSection(0);
-    $this->exhaustion = new FrontPageSection($this->exhaustion_pre->out());
-    $this->test = new FrontPageSection($this->exhaustion->out());
-    $this->victory = new FrontPageSection($this->test->out());
-    $this->impossible = new FrontPageSection($this->victory->out());
-    $this->bamboo = new FrontPageSection($this->impossible->out());
-    $this->start = new FrontPageSection($this->bamboo->out());
-    $this->start_vid = new FrontPageSection($this->start->out());
-    $this->tagline = new FrontPageSection($this->start_vid->out(), 600, 200, 0);
-  }
-}
+    ->event('wait', ':last')
+      ->add(200);
 
-class FrontPageSection {
-  private $in_time, $start, $length, $out_time;
+  $page->section('victory')
+    ->event('wait')
+      ->add(0)
+      ->add(500);
 
-  function __construct($start, $length=600, $in_time=200, $out_time=200) {
-    $this->start = $start;
-    $this->length = $length;
-    $this->in_time = $in_time;
-    $this->out_time = $out_time;
-  }
+  $page->section('impossible')
+    ->event('wait')
+      ->add(0)
+      ->add(500);
 
-  function in() {
-    return max(0, $this->start() - $this->in_time);
-  }
+  $page->section('bamboo')
+    ->event('wait')
+      ->add(0)
+      ->add(500);
 
-  function start() {
-    return $this->start;
-  }
+  $page->section('start')
+    ->event('wait')
+      ->add(0)
+      ->add(500);
 
-  function end() {
-    return $this->start() + $this->length;
-  }
+  $page->section('start_vid')
+    ->event('wait')
+      ->add(0)
+      ->add(500);
 
-  function out() {
-    return $this->end() + $this->out_time;
-  }
+  $page->section('tagline', 200, 0)
+    ->event('wait')
+      ->add(0)
+      ->add(500);
 
-  function data() {
-    $data = '';
-    if ($this->in() != $this->start()) {
-      $data .= 'data-' . $this->in() . '="top: 100%" ';
-    }
-
-    $data .= 'data-' . $this->start() . '="top: 0%" ';
-    $data .= 'data-' . $this->end() . '="top: 0%"';
-    $data .= 'data-' . $this->out() . '="top: -100%"';
-
-    return $data;
-  }
+  return $page;
 }

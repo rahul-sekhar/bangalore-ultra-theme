@@ -135,7 +135,8 @@ module.exports = function(grunt) {
           'assets/js/front-page.js',
           'templates/*.php',
           'templates/**/*.php',
-          '*.php'
+          '*.php',
+          'lib/front-page.php'
         ]
       }
     }
