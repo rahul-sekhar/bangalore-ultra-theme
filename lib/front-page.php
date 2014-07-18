@@ -5,12 +5,22 @@ function ultra_front_page() {
 
   $page->section('exhaustion')
     ->event('z1', 0)
+      ->add(500)
       ->add(300)
-      ->add(200)
+      ->section()
+
+    ->event('z2', ':last', -300)
+      ->add(500)
+      ->add(300)
+      ->section()
+
+    ->event('z3', ':last', -300)
+      ->add(500)
+      ->add(300)
       ->section()
 
     ->event('wait', ':last')
-      ->add(200);
+      ->add(100);
 
   $page->section('victory')
     ->event('wait')

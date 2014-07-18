@@ -21,9 +21,9 @@ class FPSection {
     $this->leave_time = $leave_time;
   }
 
-  function event($name, $start=null) {
+  function event($name, $marker=null, $offset=0) {
     $event = new FPEvent($this);
-    $event->decode($start);
+    $event->decode($marker, $offset);
 
     $this->events[$name] = $event;
     return $event;
@@ -101,17 +101,17 @@ class FPEvent {
     return $this->section;
   }
 
-  function decode($marker) {
+  function decode($marker, $offset=0) {
     if (is_null($marker)) return $this;
 
     if (is_int($marker)) {
-      $this->mark($marker);
+      $this->mark($marker + $offset);
       return $this;
     }
 
     if ($marker === ':last') {
       $last_event = $this->section->last_event();
-      $this->mark($last_event->end());
+      $this->mark($last_event->end() + $offset);
       return $this;
     }
   }

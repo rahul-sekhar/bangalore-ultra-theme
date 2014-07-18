@@ -6,12 +6,34 @@ $page = ultra_front_page();
   <div class="person fit">
     <div class="z 1"
       <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px, 0px);"
-      <?php $exhaustion->point('z1', 2); ?>="transform:translate(100px, -100x);"
+      <?php $exhaustion->point('z1', 2); ?>="transform:translate(150px, -150x);"
     >
       <img src="<?php image_path('z.png'); ?>" alt="Z"
         <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
-        <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:25px; height:25px;"
-        <?php $exhaustion->point('z1', 2); ?>="width: 50px; height: 50px; opacity: 0;"
+        <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:35px; height:35px;"
+        <?php $exhaustion->point('z1', 2); ?>="width: 70px; height: 70px; opacity: 0;"
+      />
+    </div>
+
+    <div class="z 1"
+      <?php $exhaustion->point('z2', 0); ?>="transform:translate(0px, 0px);"
+      <?php $exhaustion->point('z2', 2); ?>="transform:translate(150px, -150x);"
+    >
+      <img src="<?php image_path('z.png'); ?>" alt="Z"
+        <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
+        <?php $exhaustion->point('z2', 1); ?>="opacity:1; width:35px; height:35px;"
+        <?php $exhaustion->point('z2', 2); ?>="width: 70px; height: 70px; opacity: 0;"
+      />
+    </div>
+
+    <div class="z 1"
+      <?php $exhaustion->point('z3', 0); ?>="transform:translate(0px, 0px);"
+      <?php $exhaustion->point('z3', 2); ?>="transform:translate(150px, -150x);"
+    >
+      <img src="<?php image_path('z.png'); ?>" alt="Z"
+        <?php $exhaustion->point('z3', 0); ?>="width:0px; height: 0px"
+        <?php $exhaustion->point('z3', 1); ?>="opacity:1; width:35px; height:35px;"
+        <?php $exhaustion->point('z3', 2); ?>="width: 70px; height: 70px; opacity: 0;"
       />
     </div>
   </div>
