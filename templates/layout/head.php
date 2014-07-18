@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6778852/709884/css/fonts.css" />
+    <script type="text/javascript" src="//use.typekit.net/uxx3dqf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <?php wp_head(); ?>
 

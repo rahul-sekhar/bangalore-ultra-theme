@@ -1,9 +1,9 @@
 html {
-  @include whitney-book;
+  font-family: 'brandon-grotesque';
 }
 
 strong, h1, h2, h3, h4, h5, h6 {
-  @include whitney-semibold;
+  font-weight: 700;
 }
 
 a {
