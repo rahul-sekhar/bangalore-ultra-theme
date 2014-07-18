@@ -79,6 +79,9 @@ $page = ultra_front_page();
   <?php $victory->section_point('start'); ?>="top: 0%; opacity: 1;"
   <?php $victory->section_point('end'); ?>="top: 0%;"
   <?php $victory->section_point('leave'); ?>="top: -100%;"
+  data-enter-mark="<?php echo 'data' . $victory->enter(); ?>,<?php echo 'data' . $victory->enter() - 1; ?>"
+  data-leave-mark="<?php echo 'data' . $victory->leave(); ?>"
+  data-emit-events
 >
   <div class="video-container">
     <video loop>
@@ -94,15 +97,16 @@ $page = ultra_front_page();
 <section id="impossible"
   <?php $impossible->section_point('enter'); ?>="top: 100%;"
   <?php $impossible->section_point('start'); ?>="top: 0%;"
-  <?php $impossible->section_point('end'); ?>="top: 0%;"
-  <?php $impossible->section_point('leave'); ?>="top: -100%;"
-  data-start-mark="<?php echo $impossible->start(); ?>"
-  data-end-mark="<?php echo $impossible->end(); ?>"
+  <?php $impossible->section_point('leave'); ?>="top: 0%;"
+  <?php $impossible->section_point('leave', 1); ?>="top: -100%;"
+  data-start-mark="<?php echo 'data' . $impossible->start(); ?>"
+  data-end-mark="<?php echo 'data' . $impossible->end(); ?>"
   data-emit-events
 >
   <div class="runners fit">
     <img class="background-runners" src="<?php image_path('background-runners.png'); ?>" alt="hunched person" />
     <img class="person" src="<?php image_path('hunched-person.png'); ?>" alt="hunched person" />
+    <img class="tears" src="<?php image_path('hunched-person-tears.png'); ?>" alt="hunched person" />
     <img class="foreground-runners" src="<?php image_path('foreground-runners.png'); ?>" alt="hunched person" />
   </div>
 
@@ -113,10 +117,14 @@ $page = ultra_front_page();
 
 <?php $bamboo = $page->sections['bamboo']; ?>
 <section id="bamboo"
-  <?php $bamboo->section_point('enter'); ?>="top: 100%;"
-  <?php $bamboo->section_point('start'); ?>="top: 0%;"
+  <?php $bamboo->section_point('enter', -1); ?>="top: 100%;"
+  <?php $bamboo->section_point('enter'); ?>="top: 0%; opacity: 0;"
+  <?php $bamboo->section_point('start'); ?>="top: 0%; opacity: 1;"
   <?php $bamboo->section_point('end'); ?>="top: 0%;"
   <?php $bamboo->section_point('leave'); ?>="top: -100%;"
+  data-enter-mark="<?php echo 'data' . $bamboo->enter(); ?>,<?php echo 'data' . $bamboo->enter() - 1; ?>"
+  data-leave-mark="<?php echo 'data' . $bamboo->leave(); ?>"
+  data-emit-events
 >
   <div class="video-container">
     <video loop>
@@ -153,6 +161,9 @@ $page = ultra_front_page();
   <?php $start_vid->section_point('start'); ?>="top: 0%;"
   <?php $start_vid->section_point('end'); ?>="top: 0%;"
   <?php $start_vid->section_point('leave'); ?>="top: -100%;"
+  data-enter-mark="<?php echo 'data' . $start_vid->enter(); ?>"
+  data-leave-mark="<?php echo 'data' . $start_vid->leave(); ?>"
+  data-emit-events
 >
   <div class="video-container">
     <video loop>

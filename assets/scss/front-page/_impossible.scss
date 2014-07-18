@@ -23,6 +23,11 @@
     .background-runners {
       left: -100%;
     }
+
+    .tears {
+      opacity: 0;
+      top: -10%;
+    }
   }
 
   &.play {
@@ -35,6 +40,12 @@
       .background-runners {
         left: 100%;
         @include transition(left 3s linear);
+      }
+
+      .tears {
+        opacity: 1;
+        top: 100%;
+        @include transition(opacity 300ms ease 3s, top 1.5s linear 3s);
       }
     }
   }
