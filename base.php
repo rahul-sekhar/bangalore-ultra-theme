@@ -1,18 +1,16 @@
 <?php get_template_part('templates/layout/head'); ?>
   <body <?php body_class(); ?>>
 
-    <?php
-      do_action('get_header');
-      get_template_part('templates/layout/header');
-    ?>
+  <?php
+  do_action('get_header');
+  get_template_part('templates/layout/header');
+  ?>
 
-    <div id="wrapper" role="document">
-      <main role="main" class="container">
-        <?php include roots_template_path(); ?>
-      </main>
-    </div><!-- /#wrapper -->
+  <div id="wrapper">
+    <?php include roots_template_path(); ?>
+  </div>
 
-    <?php get_template_part('templates/layout/footer'); ?>
+  <?php get_template_part('templates/layout/footer'); ?>
 
   </body>
 </html>

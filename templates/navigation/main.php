@@ -1,7 +1,7 @@
 <nav id="nav">
   <ul>
     <li>
-      <a href="#">
+      <a href="/why-ultra">
         <h3>Why Ultra</h3>
         <p>All the wonderful things about the Ultra</p>
       </a>

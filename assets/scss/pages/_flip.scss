@@ -1,0 +1,15 @@
+body.page-template-flip_page-php {
+  .content {
+    padding: 0;
+  }
+
+  section {
+    position: relative;
+
+    .inner {
+      padding: 10px 20px;
+      min-height: 100%;
+      background-color: white;
+    }
+  }
+}

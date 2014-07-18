@@ -1,4 +1,8 @@
+#wrapper {
+  margin-left: $header-width;
+  height: 100%;
+}
+
 .content {
   padding: 10px 20px 40px 20px;
-  margin-left: $side-nav-width;
 }
