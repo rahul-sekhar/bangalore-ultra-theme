@@ -3,7 +3,12 @@ $page = ultra_front_page();
 ?>
 <?php $exhaustion = $page->sections['exhaustion']; ?>
 <section id="exhaustion" <?php $exhaustion->data(); ?>>
-  <div class="person fit">
+  <div class="person-container fit">
+    <img src="<?php image_path('person.png'); ?>" alt="person" class="person"
+      <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(-50%,0%); opacity: 1;"
+      <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(-50%,-100%); opacity: 0;"
+    />
+
     <div class="z 1"
       <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"
       <?php $exhaustion->point('z1', 1); ?>="transform:translate(100px,-100px);"
@@ -60,7 +65,14 @@ $page = ultra_front_page();
   <p class="line 2">...is when you've tested yourself and discovered a grit and determination you didn't know you had.</p>
 </section>
 
-<section id="victory" <?php $page->sections['victory']->data(); ?>>
+<?php $victory = $page->sections['victory']; ?>
+<section id="victory"
+  data-<?php echo ($victory->enter() - 1); ?>="top: 100%;"
+  data-<?php echo $victory->enter(); ?>="top: 0%; opacity: 0;"
+  data-<?php echo $victory->start(); ?>="top: 0%; opacity: 1;"
+  data-<?php echo $victory->end(); ?>="top: 0%;"
+  data-<?php echo $victory->leave(); ?>="top: -100%;"
+>
   <div class="video-container">
     <video loop>
       <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">

@@ -1,11 +1,10 @@
 #exhaustion {
-  .person {
+  .person-container {
     @include fit('person.png');
 
-    img {
+    .person {
       height: 100%;
-      width: auto;
-      max-width: none;
+      width: 100%;
     }
   }
 
