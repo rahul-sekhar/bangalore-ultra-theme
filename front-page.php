@@ -2,11 +2,15 @@
 $page = ultra_front_page();
 ?>
 <?php $exhaustion = $page->sections['exhaustion']; ?>
-<section id="exhaustion" <?php $exhaustion->data(); ?>>
+<section id="exhaustion"
+  <?php $exhaustion->section_point('start'); ?>="top: 0%;"
+  <?php $exhaustion->section_point('leave'); ?>="top: 0%;"
+  <?php $exhaustion->section_point('leave', 1); ?>="top: -100%;"
+>
   <div class="person-container fit">
     <img src="<?php image_path('person.png'); ?>" alt="person" class="person"
-      <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(-50%,0%); opacity: 1;"
-      <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(-50%,-100%); opacity: 0;"
+      <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%); opacity: 1;"
+      <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,-100%); opacity: 0;"
     />
 
     <div class="z 1"
@@ -66,13 +70,15 @@ $page = ultra_front_page();
   <p class="line 2">...is when you've tested yourself and discovered a grit and determination you didn't know you had.</p>
 </section>
 
+
+
 <?php $victory = $page->sections['victory']; ?>
 <section id="victory"
-  data-<?php echo ($victory->enter() - 1); ?>="top: 100%;"
-  data-<?php echo $victory->enter(); ?>="top: 0%; opacity: 0;"
-  data-<?php echo $victory->start(); ?>="top: 0%; opacity: 1;"
-  data-<?php echo $victory->end(); ?>="top: 0%;"
-  data-<?php echo $victory->leave(); ?>="top: -100%;"
+  <?php $victory->section_point('enter', -1); ?>="top: 100%;"
+  <?php $victory->section_point('enter'); ?>="top: 0%; opacity: 0;"
+  <?php $victory->section_point('start'); ?>="top: 0%; opacity: 1;"
+  <?php $victory->section_point('end'); ?>="top: 0%;"
+  <?php $victory->section_point('leave'); ?>="top: -100%;"
 >
   <div class="video-container">
     <video loop>
@@ -82,11 +88,36 @@ $page = ultra_front_page();
   </div>
 </section>
 
-<section id="impossible" <?php $page->sections['impossible']->data(); ?>>
-  <p>It always seems impossible until it's done.</p>
+
+
+<?php $impossible = $page->sections['impossible']; ?>
+<section id="impossible"
+  <?php $impossible->section_point('enter'); ?>="top: 100%;"
+  <?php $impossible->section_point('start'); ?>="top: 0%;"
+  <?php $impossible->section_point('end'); ?>="top: 0%;"
+  <?php $impossible->section_point('leave'); ?>="top: -100%;"
+  data-start-mark="<?php echo $impossible->start(); ?>"
+  data-end-mark="<?php echo $impossible->end(); ?>"
+  data-emit-events
+>
+  <div class="runners fit">
+    <img class="background-runners" src="<?php image_path('background-runners.png'); ?>" alt="hunched person" />
+    <img class="person" src="<?php image_path('hunched-person.png'); ?>" alt="hunched person" />
+    <img class="foreground-runners" src="<?php image_path('foreground-runners.png'); ?>" alt="hunched person" />
+  </div>
+
+  <p class="line">It always seems impossible until it's done.</p>
 </section>
 
-<section id="bamboo" <?php $page->sections['bamboo']->data(); ?>>
+
+
+<?php $bamboo = $page->sections['bamboo']; ?>
+<section id="bamboo"
+  <?php $bamboo->section_point('enter'); ?>="top: 100%;"
+  <?php $bamboo->section_point('start'); ?>="top: 0%;"
+  <?php $bamboo->section_point('end'); ?>="top: 0%;"
+  <?php $bamboo->section_point('leave'); ?>="top: -100%;"
+>
   <div class="video-container">
     <video loop>
       <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
@@ -95,7 +126,15 @@ $page = ultra_front_page();
   </div>
 </section>
 
-<section id="start" <?php $page->sections['start']->data(); ?>>
+
+
+<?php $start = $page->sections['start']; ?>
+<section id="start"
+  <?php $start->section_point('enter'); ?>="top: 100%;"
+  <?php $start->section_point('start'); ?>="top: 0%;"
+  <?php $start->section_point('end'); ?>="top: 0%;"
+  <?php $start->section_point('leave'); ?>="top: -100%;"
+>
   <p>
     The start &mdash;<br />
     <br />
@@ -106,7 +145,15 @@ $page = ultra_front_page();
   </p>
 </section>
 
-<section id="start-vid" <?php $page->sections['start_vid']->data(); ?>>
+
+
+<?php $start_vid = $page->sections['start_vid']; ?>
+<section id="start-vid"
+  <?php $start_vid->section_point('enter'); ?>="top: 100%;"
+  <?php $start_vid->section_point('start'); ?>="top: 0%;"
+  <?php $start_vid->section_point('end'); ?>="top: 0%;"
+  <?php $start_vid->section_point('leave'); ?>="top: -100%;"
+>
   <div class="video-container">
     <video loop>
       <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
@@ -114,7 +161,15 @@ $page = ultra_front_page();
   </div>
 </section>
 
-<section id="tagline" <?php $page->sections['tagline']->data(); ?>>
+
+
+<?php $tagline = $page->sections['tagline']; ?>
+<section id="tagline"
+  <?php $tagline->section_point('enter'); ?>="top: 100%;"
+  <?php $tagline->section_point('start'); ?>="top: 0%;"
+  <?php $tagline->section_point('end'); ?>="top: 0%;"
+  <?php $tagline->section_point('leave'); ?>="top: -100%;"
+>
   <p>
     Bangalore ultra.<br />
     It's tough. Are you?

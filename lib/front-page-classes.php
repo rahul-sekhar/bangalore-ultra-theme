@@ -1,5 +1,6 @@
 <?php
 
+// Page class
 class UltraFrontPage {
   public $sections = [];
 
@@ -11,6 +12,8 @@ class UltraFrontPage {
   }
 }
 
+
+// Page section class
 class FPSection {
   private $enter_time, $start, $leave_time;
   public $events = [];
@@ -55,17 +58,8 @@ class FPSection {
     return $this->end() + $this->leave_time;
   }
 
-  function data() {
-    $data = '';
-    if ($this->enter() != $this->start()) {
-      $data .= 'data-' . $this->enter() . '="top: 100%" ';
-    }
-
-    $data .= 'data-' . $this->start() . '="top: 0%" ';
-    $data .= 'data-' . $this->end() . '="top: 0%"';
-    $data .= 'data-' . $this->leave() . '="top: -100%"';
-
-    echo $data;
+  function section_point($section_event, $offset=0) {
+    echo 'data-' . ($this->{ $section_event }() + $offset);
   }
 
   function point($event, $point) {
@@ -73,6 +67,8 @@ class FPSection {
   }
 }
 
+
+// Section event class
 class FPEvent {
   public $points = [];
 

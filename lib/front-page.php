@@ -26,7 +26,7 @@ function ultra_front_page() {
     ->event('wait', 'form-letters:end')
       ->add(300);
 
-  $page->section('victory')
+  $page->section('victory', 400)
     ->event('wait')
       ->add(0)
       ->add(500);
