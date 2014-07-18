@@ -1,7 +1,7 @@
 #nav {
   font-size: 14px;
   text-align: left;
-  margin-top: 80px;
+  margin-top: 40px;
 
   ul {
     @include reset-list;
@@ -14,12 +14,14 @@
   h3 {
     margin: 0;
     text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   p {
     font-family: 'museo-slab';
-    font-weight: 300;
+    font-weight: 500;
     font-style: italic;
+    font-size: 13px;
     margin: 0;
   }
 }

@@ -12,6 +12,15 @@
     margin: 0;
     font-size: 25px;
     text-align: center;
+    margin-top: 20px;
+
+    @include hide-text;
+    background: image-url('logo.png') no-repeat center;
+    background-size: 100% 100%;
+
+    $logo-width: $header-width - (2 * 20px);
+    width: $logo-width;
+    height: image-height('logo.png') / image-width('logo.png') * $logo-width;
   }
 
   a {
