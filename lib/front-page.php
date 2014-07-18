@@ -9,18 +9,22 @@ function ultra_front_page() {
       ->add(300)
       ->section()
 
-    ->event('z2', ':last', -300)
+    ->event('z2', 'z1:1', -200)
       ->add(500)
       ->add(300)
       ->section()
 
-    ->event('z3', ':last', -300)
+    ->event('z3', 'z2:1', -200)
       ->add(500)
-      ->add(300)
       ->section()
 
-    ->event('wait', ':last')
-      ->add(100);
+    ->event('form-letters', 'z3:end')
+      ->add(250)
+      ->add(250)
+      ->section()
+
+    ->event('wait', 'form-letters:end')
+      ->add(500);
 
   $page->section('victory')
     ->event('wait')

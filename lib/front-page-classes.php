@@ -109,10 +109,17 @@ class FPEvent {
       return $this;
     }
 
-    if ($marker === ':last') {
-      $last_event = $this->section->last_event();
-      $this->mark($last_event->end() + $offset);
-      return $this;
+    $parts = explode(':', $marker);
+    if (count($parts) !== 2) throw new Exception('Invalid marker');
+    $event = $this->section->events[$parts[0]];
+
+    if ($parts[1] === 'end') {
+      $start = $event->end();
+    } else {
+      $start = $event->points[$parts[1]];
     }
+
+    $this->mark($start + $offset);
+    return $this;
   }
 }

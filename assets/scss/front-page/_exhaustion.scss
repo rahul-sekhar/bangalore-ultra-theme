@@ -21,4 +21,18 @@
       @include center;
     }
   }
+
+  .z.x {
+
+    .container {
+      @include transform(translate(-50%, -50%) rotate(80deg));
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include transform(none);
+    }
+  }
 }
