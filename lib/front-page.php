@@ -3,7 +3,7 @@
 function ultra_front_page() {
   $page = new UltraFrontPage();
 
-  $page->section('exhaustion')
+  $page->section('exhaustion', 0, 400)
     ->event('z1', 0)
       ->add(500)
       ->add(300)
@@ -31,7 +31,7 @@ function ultra_front_page() {
       ->add(0)
       ->add(300);
 
-  $page->section('impossible')
+  $page->section('impossible', 200, 400)
     ->event('wait')
       ->add(0)
       ->add(400);
