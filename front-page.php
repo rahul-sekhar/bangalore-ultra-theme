@@ -8,10 +8,20 @@ $page = ultra_front_page();
   <?php $exhaustion->section_point('leave', 1); ?>="top: -100%;"
 >
   <div class="person-container fit">
-    <img src="<?php image_path('person.png'); ?>" alt="person" class="person"
+    <div class="person-and-shoes"
       <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%); opacity: 1;"
       <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,-100%); opacity: 0;"
-    />
+    >
+      <img src="<?php image_path('back-shoe.png'); ?>" alt="person" class="back-shoe"
+        <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
+        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,20%);"
+      />
+      <img src="<?php image_path('front-shoe.png'); ?>" alt="person" class="front-shoe"
+        <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
+        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,-40%);"
+      />
+      <img src="<?php image_path('person.png'); ?>" alt="person" class="person" />
+    </div>
 
     <div class="z 1"
       <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"

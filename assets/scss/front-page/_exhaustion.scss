@@ -2,9 +2,20 @@
   .person-container {
     @include fit('person.png');
 
-    .person {
+    .person-and-shoes {
+      position: absolute;
       height: 100%;
       width: 100%;
+
+      img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+
+      .person {
+        z-index: 150;
+      }
     }
   }
 
