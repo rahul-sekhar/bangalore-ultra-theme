@@ -61,11 +61,11 @@ $page = ultra_front_page();
       >
         <img class="top" src="<?php image_path('zx-top.png'); ?>" alt=""
           <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
-          <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(-38%, -26%) rotate(-140deg);"
+          <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%, 48%) rotate(40deg);"
         />
         <img class="bottom" src="<?php image_path('zx-bottom.png'); ?>" alt=""
           <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
-          <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(22%, 4%) rotate(-145deg);"
+          <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(-9%, -48%) rotate(37deg);"
         />
         <img class="mid" src="<?php image_path('zx-mid.png'); ?>" alt="Z" />
       </div>
