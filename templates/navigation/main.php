@@ -1,3 +1,5 @@
+<a href="#" id="pull-nav">Menu</a>
+
 <nav id="nav">
   <ul>
     <li>

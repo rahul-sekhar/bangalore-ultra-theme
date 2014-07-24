@@ -1,4 +1,5 @@
 <nav class="page">
+  <p class="title"><?php the_title(); ?></p>
   <ul>
   <?php foreach(get_field('sections') as $section) :
     if ($section['visible']) :

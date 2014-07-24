@@ -3,9 +3,11 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: $header-width;
-  background-color: $grey-1;
+  background-color: $red;
+  width: $header-hidden-width;
   padding: 10px 20px;
+
+  @include transition(width $header-transition-time ease);
 
   h1 {
     display: inline-block;
@@ -24,6 +26,12 @@
   }
 
   a {
-    color: $brown;
+    color: white;
+  }
+}
+
+body.nav-shown {
+  #header {
+    width: $header-width;
   }
 }

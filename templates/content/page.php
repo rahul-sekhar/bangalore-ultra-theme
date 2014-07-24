@@ -1,3 +1,5 @@
+<h2><?php the_title(); ?></h2>
+
 <?php foreach(get_field('sections') as $section) :
   if ($section['visible']) :
   ?>

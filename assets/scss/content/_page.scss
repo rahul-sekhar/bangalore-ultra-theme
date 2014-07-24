@@ -1,0 +1,28 @@
+.content.page {
+  padding: $page-top-padding 100px $page-bottom-padding 100px;
+  color: $grey-2;
+
+  h2 {
+    margin: 0;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  p, span {
+    color: $grey-2 !important;
+  }
+}

@@ -1,7 +1,14 @@
 #nav {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
   font-size: 14px;
   text-align: left;
   margin-top: 40px;
+  width: $header-width - 40px;
+
+  @include transition(z-index 0 linear $header-transition-time, visibility 0 linear $header-transition-time, opacity $header-transition-time ease);
 
   ul {
     @include reset-list;
@@ -23,5 +30,15 @@
     font-style: italic;
     font-size: 13px;
     margin: 0;
+  }
+}
+
+body.nav-shown {
+  #nav {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+
+    @include transition(z-index 0 linear, visibility 0 linear, opacity $header-transition-time ease);
   }
 }

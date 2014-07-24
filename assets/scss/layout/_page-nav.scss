@@ -1,21 +1,30 @@
 nav.page {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: $header-width;
+  top: $page-top-padding;
+  right: $page-nav-margin;
   width: $page-nav-width;
-  padding: 20px;
-  border-right: 1px solid black;
+  border-top: 4px solid $red;
+  border-bottom: 4px solid $red;
+  padding: 10px 20px 10px 0;
+
+  p.title {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+    color: $red;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
   ul {
     @include reset-list;
   }
 
   a {
-    color: black;
+    color: $red;
   }
 }
 
 .content.page.nav {
-  margin-left: $page-nav-width;
+  margin-right: $page-nav-width + $page-nav-margin;
 }
