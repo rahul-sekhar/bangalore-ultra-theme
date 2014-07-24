@@ -1,0 +1,21 @@
+nav.page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: $header-width;
+  width: $page-nav-width;
+  padding: 20px;
+  border-right: 1px solid black;
+
+  ul {
+    @include reset-list;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+.content.page.nav {
+  margin-left: $page-nav-width;
+}

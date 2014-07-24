@@ -7,7 +7,7 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="/registration">
         <h3>Registration</h3>
         <p>Answers to all your questions</p>
       </a>
