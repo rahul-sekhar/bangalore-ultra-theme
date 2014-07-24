@@ -10,7 +10,6 @@
  * @link https://github.com/roots/roots/pull/1042
  */
 
-
 $roots_includes = array(
   'lib/config.php',          // Configuration
 
@@ -34,7 +33,8 @@ $roots_includes = array(
   'lib/nav-menu.php',           // Class for the page navigation menu
   'lib/nav-helpers.php',        // Helpers for navigation
   'lib/front-page-classes.php', // Helper class for the front page
-  'lib/front-page.php', // Constructor for the front page
+  'lib/front-page.php',         // Constructor for the front page
+  'lib/shortcodes.php',         // Shortcodes
 );
 
 foreach ($roots_includes as $file) {
