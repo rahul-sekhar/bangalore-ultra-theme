@@ -6,6 +6,7 @@
   background-color: $red;
   width: $header-hidden-width;
   padding: 10px 20px;
+  z-index: 400;
 
   @include transition(width $header-transition-time ease);
 
