@@ -1,19 +1,35 @@
 <?php
-
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
-    'id' => 'acf_page-sections',
-    'title' => 'Page Sections',
+    'id' => 'acf_page-fields',
+    'title' => 'Page Fields',
     'fields' => array (
       array (
-        'key' => 'field_524f9bdb96faf',
+        'key' => 'field_53d0d550217d7',
+        'label' => 'Show navigation',
+        'name' => 'show_navigation',
+        'type' => 'true_false',
+        'message' => '',
+        'default_value' => 1,
+      ),
+      array (
+        'key' => 'field_53d0d4543ef21',
         'label' => 'Sections',
         'name' => 'sections',
         'type' => 'repeater',
         'sub_fields' => array (
           array (
-            'key' => 'field_524f9bf596fb0',
+            'key' => 'field_53d0d4853ef23',
+            'label' => 'Visible',
+            'name' => 'visible',
+            'type' => 'true_false',
+            'column_width' => '',
+            'message' => '',
+            'default_value' => 0,
+          ),
+          array (
+            'key' => 'field_53d0d4723ef22',
             'label' => 'Title',
             'name' => 'title',
             'type' => 'text',
@@ -26,16 +42,7 @@ if(function_exists("register_field_group"))
             'maxlength' => '',
           ),
           array (
-            'key' => 'field_524f9bfc96fb1',
-            'label' => 'Visible',
-            'name' => 'visible',
-            'type' => 'true_false',
-            'column_width' => '',
-            'message' => '',
-            'default_value' => 1,
-          ),
-          array (
-            'key' => 'field_524f9c0896fb2',
+            'key' => 'field_53d0d4943ef24',
             'label' => 'Content',
             'name' => 'content',
             'type' => 'wysiwyg',
@@ -50,21 +57,13 @@ if(function_exists("register_field_group"))
         'layout' => 'row',
         'button_label' => 'Add Section',
       ),
-      array (
-        'key' => 'field_524ff8a763cec',
-        'label' => 'Include Social Links',
-        'name' => 'include_social_links',
-        'type' => 'true_false',
-        'message' => '',
-        'default_value' => 0,
-      ),
     ),
     'location' => array (
       array (
         array (
-          'param' => 'page_template',
+          'param' => 'post_type',
           'operator' => '==',
-          'value' => 'sectioned_page.php',
+          'value' => 'page',
           'order_no' => 0,
           'group_no' => 0,
         ),
