@@ -1,4 +1,4 @@
-<a href="#" id="pull-nav">Menu</a>
+<a href="#" id="pull-nav"></a>
 
 <nav id="nav">
   <ul>

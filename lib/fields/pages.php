@@ -26,7 +26,7 @@ if(function_exists("register_field_group"))
             'type' => 'true_false',
             'column_width' => '',
             'message' => '',
-            'default_value' => 0,
+            'default_value' => 1,
           ),
           array (
             'key' => 'field_53d0d4723ef22',
