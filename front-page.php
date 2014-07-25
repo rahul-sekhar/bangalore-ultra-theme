@@ -12,15 +12,21 @@ $page = ultra_front_page();
       <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%); opacity: 1;"
       <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,-100%); opacity: 0;"
     >
-      <img src="<?php image_path('back-shoe.png'); ?>" alt="person" class="back-shoe"
+      <img src="<?php image_path('exhaustion/person.png'); ?>" alt="person" class="person" />
+
+      <img src="<?php image_path('exhaustion/mouth-1.png'); ?>" alt="" class="mouth-1" />
+      <img src="<?php image_path('exhaustion/mouth-2.png'); ?>" alt="" class="mouth-2" />
+      <img src="<?php image_path('exhaustion/tummy-1.png'); ?>" alt="" class="tummy-1" />
+      <img src="<?php image_path('exhaustion/tummy-2.png'); ?>" alt="" class="tummy-2" />
+
+      <img src="<?php image_path('exhaustion/shoe-1.png'); ?>" alt="" class="shoe-1"
+        <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
+        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,10%);"
+      />
+      <img src="<?php image_path('exhaustion/shoe-2.png'); ?>" alt="" class="shoe-2"
         <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
         <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,20%);"
       />
-      <img src="<?php image_path('front-shoe.png'); ?>" alt="person" class="front-shoe"
-        <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
-        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,-40%);"
-      />
-      <img src="<?php image_path('person.png'); ?>" alt="person" class="person" />
     </div>
 
     <div class="z 1"
@@ -28,7 +34,7 @@ $page = ultra_front_page();
       <?php $exhaustion->point('z1', 1); ?>="transform:translate(100px,-100px);"
       <?php $exhaustion->point('z1', 2); ?>="transform:translate(160px,-160px);"
     >
-      <img src="<?php image_path('z1.png'); ?>" alt="Z"
+      <img src="<?php image_path('exhaustion/z1.png'); ?>" alt="Z"
         <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
         <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:70px; height:70px;"
         <?php $exhaustion->point('z1', 2); ?>="opacity: 0;"
@@ -41,7 +47,7 @@ $page = ultra_front_page();
       <?php $exhaustion->point('z2', 2); ?>="transform:translate(100px,-140px);"
       <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0px,-150px);"
     >
-      <img src="<?php image_path('zs.png'); ?>" alt="Z"
+      <img src="<?php image_path('exhaustion/zs.png'); ?>" alt="Z"
         <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
         <?php $exhaustion->point('z2', 1); ?>="width:70px; height:70px;"
         <?php $exhaustion->point('form-letters', 1); ?>="transform:rotateY(0deg);"
@@ -59,21 +65,18 @@ $page = ultra_front_page();
         <?php $exhaustion->point('z3', 1); ?>="width:70px; height:70px;"
         <?php $exhaustion->point('form-letters', 1); ?>="width:100px; height:100px;"
       >
-        <img class="top" src="<?php image_path('zx-top.png'); ?>" alt=""
+        <img class="top" src="<?php image_path('exhaustion/zx-top.png'); ?>" alt=""
           <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
           <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%, 48%) rotate(40deg);"
         />
-        <img class="bottom" src="<?php image_path('zx-bottom.png'); ?>" alt=""
+        <img class="bottom" src="<?php image_path('exhaustion/zx-bottom.png'); ?>" alt=""
           <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
           <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(-9%, -48%) rotate(37deg);"
         />
-        <img class="mid" src="<?php image_path('zx-mid.png'); ?>" alt="Z" />
+        <img class="mid" src="<?php image_path('exhaustion/zx-mid.png'); ?>" alt="Z" />
       </div>
     </div>
   </div>
-
-  <!-- <img class="z 2" src="<?php image_path('z.png'); ?>" alt="Z" /> -->
-  <!-- <img class="z 3" src="<?php image_path('z.png'); ?>" alt="Z" /> -->
 
   <p class="line 1">The sweetest kind of exhaustion</p>
 

@@ -5,7 +5,7 @@
   visibility: hidden;
   font-size: 14px;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 20px;
   width: $header-width - 40px;
 
   @include transition(z-index 0 linear $header-transition-time, visibility 0 linear $header-transition-time, opacity $header-transition-time ease);
@@ -25,7 +25,7 @@
   }
 
   p {
-    font-family: 'museo-slab';
+    font-family: 'ff-tisa-web-pro';
     font-weight: 500;
     font-style: italic;
     font-size: 13px;

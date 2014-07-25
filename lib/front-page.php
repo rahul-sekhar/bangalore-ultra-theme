@@ -4,6 +4,13 @@ function ultra_front_page() {
   $page = new UltraFrontPage();
 
   $page->section('exhaustion', 0, 400)
+    ->event('snore', 0)
+      ->add(400)
+      ->add(300)
+      ->add(400)
+      ->add(300)
+      ->section()
+
     ->event('z1', 0)
       ->add(500)
       ->add(300)
