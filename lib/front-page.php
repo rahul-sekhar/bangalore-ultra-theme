@@ -3,7 +3,7 @@
 function ultra_front_page() {
   $page = new UltraFrontPage();
 
-  $page->section('exhaustion', 0, 400)
+  $page->section('exhaustion')
     ->event('snore', 0)
       ->add(400)
       ->add(300)
@@ -33,17 +33,17 @@ function ultra_front_page() {
     ->event('wait', 'form-letters:end')
       ->add(300);
 
-  $page->section('victory', 400)
+  $page->section('victory')
     ->event('wait')
       ->add(0)
       ->add(300);
 
-  $page->section('impossible', 200, 400)
+  $page->section('impossible', 200)
     ->event('wait')
       ->add(0)
       ->add(400);
 
-  $page->section('bamboo', 400)
+  $page->section('bamboo')
     ->event('wait')
       ->add(0)
       ->add(300);
