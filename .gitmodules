@@ -1,0 +1,6 @@
+[submodule "util/server-sync"]
+	path = util/server-sync
+	url = https://github.com/rahul-sekhar/server-sync
+[submodule "util/update-fontello"]
+  path = util/update-fontello
+  url = https://github.com/rahul-sekhar/update-fontello
