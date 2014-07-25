@@ -1,7 +1,7 @@
 nav.page {
   font-family: 'brandon-grotesque';
   position: fixed;
-  top: $page-top-padding;
+  top: $page-top-padding + $header-hidden-height;
   right: $page-nav-margin;
   width: $page-nav-width;
   border-top: 4px solid $red;

@@ -13,7 +13,7 @@ body.home {
 
     &.skrollable {
       position: fixed;
-      left: $header-hidden-width;
+      left: 0;
       right: 0;
       z-index: $scroll-section-index;
     }

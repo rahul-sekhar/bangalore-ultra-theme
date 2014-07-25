@@ -1,13 +1,6 @@
 #wrapper {
-  margin-left: $header-hidden-width;
   height: 100%;
-  @include transition(margin-left $header-transition-time ease);
-}
-
-body.nav-shown {
-  #wrapper {
-    margin-left: $header-width;
-  }
+  @include transition(margin-top $header-transition-time ease);
 }
 
 .content {

@@ -38,7 +38,7 @@ function ultra_front_page() {
       ->add(0)
       ->add(300);
 
-  $page->section('impossible', 200)
+  $page->section('despair', 200)
     ->event('wait')
       ->add(0)
       ->add(400);

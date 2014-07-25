@@ -1,6 +1,5 @@
 .content.page {
   padding: $page-top-padding $page-side-padding $page-bottom-padding $page-side-padding;
-  color: $grey-2;
   max-width: $page-width + ($page-side-padding * 2);
 
   h2 {
@@ -20,9 +19,5 @@
 
   p {
     margin: 20px 0;
-  }
-
-  p, span {
-    color: $grey-2 !important;
   }
 }

@@ -9,7 +9,7 @@
         leaveMark = containsString(el.data('leaveMark'), name);
 
         // Trigger runner animation
-        if (element.id === 'impossible') {
+        if (element.id === 'despair') {
           if ( direction === 'down' && startMark ) {
             el.addClass('play');
           }
@@ -20,7 +20,6 @@
              ( direction === 'up' && leaveMark )) {
 
           el.find('video').each(function () {
-            console.log('playing', this);
             this.play();
           });
 
@@ -28,7 +27,6 @@
                    ( direction === 'up' && enterMark )) {
 
           el.find('video').each(function () {
-            console.log('pausing', this);
             this.pause();
           });
 
@@ -37,10 +35,10 @@
     });
 
     // Clear the runner animation when finished
-    $('#impossible .tears')
+    $('#despair .crutch-runner')
       .on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
         if (e.originalEvent.propertyName !== 'opacity') {
-          $('#impossible').removeClass('play');
+          $('#despair').removeClass('play');
         }
     });
   });

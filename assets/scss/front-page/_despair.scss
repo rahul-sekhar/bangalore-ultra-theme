@@ -1,0 +1,71 @@
+#despair {
+  .runners {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
+
+    .despairing-runner {
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+
+    .lady-runner, .crutch-runner, .fat-runner, .african-runner {
+      left: 0%;
+      @include transform(translateX(-100%));
+    }
+
+    .tears {
+      opacity: 0;
+      top: -5%;
+    }
+  }
+
+  &.play {
+    .runners {
+      .lady-runner, .crutch-runner, .fat-runner, .african-runner {
+        left: 100%;
+        @include transform(translateX(0%));
+      }
+
+      .lady-runner {
+        $length: 3s;
+        $wait: 0;
+        @include transition(left $length linear $wait, transform $length linear $wait);
+      }
+
+      .crutch-runner {
+        $length: 4s;
+        $wait: 0;
+        @include transition(left $length linear $wait, transform $length linear $wait);
+      }
+
+      .african-runner {
+        $length: 2s;
+        $wait: 0;
+        @include transition(left $length linear $wait, transform $length linear $wait);
+      }
+
+      .fat-runner {
+        $length: 3.5s;
+        $wait: 0;
+        @include transition(left $length linear $wait, transform $length linear $wait);
+      }
+
+      .tears {
+        opacity: 1;
+        top: 100%;
+        @include transition(opacity 300ms ease 3s, top 1.5s linear 3s);
+      }
+    }
+  }
+}

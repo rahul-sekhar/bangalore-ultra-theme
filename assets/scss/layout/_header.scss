@@ -1,28 +1,32 @@
+body {
+  padding-top: $header-hidden-height;
+}
+
 #header {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
+  right: 0;
   background-color: $red;
-  width: $header-hidden-width;
-  padding: 10px 20px;
   z-index: 400;
+  padding: 0 $page-side-padding;
+  text-align: right;
 
-  @include transition(width $header-transition-time ease);
+  @include transition(height $header-transition-time ease);
 
   h1 {
-    position: absolute;
-    left: 0px;
-    bottom: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
 
     margin: 0;
-    @include transform(rotate(-45deg) scale(1.3));
+    @include transform(scale(0.9));
 
     @include hide-text;
     background: image-url('logo.png') no-repeat center;
     background-size: 100% 100%;
 
-    $logo-width: $header-width - (2 * 20px);
+    $logo-width: 140px;
     width: $logo-width;
     height: image-height('logo.png') / image-width('logo.png') * $logo-width;
   }
@@ -33,21 +37,18 @@
 }
 
 #pull-nav {
-  display: block;
-  margin-top: 0;
-  text-align: center;
+  position: relative;
+  display: inline-block;
   font-size: 50px;
+  z-index: 500;
 
   &:before {
     @include icon;
+    display: block;
+    height: $header-hidden-height;
     margin: 0;
     padding: 0;
     content: '\e800';
-  }
-}
-
-body.nav-shown {
-  #header {
-    width: $header-width;
+    line-height: $header-hidden-height;
   }
 }

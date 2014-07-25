@@ -106,21 +106,24 @@ $page = ultra_front_page();
 
 
 
-<?php $impossible = $page->sections['impossible']; ?>
-<section id="impossible"
-  <?php $impossible->section_point('enter'); ?>="top: 100%;"
-  <?php $impossible->section_point('start'); ?>="top: 0%;"
-  <?php $impossible->section_point('leave'); ?>="top: 0%;"
-  <?php $impossible->section_point('leave', 1); ?>="top: -100%;"
-  data-start-mark="<?php echo 'data' . $impossible->start(); ?>"
-  data-end-mark="<?php echo 'data' . $impossible->end(); ?>"
+<?php $despair = $page->sections['despair']; ?>
+<section id="despair"
+  <?php $despair->section_point('enter'); ?>="top: 100%;"
+  <?php $despair->section_point('start'); ?>="top: 0%;"
+  <?php $despair->section_point('leave'); ?>="top: 0%;"
+  <?php $despair->section_point('leave', 1); ?>="top: -100%;"
+  data-start-mark="<?php echo 'data' . $despair->start(); ?>"
+  data-end-mark="<?php echo 'data' . $despair->end(); ?>"
   data-emit-events
 >
-  <div class="runners fit">
-    <img class="background-runners" src="<?php image_path('background-runners.png'); ?>" alt="hunched person" />
-    <img class="person" src="<?php image_path('hunched-person.png'); ?>" alt="hunched person" />
-    <img class="tears" src="<?php image_path('hunched-person-tears.png'); ?>" alt="hunched person" />
-    <img class="foreground-runners" src="<?php image_path('foreground-runners.png'); ?>" alt="hunched person" />
+  <div class="runners">
+    <img class="fat-runner" src="<?php image_path('despair/fat-runner.png'); ?>" alt="" />
+    <img class="african-runner" src="<?php image_path('despair/african-runner.png'); ?>" alt="" />
+    <img class="despairing-runner" src="<?php image_path('despair/despairing-runner.png'); ?>" alt="" />
+    <!-- <img class="tears" src="<?php image_path('despair/tears.png'); ?>" alt="" /> -->
+    <img class="crutch-runner" src="<?php image_path('despair/crutch-runner.png'); ?>" alt="" />
+    <!-- <img class="notes" src="<?php image_path('despair/notes.png'); ?>" alt="" /> -->
+    <img class="lady-runner" src="<?php image_path('despair/lady-runner.png'); ?>" alt="" />
   </div>
 
   <p class="line">It always seems impossible until it's done.</p>
