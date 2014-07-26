@@ -114,10 +114,13 @@ $page = ultra_front_page();
 <section id="despair"
   <?php $despair->section_point('enter'); ?>="top: 100%;"
   <?php $despair->section_point('start'); ?>="top: 0%;"
+  <?php $despair->section_point('end'); ?>="top: 0%;"
   <?php $despair->section_point('leave'); ?>="top: 0%;"
   <?php $despair->section_point('leave', 1); ?>="top: -100%;"
+  data-enter-mark="<?php echo 'data' . $despair->enter(); ?>"
   data-start-mark="<?php echo 'data' . $despair->start(); ?>"
   data-end-mark="<?php echo 'data' . $despair->end(); ?>"
+  data-leave-mark="<?php echo 'data' . $despair->leave(); ?>"
   data-emit-events
 >
   <div class="inner">
@@ -131,7 +134,11 @@ $page = ultra_front_page();
       <img class="lady-runner" src="<?php image_path('despair/lady-runner.png'); ?>" alt="" />
     </div>
 
-    <p class="line">It always seems impossible until it's done.</p>
+    <div class="text">
+      <div class="text-inner">
+        <p>It always seems impossible until it's done.</p>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -1,3 +1,5 @@
+'use strict';
+
 (function($) {
   var runners = [
     {
@@ -17,7 +19,6 @@
       speed: 1.1
     }
   ];
-  var lastElement = '.crutch-runner';
   var speedMultiplier = 0.5;
 
 
@@ -29,31 +30,46 @@
       runner.element = section.find('.' + runner.name + '-runner');
     });
 
-    section.on('start', function () {
-      startRunners();
-      section.addClass('play');
+    section.on('start-down', function () {
+      prepareAnimation();
+      section.addClass('run');
     });
 
-    section.find(lastElement)
-      .on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
-        // if (e.originalEvent.propertyName !== 'opacity') {
-          resetRunners();
-          section.removeClass('play');
-        // }
+    section.on('enter-down enter-up', function () {
+      instantChange();
+      section.removeClass('run');
     });
 
-    function resetRunners() {
+    function instantChange() {
       $.each(runners, function (index, runner) {
-        runner.element.css('transition-duration', '0s');
+        runner.element
+          .css('transition-delay', '0ms')
+          .css('transition-duration', '0ms');
       });
+
+      section.find('.text')
+        .css('transition-delay', '0ms')
+        .css('transition-duration', '0ms');
     }
 
-    function startRunners() {
+    function prepareAnimation() {
+      var maxTime = 0;
+
       $.each(runners, function (index, runner) {
         var distance = section.width() + runner.element.width();
         var time = distance / (runner.speed * speedMultiplier);
-        runner.element.css('transition-duration', time + 'ms');
+        runner.element
+          .css('transition-delay', '0ms')
+          .css('transition-duration', time + 'ms');
+
+        if (time > maxTime) {
+          maxTime = time;
+        }
       });
+
+      section.find('.text')
+        .css('transition-delay', maxTime + 'ms')
+        .css('transition-duration', '1000ms');
     }
   });
 })(jQuery);

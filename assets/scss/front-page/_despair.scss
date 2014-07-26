@@ -30,19 +30,55 @@
       @include transition-timing-function(linear);
     }
 
-    .tears {
-      opacity: 1;
-      top: 100%;
-      @include transition(opacity 300ms ease 3s, top 1.5s linear 3s);
+    // .tears {
+    //   opacity: 1;
+    //   top: 100%;
+    //   @include transition(opacity 300ms ease 3s, top 1.5s linear 3s);
+    // }
+  }
+
+  .text {
+    @include box-sizing(content-box);
+    padding-top: $header-hidden-height + 1px;
+    margin-top: -1 * ($header-hidden-height + 1px);
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: darken(#3f6d6d, 10);
+    color: white;
+    opacity: 0;
+    @include transition-property(opacity);
+    @include transition-timing-function(ease);
+    @include transition-delay(5s);
+    @include transition-duration(1000ms);
+
+    .text-inner {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      display: table-cell;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 50px;
     }
   }
 
-  &.play {
+  &.run {
     .runners {
       .lady-runner, .crutch-runner, .fat-runner, .african-runner {
         left: 100%;
         @include transform(translateX(0%));
       }
+    }
+
+    .text {
+      opacity: 1;
     }
   }
 }

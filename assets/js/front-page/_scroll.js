@@ -1,42 +1,27 @@
+'use strict';
+
 (function($) {
   $(document).ready(function () {
-    var s = skrollr.init({
+    var s = window.skrollr.init({
       keyframe: function (element, name, direction) {
         var el = $(element);
 
-        startMark = containsString(el.data('startMark'), name);
-        enterMark = containsString(el.data('enterMark'), name);
-        leaveMark = containsString(el.data('leaveMark'), name);
+        // Triggers events, for example "start-down" when the start point of a section is scrolled to
+        // This requires that the section has a data element called dataStart, with a value data-[number],
+        // where number is the scroll value of that point
 
-        // Trigger runner animation
-        if (element.id === 'despair') {
-          if ( direction === 'down' && startMark ) {
-            el.trigger('start');
+        $.each(['enter', 'start', 'end', 'leave'], function () {
+          if (containsString(el.data(this + 'Mark'), name)) {
+            console.log(this + '-' + direction, element);
+            el.trigger(this + '-' + direction);
           }
-        }
-
-        // Play and pause videos
-        if  (( direction === 'down' && enterMark ) ||
-             ( direction === 'up' && leaveMark )) {
-
-          el.find('video').each(function () {
-            this.play();
-          });
-
-        } else if (( direction === 'down' && leaveMark ) ||
-                   ( direction === 'up' && enterMark )) {
-
-          el.find('video').each(function () {
-            this.pause();
-          });
-
-        }
+        });
       }
     });
   });
 
   function containsString(container, contained) {
-    if (!container || !container) {
+    if (!container || !contained) {
       return false;
     }
     return (container.split(',').indexOf(contained) !== -1);
