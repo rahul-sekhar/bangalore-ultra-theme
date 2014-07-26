@@ -186,7 +186,7 @@ $page = ultra_front_page();
   <?php $start_vid->section_point('enter'); ?>="top: 100%;"
   <?php $start_vid->section_point('start'); ?>="top: 0%;"
   <?php $start_vid->section_point('end'); ?>="top: 0%;"
-  <?php $start_vid->section_point('leave'); ?>="top: -100%;"
+  <?php $start_vid->section_point('leave'); ?>="top: 0%;"
   data-enter-mark="<?php echo 'data' . $start_vid->enter(); ?>"
   data-leave-mark="<?php echo 'data' . $start_vid->leave(); ?>"
   data-emit-events
@@ -202,19 +202,19 @@ $page = ultra_front_page();
 
 
 
-<?php $tagline = $page->sections['tagline']; ?>
-<section id="tagline"
-  <?php $tagline->section_point('enter'); ?>="top: 100%;"
-  <?php $tagline->section_point('start'); ?>="top: 0%;"
-  <?php $tagline->section_point('end'); ?>="top: 0%;"
-  <?php $tagline->section_point('leave'); ?>="top: -100%;"
+<?php $register = $page->sections['register']; ?>
+<section id="register"
+  <?php $register->section_point('enter'); ?>="top: 100%;"
+  <?php $register->section_point('start'); ?>="top: 0%;"
+  <?php $register->section_point('end'); ?>="top: 0%;"
+  <?php $register->section_point('leave'); ?>="top: -100%;"
 >
   <div class="inner">
-    <p>
-      Bangalore ultra.<br />
-      It's tough. Are you?
-    </p>
+    <div class="inner-2">
+      <p class="title">Bangalore ultra.</p>
+      <p class="subtitle">It's tough. Are you?</p>
 
-    <p><a href="">Register now</a></p>
+      <a class="register button" href="">Register now</a>
+    </div>
   </div>
 </section>

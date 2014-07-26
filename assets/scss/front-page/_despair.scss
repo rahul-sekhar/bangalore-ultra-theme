@@ -1,4 +1,8 @@
 #despair {
+  &, .inner {
+    background-color: #3f6d6d;
+  }
+
   .runners {
     position: absolute;
     bottom: 0;
@@ -22,11 +26,14 @@
     .lady-runner, .crutch-runner, .fat-runner, .african-runner {
       left: 0%;
       @include transform(translateX(-100%));
+      @include transition-property(left, transform);
+      @include transition-timing-function(linear);
     }
 
     .tears {
-      opacity: 0;
-      top: -5%;
+      opacity: 1;
+      top: 100%;
+      @include transition(opacity 300ms ease 3s, top 1.5s linear 3s);
     }
   }
 
@@ -35,36 +42,6 @@
       .lady-runner, .crutch-runner, .fat-runner, .african-runner {
         left: 100%;
         @include transform(translateX(0%));
-      }
-
-      .lady-runner {
-        $length: 3s;
-        $wait: 0;
-        @include transition(left $length linear $wait, transform $length linear $wait);
-      }
-
-      .crutch-runner {
-        $length: 4s;
-        $wait: 0;
-        @include transition(left $length linear $wait, transform $length linear $wait);
-      }
-
-      .african-runner {
-        $length: 2s;
-        $wait: 0;
-        @include transition(left $length linear $wait, transform $length linear $wait);
-      }
-
-      .fat-runner {
-        $length: 3.5s;
-        $wait: 0;
-        @include transition(left $length linear $wait, transform $length linear $wait);
-      }
-
-      .tears {
-        opacity: 1;
-        top: 100%;
-        @include transition(opacity 300ms ease 3s, top 1.5s linear 3s);
       }
     }
   }

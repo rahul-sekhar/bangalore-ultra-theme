@@ -15,9 +15,9 @@ $container-symbol-width: 20px;
 
     p {
       margin: 0;
+      line-height: 120%;
       font-weight: 600;
       width: $container-title-width - $container-symbol-width - 10px;
-      overflow: hidden;
       @include wrap-words;
     }
 

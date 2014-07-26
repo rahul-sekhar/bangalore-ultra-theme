@@ -1,5 +1,3 @@
-<a href="#" id="pull-nav"></a>
-
 <nav id="nav">
   <div class="inner">
     <ul>

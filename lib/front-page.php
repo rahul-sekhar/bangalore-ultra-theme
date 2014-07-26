@@ -58,7 +58,7 @@ function ultra_front_page() {
       ->add(0)
       ->add(300);
 
-  $page->section('tagline', 200, 0)
+  $page->section('register', 200, 0)
     ->event('wait')
       ->add(0)
       ->add(300);

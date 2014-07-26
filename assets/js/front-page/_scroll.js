@@ -11,7 +11,7 @@
         // Trigger runner animation
         if (element.id === 'despair') {
           if ( direction === 'down' && startMark ) {
-            el.addClass('play');
+            el.trigger('start');
           }
         }
 
@@ -32,14 +32,6 @@
 
         }
       }
-    });
-
-    // Clear the runner animation when finished
-    $('#despair .crutch-runner')
-      .on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
-        if (e.originalEvent.propertyName !== 'opacity') {
-          $('#despair').removeClass('play');
-        }
     });
   });
 

@@ -16,7 +16,7 @@ body {
 
   h1 {
     position: fixed;
-    left: 0;
+    left: $page-side-padding;
     top: 0;
 
     margin: 0;
@@ -34,21 +34,37 @@ body {
   a {
     color: white;
   }
+
+  .register {
+    display: block;
+    float: right;
+    line-height: $header-hidden-height;
+    height: $header-hidden-height;
+    margin-right: 20px;
+  }
 }
 
 #pull-nav {
   position: relative;
-  display: inline-block;
-  font-size: 50px;
   z-index: 500;
+  display: block;
+  float: right;
+  line-height: $header-hidden-height;
+  height: $header-hidden-height;
+  vertical-align: middle;
+  padding-right: 50px + 10px;
 
-  &:before {
+  &:after {
     @include icon;
-    display: block;
-    height: $header-hidden-height;
+    font-size: 50px;
+    content: '\e800';
+    position: absolute;
     margin: 0;
     padding: 0;
-    content: '\e800';
+    height: $header-hidden-height;
+    width: 50px;
     line-height: $header-hidden-height;
+    top: 0;
+    right: 0;
   }
 }
