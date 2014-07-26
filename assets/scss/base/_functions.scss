@@ -1,22 +1,68 @@
+@mixin clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+
 @mixin reset-list {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin single-line-justify-container($line-height) {
+  text-align: justify;
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    margin-bottom: -1 * $line-height;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@mixin single-line-justify-element($line-height) {
+  display: inline-block;
+  position: relative;
+  line-height: $line-height;
+  top: $line-height;
+}
+
+@mixin wrap-words {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+
+@mixin wrap-words-strict {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 @mixin placeholder-color($color) {
-  &::-webkit-input-placeholder { /* WebKit browsers */
-      color: $color;
-  }
-  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: $color;
-  }
-  &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: $color;
-  }
-  &:-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: $color;
-  }
+  &::-webkit-input-placeholder { color: $color; }
+  &:-moz-placeholder { color: $color; }
+  &::-moz-placeholder { color: $color; }
+  &:-ms-input-placeholder { color: $color; }
 }
 
 @mixin center {

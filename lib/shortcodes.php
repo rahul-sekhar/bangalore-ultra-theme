@@ -1,5 +1,28 @@
 <?php
 
+function clean_shortcode_content($content) {
+  // $output = $content;
+
+  // // Remove starting closing p tags
+  // $output = preg_replace('/\A\s*<\/p>/i', '', $output);
+
+  // // Remove ending opening p tags
+  // $output = preg_replace('/<p>\s*\z/i', '', $output);
+
+  // // Replace starting br with opening p tag if present
+  // $output = preg_replace('/\A\s*<br \/>/i', '<p>', $output);
+
+  // // Replace ending br with closing p tag if present
+  // $output = preg_replace('/<br \/>\s*\z/i', '</p>', $output);
+
+  // return $output;
+
+  $content = do_shortcode( shortcode_unautop( $content ) );
+  $content = preg_replace( '#^<\/p>|^<br \/>|<p>$#', '', $content);
+  return $content;
+}
+
+
 function button_shortcode($atts, $content) {
   extract( shortcode_atts( array (
     'url' => '',
@@ -19,37 +42,43 @@ function button_shortcode($atts, $content) {
     }
   }
 
-
-
   $output .= '>' . clean_shortcode_content($content) . '</a>';
   return $output;
 }
 add_shortcode('button', 'button_shortcode');
+
+
+function container_shortcode($atts, $content) {
+  extract( shortcode_atts( array (
+    'title' => '',
+  ), $atts ));
+
+  $output = '<div class="item-container">';
+  $output .= '<div class="title"><p>' . $title . '</p></div>';
+  $output .= '<div class="contents">' . do_shortcode(clean_shortcode_content($content)) . '</div></div>';
+  return $output;
+}
+add_shortcode('container', 'container_shortcode');
+
+
+function item_shortcode($atts, $content) {
+  $output = '<div class="item>' + clean_shortcode_content($content) . '</div>';
+  return $output;
+}
+add_shortcode('item', 'item_shortcode');
+
 
 function hideable_shortcode($atts, $content) {
   extract( shortcode_atts( array (
     'title' => 'Expand'
   ), $atts ));
 
-  $output = '<p class="hideable-title"><span>' . $title . '</span></p>';
-  $output .= '<div class="hideable-content">' . do_shortcode(clean_shortcode_content($content)) . '</div>';
+  $output = '<div class="hideable>';
+  $output .= '<p class="title">' . $title . '</p>';
+  $output .= '<div class="contents">' . do_shortcode(clean_shortcode_content($content)) . '</div></div>';
   return $output;
 }
 add_shortcode('hideable', 'hideable_shortcode');
 
-function clean_shortcode_content($content) {
-  $output = $content;
-
-  // Remove starting closing p tags
-  $output = preg_replace('/\A\s*<\/p>/i', '', $output);
-
-  // Remove ending opening p tags
-  $output = preg_replace('/<p>\s*\z/i', '', $output);
-
-  // Replace starting brs with opening p tags
-  $output = preg_replace('/\A\s*<br \/>/i', '<p>', $output);
-
-  return $output;
-}
 
 ?>

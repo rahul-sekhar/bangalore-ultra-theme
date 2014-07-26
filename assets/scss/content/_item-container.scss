@@ -1,0 +1,49 @@
+$container-title-width: 140px;
+$container-symbol-width: 20px;
+
+.item-container {
+  position: relative;
+  display: table;
+  margin: 20px 0;
+
+  .title {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: $container-title-width;
+    text-align: right;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+      width: $container-title-width - $container-symbol-width - 10px;
+      overflow: hidden;
+      @include wrap-words;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: $container-symbol-width;
+      border: 5px solid;
+      border-right: none;
+    }
+  }
+
+  .contents {
+    display: table-cell;
+    padding-left: 10px;
+
+    & > :first-child {
+      margin-top: 0;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

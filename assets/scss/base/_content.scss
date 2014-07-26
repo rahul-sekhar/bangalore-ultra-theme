@@ -4,8 +4,12 @@ body {
   font-size: 22px;
 }
 
-strong, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'brandon-grotesque';
+  font-weight: 700;
+}
+
+strong {
   font-weight: 600;
 }
 

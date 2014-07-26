@@ -2,6 +2,10 @@
   padding: $page-top-padding $page-side-padding $page-bottom-padding $page-side-padding;
   max-width: $page-width + ($page-side-padding * 2);
 
+  section {
+    padding-top: $header-hidden-height;
+  }
+
   h2 {
     margin: 0;
     font-size: 80px;
@@ -12,7 +16,7 @@
   h3 {
     font-size: 36px;
     margin: 0;
-    margin-top: 80px;
+    padding-top: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
   }

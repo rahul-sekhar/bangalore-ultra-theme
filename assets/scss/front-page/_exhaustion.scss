@@ -15,7 +15,10 @@
 }
 
 #exhaustion {
-  background-color: #E4C54A;
+  .inner {
+    background-color: #E4C54A;
+  }
+
   .person-container {
     @include fit('exhaustion/person.png');
 
