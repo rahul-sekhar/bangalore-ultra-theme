@@ -1,5 +1,5 @@
 <nav class="page">
-  <p class="title"><?php the_title(); ?></p>
+  <p class="title"><a href="#top"><?php the_title(); ?></a></p>
   <ul>
   <?php foreach(get_field('sections') as $section) :
     if ($section['visible'] && $section['title']) :

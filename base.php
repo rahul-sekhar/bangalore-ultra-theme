@@ -1,5 +1,5 @@
 <?php get_template_part('templates/layout/head'); ?>
-  <body <?php body_class(); ?>>
+  <body id="top" <?php body_class(); ?>>
 
   <?php
   do_action('get_header');

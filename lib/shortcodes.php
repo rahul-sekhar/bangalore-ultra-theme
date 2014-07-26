@@ -73,7 +73,7 @@ function hideable_shortcode($atts, $content) {
     'title' => 'Expand'
   ), $atts ));
 
-  $output = '<div class="hideable>';
+  $output = '<div class="hideable">';
   $output .= '<p class="title">' . $title . '</p>';
   $output .= '<div class="contents">' . do_shortcode(clean_shortcode_content($content)) . '</div></div>';
   return $output;
