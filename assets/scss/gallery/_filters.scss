@@ -1,0 +1,79 @@
+#gallery {
+  #filters {
+    @include clearfix;
+    padding-bottom: 20px;
+    text-transform: lowercase;
+    font-size: 14px;
+
+    .year {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-left: 20px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .current {
+        // @include whitney-semibold;
+        color: $red;
+      }
+    }
+
+    .show {
+      margin-top: 5px;
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-left: 5px;
+        line-height: 26px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &.all:after, &.featured:after {
+          content: '/';
+          color: black;
+          font-weight: normal;
+          margin-left: 5px;
+        }
+
+        &.bib-number a {
+          display: none;
+        }
+      }
+
+      &.featured .featured, &.all .all {
+        // @include whitney-semibold;
+        color: $red;
+      }
+
+      input {
+        // @include whitney-book;
+        font-size: 12px;
+        padding: 0 5px;
+        line-height: 24px;
+        height: 24px;
+        border: 1px solid #ccc;
+        @include border-radius(5px);
+        width: 150px;
+      }
+
+      .submit {
+        @include button;
+        margin: 0;
+        padding: 0 3px 0px 3px;
+        line-height: 26px;
+        @include border-radius(5px);
+
+        span {
+          display: block;
+          height: 0;
+          @include hide-text;
+        }
+      }
+    }
+  }
+}

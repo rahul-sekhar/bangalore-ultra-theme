@@ -6,7 +6,7 @@
       <li><a href="/registration">Registration</a></li>
       <li><a href="/race-day">Race Day</a></li>
       <li><a href="#">Hall of Fame</a></li>
-      <li><a href="#">Gallery</a></li>
+      <li><a href="/gallery">Gallery</a></li>
       <li><a href="/behind-the-ultra">Behind the Ultra</a></li>
     </ul>
   </div>

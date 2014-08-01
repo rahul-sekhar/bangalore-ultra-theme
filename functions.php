@@ -11,37 +11,49 @@
  */
 
 $roots_includes = array(
-  'lib/config.php',          // Configuration
+  'config',          // Configuration
 
   // Plugins
-  'lib/plugins/advanced-custom-fields/acf.php',
-  'lib/plugins/acf-repeater/acf-repeater.php',
-  'lib/plugins/acf-options-page/acf-options-page.php',
+  'plugins/advanced-custom-fields/acf',
+  'plugins/acf-repeater/acf-repeater',
+  'plugins/acf-options-page/acf-options-page',
+  'plugins/acf-gallery/acf-gallery',
+
+  'plugins/add-from-server/add-from-server',
 
   // ACF Fields
-  'lib/fields/pages.php',
+  'fields/pages',
+  'fields/gallery',
 
-  'lib/assets.php',             // Asset helpers (paths, etc)
-  'lib/utils.php',              // Utility functions
-  'lib/init.php',               // Initial theme setup and constants
-  'lib/wrapper.php',            // Theme wrapper class
-  'lib/sidebar.php',            // Sidebar class
-  'lib/titles.php',             // Page titles
-  'lib/nav.php',                // Custom nav modifications
-  'lib/scripts.php',            // Scripts and stylesheets
-  'lib/extras.php',             // Custom functions
-  'lib/nav-menu.php',           // Class for the page navigation menu
-  'lib/nav-helpers.php',        // Helpers for navigation
-  'lib/front-page-classes.php', // Helper class for the front page
-  'lib/front-page.php',         // Constructor for the front page
-  'lib/shortcodes.php',         // Shortcodes
+  'assets',             // Asset helpers (paths, etc)
+  'utils',              // Utility functions
+  'init',               // Initial theme setup and constants
+  'wrapper',            // Theme wrapper class
+  'sidebar',            // Sidebar class
+  'titles',             // Page titles
+  'nav',                // Custom nav modifications
+  'scripts',            // Scripts and stylesheets
+  'extras',             // Custom functions
+  'nav-menu',           // Class for the page navigation menu
+  'nav-helpers',        // Helpers for navigation
+  'front-page-classes', // Helper class for the front page
+  'front-page',         // Constructor for the front page
+  'shortcodes',         // Shortcodes
+  'gallery-type',       // Gallery type and taxonomies
+  'gallery-page',       // Gallery page helpers
+  'media-bulk-actions', // Bulk media operations - setting year, rotating
+  'responsive-images',  // Responsive image sizes
+  'bib-tagging',        // Bib tagging
 );
 
 foreach ($roots_includes as $file) {
-  if (!$filepath = locate_template($file)) {
+  if (!$filepath = locate_template('lib/' . $file . '.php')) {
     trigger_error(sprintf(__('Error locating %s for inclusion', 'roots'), $file), E_USER_ERROR);
   }
 
   require_once $filepath;
 }
 unset($file, $filepath);
+
+# Load add from server
+afs_load();

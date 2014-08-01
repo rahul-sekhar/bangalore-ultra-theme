@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'fontello';
+  src: url("../icons/fontello.eot?36678606");
+  src: url("../icons/fontello.eot?36678606#iefix") format("embedded-opentype"), url("../icons/fontello.woff?36678606") format("woff"), url("../icons/fontello.ttf?36678606") format("truetype"), url("../icons/fontello.svg?36678606#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../icons/fontello.svg?36678606#fontello') format('svg');
+  }
+}
+*/
+/* line 53, ../scss/settings/_icons.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 57, ../scss/settings/_icons.scss */
+.icon-menu:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 58, ../scss/settings/_icons.scss */
+.icon-right-open:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 59, ../scss/settings/_icons.scss */
+.icon-down-open:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 60, ../scss/settings/_icons.scss */
+.icon-right-open-big:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 61, ../scss/settings/_icons.scss */
+.icon-left-open-big:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 62, ../scss/settings/_icons.scss */
+.icon-cancel:before {
+  content: '\e805';
+}
+
+/* '' */
+/* line 63, ../scss/settings/_icons.scss */
+.icon-search:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 64, ../scss/settings/_icons.scss */
+.icon-left-open:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 4, ../scss/bib-tagging.scss */
+.message {
+  font-weight: bold;
+}
+
+/* line 8, ../scss/bib-tagging.scss */
+#bib-tagging-container {
+  display: none;
+  position: relative;
+}
+/* line 12, ../scss/bib-tagging.scss */
+#bib-tagging-container .photo-info {
+  position: absolute;
+  line-height: 30px;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+}
+/* line 19, ../scss/bib-tagging.scss */
+#bib-tagging-container .photo-info .loading {
+  display: none;
+  background-image: url('../img/loading.gif?1379659097');
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+}
+/* line 29, ../scss/bib-tagging.scss */
+#bib-tagging-container .preload-area {
+  display: none;
+}
+/* line 33, ../scss/bib-tagging.scss */
+#bib-tagging-container .current.image img {
+  width: 100%;
+  height: auto;
+}
+/* line 38, ../scss/bib-tagging.scss */
+#bib-tagging-container #bib-tags {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+/* line 43, ../scss/bib-tagging.scss */
+#bib-tagging-container a {
+  text-decoration: none;
+  font-size: 20px;
+}
+/* line 48, ../scss/bib-tagging.scss */
+#bib-tagging-container .tagging-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+/* line 54, ../scss/bib-tagging.scss */
+#bib-tagging-container .tagging-section input {
+  line-height: 30px;
+  height: 30px;
+}
+/* line 59, ../scss/bib-tagging.scss */
+#bib-tagging-container .tagging-section .next, #bib-tagging-container .tagging-section .prev {
+  display: block;
+  line-height: 30px;
+}
+/* line 64, ../scss/bib-tagging.scss */
+#bib-tagging-container .tagging-section .next {
+  float: right;
+}
+/* line 68, ../scss/bib-tagging.scss */
+#bib-tagging-container .tagging-section .prev {
+  float: left;
+}
+/* line 73, ../scss/bib-tagging.scss */
+#bib-tagging-container .back {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

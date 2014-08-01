@@ -1,4 +1,4 @@
-.button {
+@mixin button {
   display: inline-block;
   background-color: $red;
   color: white;
@@ -7,4 +7,19 @@
   text-transform:uppercase;
   letter-spacing: 1px;
   font-weight: 700;
+
+  border: none;
+  @include transition(background-color ease 250ms);
+
+  &:hover {
+    background-color: lighten($red, 10);
+  }
+
+  &.disabled {
+    background-color: #ccc;
+  }
+}
+
+.button {
+  @include button;
 }

@@ -1,0 +1,78 @@
+@import "compass";
+@import "settings/icons";
+
+.message {
+  font-weight: bold;
+}
+
+#bib-tagging-container {
+  display: none;
+  position: relative;
+
+  .photo-info {
+    position: absolute;
+    line-height: 30px;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+
+    .loading {
+      display: none;
+      background-image: image_url('loading.gif');
+      width: image_width('loading.gif');
+      height: image_height('loading.gif');
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .preload-area {
+    display: none;
+  }
+
+  .current.image img {
+    width: 100%;
+    height: auto;
+  }
+
+  #bib-tags {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .tagging-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    input {
+      line-height: 30px;
+      height: 30px;
+    }
+
+    .next, .prev {
+      display: block;
+      line-height: 30px;
+    }
+
+    .next {
+      float: right;
+    }
+
+    .prev {
+      float: left;
+    }
+  }
+
+  .back {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
