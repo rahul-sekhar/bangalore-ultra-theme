@@ -1,3 +1,6 @@
+Gallery Documentation
+=====================
+
 Photos are sorted by year, and for each year there is a set of featured images you need to pick out.
 
 To add or remove a year, go to "Gallery Years", under "Media". The only important field there is the name. The slug, parent and description do not matter and can be left blank.
