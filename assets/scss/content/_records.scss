@@ -1,0 +1,136 @@
+#records {
+  padding: $page-top-padding $page-side-padding $page-bottom-padding $page-side-padding;
+
+  .table-container {
+    position: relative;
+    clear: both;
+  }
+
+  table {
+    width: 100%;
+    display: none;
+
+    &.exiting {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &.course {
+      display: table;
+    }
+
+    &.year-winners {
+      .event {
+        padding-right: 20px;
+        vertical-align: top;
+      }
+
+      .event-row td {
+        padding-top: 20px;
+      }
+
+      .heading + .event-row td {
+        padding-top: 0;
+      }
+    }
+
+    td {
+      padding-right: 10px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    h4 {
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+
+    tr:first-child h4 {
+      margin-top: 20px;
+    }
+  }
+
+  .event {
+    // @include whitney-medium;
+  }
+
+  .filters{
+    font-size: 14px;
+
+    span {
+      // @include link-colors($teal, lighten($teal, 20));
+      cursor: pointer;
+    }
+
+    &, ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .year {
+      position: relative;
+
+      & > span:after {
+        content: '\e802';
+        @include icon;
+        text-align: left;
+        width: auto;
+        margin-left: 0.6em;
+      }
+
+      ul {
+        position: absolute;
+        display: none;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        background: black;
+        @include border-bottom-radius(5px);
+        overflow: hidden;
+        z-index: 50;
+
+        span {
+          display: block;
+          @include link-colors(white, white);
+        }
+
+        li {
+          background-color: black;
+          @include transition(background-color 200ms ease);
+          line-height: 25px;
+          &:hover {
+            background-color: lighten(black, 10);
+          }
+
+          &:first-child {
+            padding-top: 3px;
+          }
+          &:last-child {
+            padding-bottom: 3px;
+          }
+        }
+      }
+
+      li {
+        float: none;
+        margin-right: 0;
+      }
+    }
+
+    .current {
+      // @include whitney-semibold;
+
+      span {
+        @include link-colors($red, $red)
+      }
+    }
+  }
+}

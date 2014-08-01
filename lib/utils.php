@@ -25,3 +25,12 @@ function ultra_get_term_list($object, $taxonomy, $seperator = ', ') {
   $terms = wp_list_pluck($terms, 'name');
   return implode($terms, $seperator);
 }
+
+// Convert to an empty array if false
+function to_array($array) {
+  if (!$array) {
+    return array();
+  } else {
+    return $array;
+  }
+}

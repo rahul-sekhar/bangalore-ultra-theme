@@ -67,6 +67,12 @@
 }
 
 /* '' */
+/* line 61, ../scss/settings/_icons.scss */
+.icon-left-open-big:before {
+  content: '\e804';
+}
+
+/* '' */
 /* line 62, ../scss/settings/_icons.scss */
 .icon-cancel:before {
   content: '\e805';
