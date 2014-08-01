@@ -29,9 +29,11 @@ Designed by Shalini Sekhar
 @import "front-page/register";
 
 @import "content/page";
-@import "content/buttons";
-@import "content/item-container";
-@import "content/hideable";
+
+@import "components/item-container";
+@import "components/hideable";
+@import "components/button";
+@import "components/map";
 
 @import "gallery/layout";
 @import "gallery/filters";

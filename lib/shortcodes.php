@@ -81,4 +81,23 @@ function hideable_shortcode($atts, $content) {
 add_shortcode('hideable', 'hideable_shortcode');
 
 
-?>
+/* shortcode of this form: [map name="Map name"] */
+function sharan_map_shortcode( $atts ) {
+  extract( shortcode_atts( array(
+    'name' => null,
+  ), $atts ) );
+
+  $output = '';
+
+  global $post;
+  $post = get_page_by_title( $name, 'OBJECT', 'map' );
+  if ($post) : setup_postdata( $post );
+    ob_start();
+    get_template_part('templates/components/map');
+    $output = ob_get_clean();
+  endif;
+  wp_reset_postdata();
+
+  return $output;
+}
+add_shortcode( 'map', 'sharan_map_shortcode' );

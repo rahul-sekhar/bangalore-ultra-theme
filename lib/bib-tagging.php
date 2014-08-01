@@ -7,11 +7,24 @@ class BibTagging {
   }
 
   function admin_init() {
+    if (WP_ENV === 'development') {
+      $assets = array(
+        'css'           => '/assets/css-dev/bib-tagging.css',
+        'js'            => '/assets/js/bib-tagging.js',
+      );
+    } else {
+      $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
+      $assets     = json_decode($get_assets, true);
+      $assets     = array(
+        'css'           => '/assets/css/bib-tagging.css' . '?' . $assets['assets/css/bib-tagging.css']['hash'],
+        'js'            => '/assets/js/bib-tagging.min.js' . '?' . $assets['assets/js/bib-tagging.min.js']['hash'],
+      );
+    }
+
     // Add styles and script
-    $version = wp_get_theme()->Version;
     wp_register_script( 'images-loaded', get_stylesheet_directory_uri() . '/assets/js/plugins/imagesloaded.pkgd.min.js', array(), '3.0.4' );
-    wp_register_script( 'bib-tagging', get_stylesheet_directory_uri() . '/assets/js/bib-tagging.js', array( 'jquery', 'images-loaded' ), $version );
-    wp_register_style ('bib-tagging', get_stylesheet_directory_uri() . '/assets/css/bib-tagging.css', array(), $version);
+    wp_register_script( 'bib-tagging', get_template_directory_uri() . $assets['js'], array( 'jquery', 'images-loaded' ), null);
+    wp_register_style ('bib-tagging', get_stylesheet_directory_uri() . $assets['css'], false, null);
 
     add_action('load-media_page_bib-tagging', array(&$this, 'add_script_and_style') );
 

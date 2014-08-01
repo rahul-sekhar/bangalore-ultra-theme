@@ -24,6 +24,7 @@ $roots_includes = array(
   // ACF Fields
   'fields/pages',
   'fields/gallery',
+  'fields/maps',
 
   'assets',             // Asset helpers (paths, etc)
   'utils',              // Utility functions
@@ -44,6 +45,7 @@ $roots_includes = array(
   'media-bulk-actions', // Bulk media operations - setting year, rotating
   'responsive-images',  // Responsive image sizes
   'bib-tagging',        // Bib tagging
+  'map-type',            // Maps
 );
 
 foreach ($roots_includes as $file) {

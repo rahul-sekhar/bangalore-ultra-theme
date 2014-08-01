@@ -7,6 +7,12 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "43ab845088317bd348dee1d975700c48",
+      "css": "ok-circled",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
       "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
       "css": "menu",
       "code": 59392,
@@ -47,6 +53,12 @@
       "css": "right-open-big",
       "code": 59395,
       "src": "entypo"
+    },
+    {
+      "uid": "5889f24614ead600acce1af6a861b97c",
+      "css": "cw",
+      "code": 59400,
+      "src": "iconic"
     },
     {
       "uid": "221947bea81f49a11b863c686a7bd235",
