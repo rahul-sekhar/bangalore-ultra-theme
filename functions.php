@@ -36,8 +36,6 @@ $roots_includes = array(
   'nav',                // Custom nav modifications
   'scripts',            // Scripts and stylesheets
   'extras',             // Custom functions
-  'nav-menu',           // Class for the page navigation menu
-  'nav-helpers',        // Helpers for navigation
   'front-page-classes', // Helper class for the front page
   'front-page',         // Constructor for the front page
   'shortcodes',         // Shortcodes
