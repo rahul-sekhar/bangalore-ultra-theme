@@ -7,10 +7,6 @@
       speed: 1.2
     },
     {
-      name: 'crutch',
-      speed: 1
-    },
-    {
       name: 'african',
       speed: 1.4
     },
@@ -19,7 +15,7 @@
       speed: 1.1
     }
   ];
-  var speedMultiplier = 0.5;
+  var speedMultiplier = 0.9;
 
 
   $(document).ready(function () {
@@ -69,7 +65,7 @@
 
       section.find('.text')
         .css('transition-delay', maxTime + 'ms')
-        .css('transition-duration', '1000ms');
+        .css('transition-duration', '500ms');
     }
   });
 })(jQuery);

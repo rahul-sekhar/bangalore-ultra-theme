@@ -11,7 +11,7 @@ $page = ultra_front_page();
     <div class="person-container fit">
       <div class="person-and-shoes"
         <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%); opacity: 1;"
-        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,-100%); opacity: 0;"
+        <?php $exhaustion->point('form-letters', 3); ?>xx="transform:translate(0%,-100%); opacity: 0;"
       >
         <img src="<?php image_path('exhaustion/person.png'); ?>" alt="person" class="person" />
 
@@ -22,66 +22,96 @@ $page = ultra_front_page();
 
         <img src="<?php image_path('exhaustion/shoe-1.png'); ?>" alt="" class="shoe-1"
           <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
-          <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,10%);"
+          <?php $exhaustion->point('form-letters', 3); ?>xx="transform:translate(0%,10%);"
         />
         <img src="<?php image_path('exhaustion/shoe-2.png'); ?>" alt="" class="shoe-2"
           <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%);"
-          <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%,20%);"
+          <?php $exhaustion->point('form-letters', 3); ?>xx="transform:translate(0%,20%);"
         />
       </div>
 
-      <div class="z 1"
+      <div class="z z1"
         <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"
         <?php $exhaustion->point('z1', 1); ?>="transform:translate(100px,-100px);"
         <?php $exhaustion->point('z1', 2); ?>="transform:translate(160px,-160px);"
       >
-        <img src="<?php image_path('exhaustion/z1.png'); ?>" alt="Z"
+        <div class="container"
           <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:70px; height:70px;"
           <?php $exhaustion->point('z1', 2); ?>="opacity: 0;"
-        />
+        >
+          <img class="t" src="<?php image_path('exhaustion/z1.png'); ?>" alt="" />
+          <img class="m" src="<?php image_path('exhaustion/z2.png'); ?>" alt="" />
+          <img class="b" src="<?php image_path('exhaustion/z3.png'); ?>" alt="" />
+        </div>
       </div>
 
       <div class="z s"
         <?php $exhaustion->point('z2', 0); ?>="transform:translate(0px,0px);"
         <?php $exhaustion->point('z2', 1); ?>="transform:translate(70px,-100px);"
         <?php $exhaustion->point('z2', 2); ?>="transform:translate(100px,-140px);"
-        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0px,-150px);"
+        <?php $exhaustion->point('form-letters', 3); ?>="transform:translate(-170px,-220px);"
       >
-        <img src="<?php image_path('exhaustion/zs.png'); ?>" alt="Z"
+        <div class="container"
           <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z2', 1); ?>="width:70px; height:70px;"
           <?php $exhaustion->point('form-letters', 1); ?>="transform:rotateY(0deg);"
-          <?php $exhaustion->point('form-letters', 2); ?>="transform:rotateY(-180deg);"
-        />
+          <?php $exhaustion->point('form-letters', 2); ?>="transform:rotateY(-90deg); opacity: 1;"
+          <?php $exhaustion->point('form-letters', 3); ?>="transform:rotateY(-180deg); opacity: 0;"
+        >
+          <img class="t" src="<?php image_path('exhaustion/z1.png'); ?>" alt="" />
+          <img class="m" src="<?php image_path('exhaustion/z2.png'); ?>" alt="" />
+          <img class="b" src="<?php image_path('exhaustion/z3.png'); ?>" alt="" />
+        </div>
       </div>
 
       <div class="z x"
         <?php $exhaustion->point('z3', 0); ?>="transform:translate(0px,0px);"
         <?php $exhaustion->point('z3', 1); ?>="transform:translate(20px,-20px);"
-        <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(100px,-100px);"
+        <?php $exhaustion->point('form-letters', 3); ?>="transform:translate(-250px,-120px);"
       >
         <div class="container"
           <?php $exhaustion->point('z3', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z3', 1); ?>="width:70px; height:70px;"
           <?php $exhaustion->point('form-letters', 1); ?>="width:100px; height:100px;"
+          <?php $exhaustion->point('form-letters', 2); ?>="opacity: 1;"
+          <?php $exhaustion->point('form-letters', 3); ?>="opacity: 0;"
         >
-          <img class="top" src="<?php image_path('exhaustion/zx-top.png'); ?>" alt=""
+          <img class="t" src="<?php image_path('exhaustion/z1.png'); ?>" alt=""
             <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
-            <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(0%, 48%) rotate(40deg);"
+            <?php $exhaustion->point('form-letters', 3); ?>="transform:translate(-8%, 50%) rotate(40deg);"
           />
-          <img class="bottom" src="<?php image_path('exhaustion/zx-bottom.png'); ?>" alt=""
+          <img class="m" src="<?php image_path('exhaustion/z2.png'); ?>" alt="" />
+          <img class="b" src="<?php image_path('exhaustion/z3.png'); ?>" alt=""
             <?php $exhaustion->point('form-letters', 1); ?>="transform:translate(0%, 0%) rotate(0deg);"
-            <?php $exhaustion->point('form-letters', 2); ?>="transform:translate(-9%, -48%) rotate(37deg);"
+            <?php $exhaustion->point('form-letters', 3); ?>="transform:translate(0%, -44%) rotate(40deg);"
           />
-          <img class="mid" src="<?php image_path('exhaustion/zx-mid.png'); ?>" alt="Z" />
         </div>
       </div>
     </div>
 
-    <p class="line 1">The sweetest kind of exhaustion</p>
+    <div class="center"
+      <?php $exhaustion->point('form-letters', 2); ?>="opacity: 0;"
+      <?php $exhaustion->point('form-letters', 3); ?>="opacity: 1;"
+    >
+      <p class="center-inner">The sweetest exhaustion&hellip;</p>
+    </div>
+  </div>
+</section>
 
-    <p class="line 2">...is when you've tested yourself and discovered a grit and determination you didn't know you had.</p>
+
+
+<?php $limits = $page->sections['limits']; ?>
+<section id="limits"
+  <?php $limits->section_point('enter'); ?>="opacity: 0;"
+  <?php $limits->section_point('start'); ?>="opacity: 1;"
+  <?php $limits->section_point('end'); ?>="top: 0%;"
+  <?php $limits->section_point('leave'); ?>="top: -100%;"
+>
+  <div class="inner">
+    <div class="center">
+      <p class="center-inner">When you've pushed your limits,</p>
+    </div>
   </div>
 </section>
 
@@ -103,7 +133,9 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
       </video>
-      <p>A deeply personal victory for each runner</p>
+      <div class="center">
+        <p class="center-inner">Experienced your own kind of triumph</p>
+      </div>
     </div>
   </div>
 </section>
@@ -128,15 +160,12 @@ $page = ultra_front_page();
       <img class="fat-runner" src="<?php image_path('despair/fat-runner.png'); ?>" alt="" />
       <img class="african-runner" src="<?php image_path('despair/african-runner.png'); ?>" alt="" />
       <img class="despairing-runner" src="<?php image_path('despair/despairing-runner.png'); ?>" alt="" />
-      <!-- <img class="tears" src="<?php image_path('despair/tears.png'); ?>" alt="" /> -->
-      <img class="crutch-runner" src="<?php image_path('despair/crutch-runner.png'); ?>" alt="" />
-      <!-- <img class="notes" src="<?php image_path('despair/notes.png'); ?>" alt="" /> -->
       <img class="lady-runner" src="<?php image_path('despair/lady-runner.png'); ?>" alt="" />
     </div>
 
     <div class="text">
-      <div class="text-inner">
-        <p>It always seems impossible until it's done.</p>
+      <div class="center">
+        <p class="center-inner">Achieved what seemed impossible</p>
       </div>
     </div>
   </div>
@@ -160,7 +189,9 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
       </video>
-      <p>A trail through bamboo</p>
+      <div class="center">
+        <p class="center-inner">And experienced a trail through bamboo.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -172,30 +203,9 @@ $page = ultra_front_page();
   <?php $start->section_point('enter'); ?>="top: 100%;"
   <?php $start->section_point('start'); ?>="top: 0%;"
   <?php $start->section_point('end'); ?>="top: 0%;"
-  <?php $start->section_point('leave'); ?>="top: -100%;"
->
-  <div class="inner">
-    <p>
-      The start &mdash;<br />
-      <br />
-      early morning darkness,<br />
-      excitement in the air,<br />
-      energy in your veins, and<br />
-      incredibly inspiring fellow runners.<br />
-    </p>
-  </div>
-</section>
-
-
-
-<?php $start_vid = $page->sections['start_vid']; ?>
-<section id="start-vid"
-  <?php $start_vid->section_point('enter'); ?>="top: 100%;"
-  <?php $start_vid->section_point('start'); ?>="top: 0%;"
-  <?php $start_vid->section_point('end'); ?>="top: 0%;"
-  <?php $start_vid->section_point('leave'); ?>="top: 0%;"
-  data-enter-mark="<?php echo 'data' . $start_vid->enter(); ?>"
-  data-leave-mark="<?php echo 'data' . $start_vid->leave(); ?>"
+  <?php $start->section_point('leave'); ?>="top: 0%;"
+  data-enter-mark="<?php echo 'data' . $start->enter(); ?>"
+  data-leave-mark="<?php echo 'data' . $start->leave(); ?>"
   data-emit-events
 >
   <div class="inner">
@@ -203,6 +213,9 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
       </video>
+      <div class="center">
+        <p class="center-inner">A journey that began in early morning darkness.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -216,8 +229,8 @@ $page = ultra_front_page();
   <?php $register->section_point('end'); ?>="top: 0%;"
   <?php $register->section_point('leave'); ?>="top: -100%;"
 >
-  <div class="inner">
-    <div class="inner-2">
+  <div class="inner center">
+    <div class="center-inner">
       <p class="title">Bangalore ultra.</p>
       <p class="subtitle">It's tough. Are you?</p>
 

@@ -23,9 +23,13 @@ Designed by Shalini Sekhar
 
 @import "front-page/fit";
 @import "front-page/layout";
+@import "front-page/content";
 @import "front-page/skrollr";
 @import "front-page/exhaustion";
+@import "front-page/victory";
 @import "front-page/despair";
+@import "front-page/bamboo";
+@import "front-page/start";
 @import "front-page/register";
 
 @import "content/page";
@@ -35,6 +39,7 @@ Designed by Shalini Sekhar
 @import "components/hideable";
 @import "components/button";
 @import "components/map";
+@import "components/center";
 
 @import "gallery/layout";
 @import "gallery/filters";

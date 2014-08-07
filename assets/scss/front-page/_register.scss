@@ -1,25 +1,22 @@
 #register {
-  .inner {
+  &, .inner {
     background-color: #302a2a;
-    color: white;
-    font-size: 30px;
-    font-family: 'brandon-grotesque';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: table;
-  }
-
-  .inner-2 {
-    display: table-cell;
-    vertical-align: middle;
   }
 
   p {
     margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 40px;
+    font-family: 'brandon-grotesque';
+    line-height: 150%;
+    font-weight: 400;
   }
 
   .title {
     font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   .button.register {

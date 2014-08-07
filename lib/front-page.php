@@ -28,39 +28,34 @@ function ultra_front_page() {
     ->event('form-letters', 'z3:end')
       ->add(250)
       ->add(250)
+      ->add(250)
       ->section()
 
     ->event('wait', 'form-letters:end')
+      ->add(500);
+
+  $page->section('limits')
+    ->event('wait')
       ->add(300);
 
   $page->section('victory')
     ->event('wait')
-      ->add(0)
       ->add(300);
 
   $page->section('despair', 200)
     ->event('wait')
-      ->add(0)
       ->add(400);
 
   $page->section('bamboo')
     ->event('wait')
-      ->add(0)
       ->add(300);
 
   $page->section('start')
     ->event('wait')
-      ->add(0)
-      ->add(300);
-
-  $page->section('start_vid')
-    ->event('wait')
-      ->add(0)
       ->add(300);
 
   $page->section('register', 200, 0)
     ->event('wait')
-      ->add(0)
       ->add(300);
 
   return $page;

@@ -1,0 +1,10 @@
+.center {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.center-inner {
+  display: table-cell;
+  vertical-align: middle;
+}

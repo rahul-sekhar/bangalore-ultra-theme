@@ -16,7 +16,6 @@
 
 #exhaustion {
   .inner {
-    // background-color: #E4C54A;
     background-color: #302a2a;
   }
 
@@ -48,30 +47,14 @@
     }
   }
 
-  .line {
-    display: none;
-  }
-
   .z {
     top: 48%;
     left: 52%;
 
     img {
-      @include center;
-    }
-  }
-
-  .z.x {
-
-    .container {
-      @include transform(translate(-50%, -50%) rotate(80deg));
-    }
-
-    img {
       position: absolute;
       left: 0;
       top: 0;
-      @include transform(none);
     }
   }
 }
