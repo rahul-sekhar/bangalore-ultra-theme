@@ -131,7 +131,7 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <video loop>
-        <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
+        <source src="<?php //video_path('clip1.webm'); ?>" type="video/webm">
       </video>
       <div class="center">
         <p class="center-inner">Experienced your own kind of triumph</p>
@@ -187,7 +187,7 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <video loop>
-        <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
+        <source src="<?php //video_path('clip2.webm'); ?>" type="video/webm">
       </video>
       <div class="center">
         <p class="center-inner">And experienced a trail through bamboo.</p>
@@ -211,7 +211,7 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <video loop>
-        <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
+        <source src="<?php //video_path('clip3.webm'); ?>" type="video/webm">
       </video>
       <div class="center">
         <p class="center-inner">A journey that began in early morning darkness.</p>

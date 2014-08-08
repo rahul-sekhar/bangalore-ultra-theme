@@ -42,6 +42,16 @@ body {
     height: $header-hidden-height;
     margin-right: 20px;
   }
+
+  .dates {
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    float: right;
+    line-height: $header-hidden-height;
+    height: $header-hidden-height;
+    margin-right: 20px;
+  }
 }
 
 #pull-nav {

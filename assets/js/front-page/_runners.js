@@ -15,7 +15,7 @@
       speed: 1.1
     }
   ];
-  var speedMultiplier = 0.9;
+  var speedMultiplier = 1.2;
 
 
   $(document).ready(function () {
