@@ -140,9 +140,6 @@
       var viewerWidth = imageViewer.width();
       var viewerHeight = imageViewer.height();
 
-      console.log(width, height);
-      console.log(viewerWidth, viewerHeight);
-
       if (width / height > viewerWidth / viewerHeight) {
         img.width(viewerWidth);
         img.height(viewerWidth * (height / width));

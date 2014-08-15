@@ -55,7 +55,7 @@ class Ultra_Gallery {
 
   /* Compare a year against the current gallery year */
   public function is_current($year) {
-    return $year == $this->_year;
+    return $year->term_id == $this->_year->term_id;
   }
 
   /* Check if the gallery was found */

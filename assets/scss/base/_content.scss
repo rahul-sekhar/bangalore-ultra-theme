@@ -15,6 +15,8 @@ strong {
 
 a {
   text-decoration: none;
+  @include link-colors($teal, lighten($teal, 10));
+  @include transition(color 250ms ease);
 }
 
 img {

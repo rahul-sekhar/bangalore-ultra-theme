@@ -45,7 +45,6 @@
       });
 
       if (newWidth !== currWidth) {
-        console.log(newWidth);
         mapInner.data('imgWidth', newWidth);
 
         mapInner.find('.picture').each(function () {

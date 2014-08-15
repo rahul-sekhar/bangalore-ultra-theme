@@ -3,7 +3,7 @@
     @include clearfix;
     padding-bottom: 20px;
     text-transform: lowercase;
-    font-size: 14px;
+    font-size: 20px;
 
     .year {
       text-align: center;
@@ -16,8 +16,8 @@
         }
       }
       .current {
-        // @include whitney-semibold;
         color: $red;
+        font-weight: 600;
       }
     }
 
@@ -35,7 +35,7 @@
 
         &.all:after, &.featured:after {
           content: '/';
-          color: black;
+          color: $teal;
           font-weight: normal;
           margin-left: 5px;
         }
@@ -46,7 +46,7 @@
       }
 
       &.featured .featured, &.all .all {
-        // @include whitney-semibold;
+        font-weight: 600;
         color: $red;
       }
 
