@@ -15,14 +15,36 @@
 }
 
 #exhaustion {
+
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: image-url('exhaustion/texture.png');
+  //   opacity: 0.2;
+  // }
+
   .inner {
-    background-color: #302a2a;
+    background-color: #3b3225;
+    @include background-image(radial-gradient(transparent, rgba(black, 0.5)));
   }
 
-  .person-container {
-    @include fit('exhaustion/person.png');
+  .background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    .person-and-shoes {
+  .illustration-container {
+    @include fit('exhaustion/chap.png');
+
+    .illustration {
       position: absolute;
       height: 100%;
       width: 100%;
@@ -48,13 +70,28 @@
   }
 
   .z {
-    top: 48%;
-    left: 52%;
+    top: 36%;
+    left: 59%;
+  }
+
+  .text {
+    @include fit('exhaustion/text.png');
 
     img {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 10%;
+      top: 10%;
+      width: 80%;
+      height: 80%;
     }
+  }
+
+  .text-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.4);
   }
 }
