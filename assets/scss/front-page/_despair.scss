@@ -46,8 +46,8 @@
 
   .text-container {
     @include box-sizing(content-box);
-    padding-top: $header-hidden-height + 1px;
-    margin-top: -1 * ($header-hidden-height + 1px);
+    padding-top: $top-space + 1px;
+    margin-top: -1 * ($top-space + 1px);
     position: relative;
     z-index: 10;
     width: 100%;

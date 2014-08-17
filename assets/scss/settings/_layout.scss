@@ -1,5 +1,7 @@
-$header-hidden-height: 60px;
+$top-bar-height: 60px;
 $header-transition-time: 300ms;
+
+$top-space: $top-bar-height - 5px;
 
 $page-width: 700px;
 $page-side-padding: 100px;

@@ -1,5 +1,5 @@
 body {
-  padding-top: $header-hidden-height;
+  padding-top: $top-space;
 }
 
 #header {
@@ -7,7 +7,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: $red;
+  background: image-url('top-bar.png') repeat-x;
   z-index: 400;
   padding: 0 $page-side-padding;
   text-align: right;
@@ -38,8 +38,8 @@ body {
   .register {
     display: block;
     float: right;
-    line-height: $header-hidden-height;
-    height: $header-hidden-height;
+    line-height: $top-bar-height;
+    height: $top-bar-height;
     margin-right: 20px;
   }
 
@@ -48,8 +48,8 @@ body {
     color: white;
     display: block;
     float: right;
-    line-height: $header-hidden-height;
-    height: $header-hidden-height;
+    line-height: $top-bar-height;
+    height: $top-bar-height;
     margin-right: 20px;
   }
 }
@@ -59,8 +59,8 @@ body {
   z-index: 500;
   display: block;
   float: right;
-  line-height: $header-hidden-height;
-  height: $header-hidden-height;
+  line-height: $top-bar-height;
+  height: $top-bar-height;
   vertical-align: middle;
   padding-right: 50px + 10px;
 
@@ -71,9 +71,9 @@ body {
     position: absolute;
     margin: 0;
     padding: 0;
-    height: $header-hidden-height;
+    height: $top-bar-height;
     width: 50px;
-    line-height: $header-hidden-height;
+    line-height: $top-bar-height;
     top: 0;
     right: 0;
   }

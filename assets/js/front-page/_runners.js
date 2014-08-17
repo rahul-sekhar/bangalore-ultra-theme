@@ -26,7 +26,7 @@
       runner.element = section.find('.' + runner.name + '-runner');
     });
 
-    section.on('start-down', function () {
+    section.on('start-down leave-down leave-up', function () {
       prepareAnimation();
       section.addClass('run');
     });

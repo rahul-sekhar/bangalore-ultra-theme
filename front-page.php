@@ -128,7 +128,7 @@ $page = ultra_front_page();
 
 
 <?php $despair = $page->sections['despair']; ?>
-<section id="despair"
+<section id="despair" class="run"
   <?php $despair->section_point('enter'); ?>="top: 100%;"
   <?php $despair->section_point('start'); ?>="top: 0%;"
   <?php $despair->section_point('end'); ?>="top: 0%;"
@@ -174,8 +174,10 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
       </video>
-      <div class="text fit">
-        <img src="<?php image_path('bamboo/text.png'); ?>" alt="and experienced a trail through bamboo" />
+      <div class="text-container">
+        <div class="text fit">
+          <img src="<?php image_path('bamboo/text.png'); ?>" alt="and experienced a trail through bamboo" />
+        </div>
       </div>
     </div>
   </div>
@@ -198,9 +200,32 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
       </video>
-      <div class="center">
-        <p class="center-inner">A journey that began in early morning darkness.</p>
+      <div class="text fit">
+        <img src="<?php image_path('start/text.png'); ?>" alt="The journey begins..." />
       </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<?php $dates = $page->sections['dates']; ?>
+<section id="dates"
+  <?php $dates->section_point('enter'); ?>="top: 100%;"
+  <?php $dates->section_point('start'); ?>="top: 0%;"
+  <?php $dates->section_point('end'); ?>="top: 0%;"
+  <?php $dates->section_point('leave'); ?>="top: 0%;"
+>
+  <div class="inner">
+    <div class="dates">
+      <div class="text fit">
+        <img src="<?php image_path('dates/text.png'); ?>" alt="8th &amp; 9th November" />
+      </div>
+    </div>
+
+    <div class="register-container">
+      <a class="register button" href="">Register now</a>
     </div>
   </div>
 </section>
@@ -218,8 +243,6 @@ $page = ultra_front_page();
     <div class="center-inner">
       <p class="title">Bangalore ultra.</p>
       <p class="subtitle">It's tough. Are you?</p>
-
-      <a class="register button" href="">Register now</a>
     </div>
   </div>
 </section>

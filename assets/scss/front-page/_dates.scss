@@ -1,0 +1,28 @@
+#dates {
+  .text {
+    @include fit('dates/text.png');
+
+    img {
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  .dates {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    height: 50%;
+  }
+
+  .register-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65%;
+  }
+}

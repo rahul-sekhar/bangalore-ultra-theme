@@ -54,6 +54,10 @@ function ultra_front_page() {
     ->event('wait')
       ->add(300);
 
+  $page->section('dates')
+    ->event('wait')
+      ->add(300);
+
   $page->section('register', 200, 0)
     ->event('wait')
       ->add(300);

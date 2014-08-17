@@ -1,8 +1,21 @@
 #bamboo {
   background-color: transparent;
 
+  .text-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+  }
+
   .text {
     @include fit('bamboo/text.png');
+    bottom: 0;
+    right: 0;
+    left: auto;
+    top: auto;
+    @include transform(none);
 
     img {
       position: absolute;

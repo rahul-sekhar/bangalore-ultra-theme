@@ -2,4 +2,16 @@
   &, .inner {
     background-color: black;
   }
+
+  .text {
+    @include fit('start/text.png');
+
+    img {
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      width: 80%;
+      height: 80%;
+    }
+  }
 }
