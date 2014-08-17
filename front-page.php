@@ -152,7 +152,7 @@ $page = ultra_front_page();
 
     <div class="text-container">
       <div class="text fit">
-        <img src="<?php image_path('despair/text.png'); ?>" alt="achieved what seemed impossible" />
+        <img src="<?php image_path('despair/text1.png'); ?>" alt="achieved what seemed impossible" />
       </div>
     </div>
   </div>
