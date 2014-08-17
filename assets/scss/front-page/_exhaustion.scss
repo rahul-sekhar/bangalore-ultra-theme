@@ -16,18 +16,6 @@
 
 #exhaustion {
 
-  // &:after {
-  //   content: '';
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: image-url('exhaustion/texture.png');
-  //   opacity: 0.2;
-  // }
-
   .inner {
     background-color: #3b3225;
     @include background-image(radial-gradient(transparent, rgba(black, 0.5)));

@@ -43,7 +43,7 @@
           .css('transition-duration', '0ms');
       });
 
-      section.find('.text')
+      section.find('.text-container')
         .css('transition-delay', '0ms')
         .css('transition-duration', '0ms');
     }
@@ -63,7 +63,7 @@
         }
       });
 
-      section.find('.text')
+      section.find('.text-container')
         .css('transition-delay', maxTime + 'ms')
         .css('transition-duration', '500ms');
     }

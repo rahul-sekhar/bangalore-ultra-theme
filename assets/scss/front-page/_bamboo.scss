@@ -1,3 +1,15 @@
 #bamboo {
   background-color: transparent;
+
+  .text {
+    @include fit('bamboo/text.png');
+
+    img {
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      width: 80%;
+      height: 80%;
+    }
+  }
 }

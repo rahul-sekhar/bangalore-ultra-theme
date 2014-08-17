@@ -94,8 +94,8 @@ $page = ultra_front_page();
   <?php $limits->section_point('leave'); ?>="top: -100%;"
 >
   <div class="inner">
-    <div class="center">
-      <p class="center-inner">When you've pushed your limits,</p>
+    <div class="text fit">
+      <img src="<?php image_path('limits/text.png'); ?>" alt="...when you've pushed your limits" />
     </div>
   </div>
 </section>
@@ -116,10 +116,10 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <video loop>
-        <source src="<?php //video_path('clip1.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
       </video>
-      <div class="center">
-        <p class="center-inner">Experienced your own kind of triumph</p>
+      <div class="text fit">
+        <img src="<?php image_path('victory/text.png'); ?>" alt="experienced your own kind of triumph" />
       </div>
     </div>
   </div>
@@ -148,9 +148,9 @@ $page = ultra_front_page();
       <img class="lady-runner" src="<?php image_path('despair/lady-runner.png'); ?>" alt="" />
     </div>
 
-    <div class="text">
-      <div class="center">
-        <p class="center-inner">Achieved what seemed impossible</p>
+    <div class="text-container">
+      <div class="text fit">
+        <img src="<?php image_path('despair/text.png'); ?>" alt="achieved what seemed impossible" />
       </div>
     </div>
   </div>
@@ -172,10 +172,10 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <video loop>
-        <source src="<?php //video_path('clip2.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
       </video>
-      <div class="center">
-        <p class="center-inner">And experienced a trail through bamboo.</p>
+      <div class="text fit">
+        <img src="<?php image_path('bamboo/text.png'); ?>" alt="and experienced a trail through bamboo" />
       </div>
     </div>
   </div>
@@ -196,7 +196,7 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <video loop>
-        <source src="<?php //video_path('clip3.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
       </video>
       <div class="center">
         <p class="center-inner">A journey that began in early morning darkness.</p>
