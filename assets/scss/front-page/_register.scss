@@ -22,4 +22,15 @@
   .button.register {
     margin-top: 20px;
   }
+
+  .sponsors {
+    @include reset-list;
+    margin-top: 40px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
 }

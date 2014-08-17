@@ -1,6 +1,6 @@
 #victory {
   .text {
-    @include fit('victory/text.png');
+    @include fit('victory/text1.png');
 
     img {
       position: absolute;
@@ -9,5 +9,13 @@
       width: 80%;
       height: 80%;
     }
+  }
+
+  .text-container {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }

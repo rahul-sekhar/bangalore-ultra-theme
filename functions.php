@@ -26,6 +26,7 @@ $roots_includes = array(
   'fields/gallery',
   'fields/maps',
   'fields/records',
+  'fields/sponsors',
 
   'assets',             // Asset helpers (paths, etc)
   'utils',              // Utility functions
@@ -44,7 +45,9 @@ $roots_includes = array(
   'media-bulk-actions', // Bulk media operations - setting year, rotating
   'responsive-images',  // Responsive image sizes
   'bib-tagging',        // Bib tagging
-  'map-type',            // Maps
+  'map-type',           // Maps
+  'image-handling',     // Image manipulation to make logos uniform
+  'cache',              // Setup cache directory
 );
 
 foreach ($roots_includes as $file) {

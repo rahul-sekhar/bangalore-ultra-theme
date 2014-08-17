@@ -118,8 +118,10 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
       </video>
-      <div class="text fit">
-        <img src="<?php image_path('victory/text.png'); ?>" alt="experienced your own kind of triumph" />
+      <div class="text-container">
+        <div class="text fit">
+          <img src="<?php image_path('victory/text1.png'); ?>" alt="experienced your own kind of triumph" />
+        </div>
       </div>
     </div>
   </div>
@@ -164,7 +166,8 @@ $page = ultra_front_page();
   <?php $bamboo->section_point('enter'); ?>="top: 100%;"
   <?php $bamboo->section_point('start'); ?>="top: 0%;"
   <?php $bamboo->section_point('end'); ?>="top: 0%;"
-  <?php $bamboo->section_point('leave'); ?>="top: -100%;"
+  <?php $bamboo->section_point('leave'); ?>="top: 0%;"
+  <?php $bamboo->section_point('leave', 1); ?>="top: -100%;"
   data-enter-mark="<?php echo 'data' . $bamboo->enter(); ?>,<?php echo 'data' . $bamboo->enter() - 1; ?>"
   data-leave-mark="<?php echo 'data' . $bamboo->leave(); ?>"
   data-emit-events
@@ -243,6 +246,27 @@ $page = ultra_front_page();
     <div class="center-inner">
       <p class="title">Bangalore ultra.</p>
       <p class="subtitle">It's tough. Are you?</p>
+
+      <ul class="sponsors">
+        <?php
+        $logoColor = 'ffffff';
+        $logoArea = 8000;
+        ?>
+        <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
+          <li>
+            <?php if( $sponsor['url'] ) : ?>
+              <a href="<?php echo $sponsor['url']; ?>" target="_blank">
+            <?php endif; ?>
+              <img
+                src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
+                alt="<?php echo $sponsor['name']; ?>"
+              />
+            <?php if( $sponsor['url'] ) : ?>
+              </a>
+            <?php endif; ?>
+          </li>
+        <?php endforeach; ?>
+      </ul>
     </div>
   </div>
 </section>

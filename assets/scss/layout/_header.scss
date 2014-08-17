@@ -8,6 +8,7 @@ body {
   left: 0;
   right: 0;
   background: image-url('top-bar.png') repeat-x;
+  // background: $red;
   z-index: 400;
   padding: 0 $page-side-padding;
   text-align: right;
@@ -63,6 +64,9 @@ body {
   height: $top-bar-height;
   vertical-align: middle;
   padding-right: 50px + 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
   &:after {
     @include icon;
