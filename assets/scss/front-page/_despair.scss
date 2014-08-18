@@ -1,14 +1,21 @@
 #despair {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: image-url('texture.png');
+  }
+
   &, .inner {
     background-color: #3b3225;
   }
 
   .runners {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    @include fit('despair/person.png');
 
     img {
       position: absolute;
@@ -18,14 +25,9 @@
       max-width: none;
     }
 
-    .despairing-runner {
-      left: 50%;
-      @include transform(translateX(-50%));
-    }
-
-    .lady-runner, .fat-runner, .african-runner {
-      left: 50%;
-      @include transform(translateX(-120%));
+    .runner {
+      left: 0%;
+      @include transform(translateX(-100%));
       @include transition-property(left, transform);
       @include transition-timing-function(linear);
     }
@@ -33,7 +35,7 @@
 
   &.run {
     .runners {
-      .lady-runner, .fat-runner, .african-runner {
+      .runner {
         left: 100%;
         @include transform(translateX(0%));
       }

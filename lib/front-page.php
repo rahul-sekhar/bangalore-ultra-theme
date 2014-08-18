@@ -31,12 +31,10 @@ function ultra_front_page() {
       ->add(250)
       ->section()
 
-    ->event('wait', 'form-letters:end')
+    ->event('text', 'form-letters:end')
+      ->add(500)
+      ->add(200)
       ->add(500);
-
-  $page->section('limits')
-    ->event('wait')
-      ->add(300);
 
   $page->section('victory')
     ->event('wait')

@@ -1,4 +1,6 @@
 #victory {
+  background-color: transparent;
+
   .text {
     @include fit('victory/text1.png');
 

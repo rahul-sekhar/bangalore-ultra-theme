@@ -74,28 +74,28 @@ $page = ultra_front_page();
     </div>
 
     <div class="text-container"
-      <?php $exhaustion->point('form-letters', 2); ?>="opacity: 0;"
-      <?php $exhaustion->point('form-letters', 3); ?>="opacity: 1;"
+      <?php $exhaustion->point('form-letters', 2); ?>="background-color: rgba(0,0,0,0.4); opacity: 0;"
+      <?php $exhaustion->point('form-letters', 3); ?>="background-color: rgba(0,0,0,0.4); opacity: 1;"
+      <?php $exhaustion->point('text', 1); ?>="background-color: rgba(0,0,0,0.4);"
+      <?php $exhaustion->point('text', 2); ?>="background-color: rgba(0,0,0,0.6);"
     >
-      <div class="text fit">
-        <img src="<?php image_path('exhaustion/text.png'); ?>" alt="The sweetest exhaustion" />
+      <div class="text-wrapper"
+        <?php $exhaustion->point('text', 1); ?>="left: 0%;"
+        <?php $exhaustion->point('text', 2); ?>="left: 100%;"
+      >
+        <div class="text1 fit">
+          <img src="<?php image_path('exhaustion/text1.png'); ?>" alt="The sweetest exhaustion" />
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-
-
-<?php $limits = $page->sections['limits']; ?>
-<section id="limits"
-  <?php $limits->section_point('enter'); ?>="opacity: 0;"
-  <?php $limits->section_point('start'); ?>="opacity: 1;"
-  <?php $limits->section_point('end'); ?>="top: 0%;"
-  <?php $limits->section_point('leave'); ?>="top: -100%;"
->
-  <div class="inner">
-    <div class="text fit">
-      <img src="<?php image_path('limits/text.png'); ?>" alt="...when you've pushed your limits" />
+      <div class="text-wrapper"
+        <?php $exhaustion->point('text', 1); ?>="left: -100%;"
+        <?php $exhaustion->point('text', 2); ?>="left: 0%;"
+      >
+        <div class="text2 fit">
+          <img src="<?php image_path('exhaustion/text2.png'); ?>" alt="...when you've pushed your limits" />
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -143,11 +143,20 @@ $page = ultra_front_page();
   data-emit-events
 >
   <div class="inner">
-    <div class="runners">
-      <img class="fat-runner" src="<?php image_path('despair/fat-runner.png'); ?>" alt="" />
-      <img class="african-runner" src="<?php image_path('despair/african-runner.png'); ?>" alt="" />
-      <img class="despairing-runner" src="<?php image_path('despair/despairing-runner.png'); ?>" alt="" />
-      <img class="lady-runner" src="<?php image_path('despair/lady-runner.png'); ?>" alt="" />
+    <div class="runners fit">
+      <img class="ground" src="<?php image_path('despair/ground.png'); ?>" alt="" />
+      <img class="cloud" src="<?php image_path('despair/cloud.png'); ?>" alt="" />
+      <img class="dragonfly-1" src="<?php image_path('despair/dragonfly-1.png'); ?>" alt="" />
+      <img class="dragonfly-2" src="<?php image_path('despair/dragonfly-2.png'); ?>" alt="" />
+
+      <img class="runner drinking" src="<?php image_path('despair/runner-drinking.png'); ?>" alt="" />
+      <img class="runner african" src="<?php image_path('despair/runner-african.png'); ?>" alt="" />
+      <img class="runner lady" src="<?php image_path('despair/runner-lady.png'); ?>" alt="" />
+
+      <img class="person" src="<?php image_path('despair/person.png'); ?>" alt="" />
+
+      <img class="runner lady-2" src="<?php image_path('despair/runner-lady-2.png'); ?>" alt="" />
+      <img class="runner towel" src="<?php image_path('despair/runner-towel.png'); ?>" alt="" />
     </div>
 
     <div class="text-container">
@@ -204,7 +213,7 @@ $page = ultra_front_page();
         <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
       </video>
       <div class="text fit">
-        <img src="<?php image_path('start/text.png'); ?>" alt="The journey begins..." />
+        <img src="<?php image_path('start/text1.png'); ?>" alt="The journey begins..." />
       </div>
     </div>
   </div>

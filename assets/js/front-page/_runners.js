@@ -3,15 +3,23 @@
 (function($) {
   var runners = [
     {
-      name: 'lady',
-      speed: 1.2
+      name: 'drinking',
+      speed: 1.1
     },
     {
       name: 'african',
       speed: 1.4
     },
     {
-      name: 'fat',
+      name: 'lady',
+      speed: 1.2
+    },
+    {
+      name: 'lady-2',
+      speed: 1.05
+    },
+    {
+      name: 'towel',
       speed: 1.1
     }
   ];
@@ -23,7 +31,7 @@
     var section = $('#despair');
 
     $.each(runners, function (index, runner) {
-      runner.element = section.find('.' + runner.name + '-runner');
+      runner.element = section.find('.' + runner.name + '.runner');
     });
 
     section.on('start-down leave-down leave-up', function () {
@@ -52,7 +60,7 @@
       var maxTime = 0;
 
       $.each(runners, function (index, runner) {
-        var distance = section.width() + runner.element.width();
+        var distance = section.find('.runners').width() + runner.element.width();
         var time = distance / (runner.speed * speedMultiplier);
         runner.element
           .css('transition-delay', '0ms')

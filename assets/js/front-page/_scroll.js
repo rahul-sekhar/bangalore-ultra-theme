@@ -12,7 +12,6 @@
 
         $.each(['enter', 'start', 'end', 'leave'], function () {
           if (containsString(el.data(this + 'Mark'), name)) {
-            console.log(this + '-' + direction, element);
             el.trigger(this + '-' + direction);
           }
         });
