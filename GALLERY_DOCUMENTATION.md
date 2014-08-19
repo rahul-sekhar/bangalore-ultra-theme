@@ -3,9 +3,9 @@ Gallery Documentation
 
 The gallery is split up into years. Each year contains a gallery of all photos from that year and a selection of featured photos. Users can also search the photos from that year by bib number.
 
-The `Media` section of the backend contains all images used on the site. Not just the gallery photos, but also images for the trail, logos, images in pages, etc. **A photo will only appear in the photo gallery if it has been tagged with a year or added to the featured gallery for a year.**
+The `Media` section of the backend contains all images used on the site. Not just the gallery photos, but also images for the trail, logos, images in pages, etc. ***A photo will only appear in the photo gallery if it has been tagged with a year or added to the featured gallery for a year.***
 
-To add or remove a year, go to `Gallery Years`, under `Media`. The important fields here are the name and the slug. **Make sure the name and slug are both set to the year, for example `2014`.** The parent and description do not matter and can be left blank.
+To add or remove a year, go to `Gallery Years`, under `Media`. The important fields here are the name and the slug. *Make sure the name and slug are both set to the year, for example `2014`.* The parent and description do not matter and can be left blank.
 
 If you want to add a few photos, you can click on `Add New` in the `Media` section and upload them there. They'll appear in the `Media` section. You should then select them and tag them by choosing `Set year: xxxx` in the `Bulk actions` dropdown, and clicking on `Apply`.
 
