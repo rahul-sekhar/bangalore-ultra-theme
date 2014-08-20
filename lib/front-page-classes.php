@@ -63,7 +63,7 @@ class FPSection {
   }
 
   function point($event, $point) {
-    echo 'data-' . $this->events[$event]->points[$point];
+    echo 'data-' . ($this->start() + $this->events[$event]->points[$point]);
   }
 }
 

@@ -9,8 +9,17 @@
     height: 50%;
   }
 
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(black, 0.2);
+  }
+
   .text {
-    @include fit('bamboo/text.png');
+    @include fit('bamboo/text1.png');
     bottom: 0;
     right: 0;
     left: auto;

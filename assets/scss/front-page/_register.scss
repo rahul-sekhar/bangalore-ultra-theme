@@ -23,14 +23,36 @@
     margin-top: 20px;
   }
 
+  .sponsors-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+
   .sponsors {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
     @include reset-list;
-    margin-top: 40px;
     text-align: center;
 
     li {
       display: inline-block;
       margin: 0 10px;
+    }
+  }
+
+  @media (max-width: 800px), (max-height: 600px) {
+    .sponsors-container {
+      background-color: #302a2a;
+    }
+
+    .sponsors {
+      bottom: auto;
+      top: 50%;
+      @include transform(translateY(-50%));
     }
   }
 }

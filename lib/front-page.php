@@ -32,9 +32,9 @@ function ultra_front_page() {
       ->section()
 
     ->event('text', 'form-letters:end')
-      ->add(500)
+      ->add(400)
       ->add(200)
-      ->add(500);
+      ->add(400);
 
   $page->section('victory')
     ->event('wait')
@@ -50,15 +50,21 @@ function ultra_front_page() {
 
   $page->section('start')
     ->event('wait')
-      ->add(300);
+      ->add(400)
+      ->section()
 
-  $page->section('dates')
-    ->event('wait')
-      ->add(300);
+    ->event('dates', 'wait:end')
+      ->add(200)
+      ->add(400);
 
   $page->section('register', 200, 0)
     ->event('wait')
-      ->add(300);
+      ->add(400)
+      ->section()
+
+    ->event('sponsors', 'wait:end')
+      ->add(200)
+      ->add(400);
 
   return $page;
 }

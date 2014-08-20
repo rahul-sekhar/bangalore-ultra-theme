@@ -10,6 +10,8 @@
         // This requires that the section has a data element called dataStart, with a value data-[number],
         // where number is the scroll value of that point
 
+        console.log(name, direction);
+
         $.each(['enter', 'start', 'end', 'leave'], function () {
           if (containsString(el.data(this + 'Mark'), name)) {
             el.trigger(this + '-' + direction);

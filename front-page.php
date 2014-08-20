@@ -93,7 +93,7 @@ $page = ultra_front_page();
         <?php $exhaustion->point('text', 2); ?>="left: 0%;"
       >
         <div class="text2 fit">
-          <img src="<?php image_path('exhaustion/text2.png'); ?>" alt="...when you've pushed your limits" />
+          <img src="<?php image_path('exhaustion/text3.png'); ?>" alt="...when you've pushed your limits" />
         </div>
       </div>
     </div>
@@ -110,6 +110,7 @@ $page = ultra_front_page();
   <?php $victory->section_point('end'); ?>="top: 0%;"
   <?php $victory->section_point('leave'); ?>="top: -100%;"
   data-enter-mark="<?php echo 'data' . $victory->enter(); ?>,<?php echo 'data' . $victory->enter() - 1; ?>"
+  data-start-mark="<?php echo 'data' . $victory->start(); ?>"
   data-leave-mark="<?php echo 'data' . $victory->leave(); ?>"
   data-emit-events
 >
@@ -120,7 +121,7 @@ $page = ultra_front_page();
       </video>
       <div class="text-container">
         <div class="text fit">
-          <img src="<?php image_path('victory/text1.png'); ?>" alt="experienced your own kind of triumph" />
+          <img src="<?php image_path('victory/text2.png'); ?>" alt="experienced your own kind of triumph" />
         </div>
       </div>
     </div>
@@ -161,7 +162,7 @@ $page = ultra_front_page();
 
     <div class="text-container">
       <div class="text fit">
-        <img src="<?php image_path('despair/text1.png'); ?>" alt="achieved what seemed impossible" />
+        <img src="<?php image_path('despair/text2.png'); ?>" alt="achieved what seemed impossible" />
       </div>
     </div>
   </div>
@@ -178,6 +179,7 @@ $page = ultra_front_page();
   <?php $bamboo->section_point('leave'); ?>="top: 0%;"
   <?php $bamboo->section_point('leave', 1); ?>="top: -100%;"
   data-enter-mark="<?php echo 'data' . $bamboo->enter(); ?>,<?php echo 'data' . $bamboo->enter() - 1; ?>"
+  data-start-mark="<?php echo 'data' . $bamboo->start(); ?>"
   data-leave-mark="<?php echo 'data' . $bamboo->leave(); ?>"
   data-emit-events
 >
@@ -186,9 +188,10 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
       </video>
+      <div class="overlay"></div>
       <div class="text-container">
         <div class="text fit">
-          <img src="<?php image_path('bamboo/text.png'); ?>" alt="and experienced a trail through bamboo" />
+          <img src="<?php image_path('bamboo/text1.png'); ?>" alt="and experienced a trail through bamboo" />
         </div>
       </div>
     </div>
@@ -204,6 +207,7 @@ $page = ultra_front_page();
   <?php $start->section_point('end'); ?>="top: 0%;"
   <?php $start->section_point('leave'); ?>="top: 0%;"
   data-enter-mark="<?php echo 'data' . $start->enter(); ?>"
+  data-start-mark="<?php echo 'data' . $start->start(); ?>"
   data-leave-mark="<?php echo 'data' . $start->leave(); ?>"
   data-emit-events
 >
@@ -212,36 +216,24 @@ $page = ultra_front_page();
       <video loop>
         <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
       </video>
-      <div class="text fit">
-        <img src="<?php image_path('start/text1.png'); ?>" alt="The journey begins..." />
+      <div class="text-container"
+        <?php $start->point('dates', 0); ?>="left: 0%;"
+        <?php $start->point('dates', 1); ?>="left: 100%;"
+      >
+        <div class="text fit">
+          <img src="<?php image_path('start/text-alt.png'); ?>" alt="the journey begins" />
+        </div>
+      </div>
+
+      <div class="dates-container"
+        <?php $start->point('dates', 0); ?>="left: -100%;"
+        <?php $start->point('dates', 1); ?>="left: 0%;"
+      >
+        <p class="dates">8th &amp; 9th November 2014</p>
       </div>
     </div>
   </div>
 </section>
-
-
-
-
-<?php $dates = $page->sections['dates']; ?>
-<section id="dates"
-  <?php $dates->section_point('enter'); ?>="top: 100%;"
-  <?php $dates->section_point('start'); ?>="top: 0%;"
-  <?php $dates->section_point('end'); ?>="top: 0%;"
-  <?php $dates->section_point('leave'); ?>="top: 0%;"
->
-  <div class="inner">
-    <div class="dates">
-      <div class="text fit">
-        <img src="<?php image_path('dates/text.png'); ?>" alt="8th &amp; 9th November" />
-      </div>
-    </div>
-
-    <div class="register-container">
-      <a class="register button" href="">Register now</a>
-    </div>
-  </div>
-</section>
-
 
 
 <?php $register = $page->sections['register']; ?>
@@ -255,27 +247,33 @@ $page = ultra_front_page();
     <div class="center-inner">
       <p class="title">Bangalore ultra.</p>
       <p class="subtitle">It's tough. Are you?</p>
+      <a class="register button" href="">Register now</a>
 
-      <ul class="sponsors">
-        <?php
-        $logoColor = 'ffffff';
-        $logoArea = 8000;
-        ?>
-        <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
-          <li>
-            <?php if( $sponsor['url'] ) : ?>
-              <a href="<?php echo $sponsor['url']; ?>" target="_blank">
-            <?php endif; ?>
-              <img
-                src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
-                alt="<?php echo $sponsor['name']; ?>"
-              />
-            <?php if( $sponsor['url'] ) : ?>
-              </a>
-            <?php endif; ?>
-          </li>
-        <?php endforeach; ?>
-      </ul>
+      <div class="sponsors-container"
+        <?php $register->point('sponsors', 0); ?>="top: 100%;"
+        <?php $register->point('sponsors', 1); ?>="top: 0%;"
+      >
+        <ul class="sponsors">
+          <?php
+          $logoColor = 'ffffff';
+          $logoArea = 8000;
+          ?>
+          <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
+            <li>
+              <?php if( $sponsor['url'] ) : ?>
+                <a href="<?php echo $sponsor['url']; ?>" target="_blank">
+              <?php endif; ?>
+                <img
+                  src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
+                  alt="<?php echo $sponsor['name']; ?>"
+                />
+              <?php if( $sponsor['url'] ) : ?>
+                </a>
+              <?php endif; ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
