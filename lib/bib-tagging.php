@@ -85,7 +85,7 @@ class BibTagging {
               <?php
               $selected_size = get_option('ultra_bib_tagging_image_size');
               $sizes = array(
-                'w600' => '600 pixel max width',
+                'w400' => '400 pixel max width',
                 'w800' => '800 pixel max width',
                 'w1024' => '1024 pixel max width',
                 'w1280' => '1280 pixel max width',
