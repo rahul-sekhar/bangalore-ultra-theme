@@ -1,17 +1,8 @@
 #despair {
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: image-url('texture.png');
-  }
+  @include texture;
 
   &, .inner {
-    background-color: #3b3225;
+    background-color: $brown-2;
   }
 
   .runners {
@@ -54,7 +45,7 @@
     z-index: 10;
     width: 100%;
     height: 100%;
-    // background-color: #302a2a;
+    background-color: rgba(black, 0.2);
     opacity: 0;
     @include transition-property(opacity);
     @include transition-timing-function(ease);

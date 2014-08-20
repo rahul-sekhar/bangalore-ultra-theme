@@ -1,0 +1,25 @@
+#scroll-button {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  @include transform(translateX(-50%));
+  z-index: 200;
+  @include border-radius(50% 50% 0 0);
+
+  padding: 10px 10px 0 10px;
+
+  background-color: $red;
+  color: white;
+  text-transform: lowercase;
+
+  &:after {
+    @include icon;
+    content: '\e802';
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}

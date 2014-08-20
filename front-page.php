@@ -6,6 +6,7 @@ $page = ultra_front_page();
   <?php $exhaustion->section_point('start'); ?>="top: 0%;"
   <?php $exhaustion->section_point('leave'); ?>="top: 0%;"
   <?php $exhaustion->section_point('leave', 1); ?>="top: -100%;"
+  data-marker="<?php echo $exhaustion->start(); ?>"
 >
   <div class="inner">
     <img src="<?php image_path('exhaustion/background-shape.png'); ?>" class="background-shape" alt="" />
@@ -82,6 +83,7 @@ $page = ultra_front_page();
       <div class="text-wrapper"
         <?php $exhaustion->point('text', 1); ?>="left: 0%;"
         <?php $exhaustion->point('text', 2); ?>="left: 100%;"
+        data-marker="<?php echo $exhaustion->raw_point('text', 0); ?>"
       >
         <div class="text1 fit">
           <img src="<?php image_path('exhaustion/text1.png'); ?>" alt="The sweetest exhaustion" />
@@ -91,6 +93,7 @@ $page = ultra_front_page();
       <div class="text-wrapper"
         <?php $exhaustion->point('text', 1); ?>="left: -100%;"
         <?php $exhaustion->point('text', 2); ?>="left: 0%;"
+        data-marker="<?php echo $exhaustion->raw_point('text', 2); ?>"
       >
         <div class="text2 fit">
           <img src="<?php image_path('exhaustion/text3.png'); ?>" alt="...when you've pushed your limits" />
@@ -113,6 +116,7 @@ $page = ultra_front_page();
   data-start-mark="<?php echo 'data' . $victory->start(); ?>"
   data-leave-mark="<?php echo 'data' . $victory->leave(); ?>"
   data-emit-events
+  data-marker="<?php echo $victory->start(); ?>"
 >
   <div class="inner">
     <div class="video-container">
@@ -142,6 +146,7 @@ $page = ultra_front_page();
   data-end-mark="<?php echo 'data' . $despair->end(); ?>"
   data-leave-mark="<?php echo 'data' . $despair->leave(); ?>"
   data-emit-events
+  data-marker="<?php echo $despair->start() + 1; ?>"
 >
   <div class="inner">
     <div class="runners fit">
@@ -182,6 +187,7 @@ $page = ultra_front_page();
   data-start-mark="<?php echo 'data' . $bamboo->start(); ?>"
   data-leave-mark="<?php echo 'data' . $bamboo->leave(); ?>"
   data-emit-events
+  data-marker="<?php echo $bamboo->start(); ?>"
 >
   <div class="inner">
     <div class="video-container">
@@ -210,6 +216,7 @@ $page = ultra_front_page();
   data-start-mark="<?php echo 'data' . $start->start(); ?>"
   data-leave-mark="<?php echo 'data' . $start->leave(); ?>"
   data-emit-events
+  data-marker="<?php echo $start->start(); ?>"
 >
   <div class="inner">
     <div class="video-container">
@@ -228,6 +235,7 @@ $page = ultra_front_page();
       <div class="dates-container"
         <?php $start->point('dates', 0); ?>="left: -100%;"
         <?php $start->point('dates', 1); ?>="left: 0%;"
+        data-marker="<?php echo $start->raw_point('dates', 1); ?>"
       >
         <p class="dates">8th &amp; 9th November 2014</p>
       </div>
@@ -240,8 +248,7 @@ $page = ultra_front_page();
 <section id="register"
   <?php $register->section_point('enter'); ?>="top: 100%;"
   <?php $register->section_point('start'); ?>="top: 0%;"
-  <?php $register->section_point('end'); ?>="top: 0%;"
-  <?php $register->section_point('leave'); ?>="top: -100%;"
+  data-marker="<?php echo $register->start(); ?>"
 >
   <div class="inner center">
     <div class="center-inner">
@@ -252,6 +259,7 @@ $page = ultra_front_page();
       <div class="sponsors-container"
         <?php $register->point('sponsors', 0); ?>="top: 100%;"
         <?php $register->point('sponsors', 1); ?>="top: 0%;"
+        data-marker="<?php echo $register->raw_point('sponsors', 1); ?>"
       >
         <ul class="sponsors">
           <?php
@@ -277,3 +285,8 @@ $page = ultra_front_page();
     </div>
   </div>
 </section>
+
+<a href="#" id="scroll-button"
+  <?php $register->point('sponsors', 0); ?>="opacity: 1;"
+  <?php $register->point('sponsors', 1); ?>="opacity: 0;"
+>Scroll</a>

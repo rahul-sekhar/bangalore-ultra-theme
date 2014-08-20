@@ -63,8 +63,7 @@ function ultra_front_page() {
       ->section()
 
     ->event('sponsors', 'wait:end')
-      ->add(200)
-      ->add(400);
+      ->add(200);
 
   return $page;
 }

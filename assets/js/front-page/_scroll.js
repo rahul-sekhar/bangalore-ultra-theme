@@ -19,6 +19,20 @@
         });
       }
     });
+
+    var scrollPoints = $('[data-marker]');
+
+    $('#scroll-button').on('click', function (e) {
+      e.preventDefault();
+
+      var currentPos = $(window).scrollTop();
+      scrollPoints.each(function () {
+        if ($(this).data('marker') > currentPos) {
+          $(window).scrollTop($(this).data('marker'));
+          return false;
+        }
+      });
+    });
   });
 
   function containsString(container, contained) {

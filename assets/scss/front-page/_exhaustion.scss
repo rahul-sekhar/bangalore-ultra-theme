@@ -15,20 +15,10 @@
 }
 
 #exhaustion {
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: image-url('texture.png');
-  }
+  @include texture;
 
   .inner {
-    background-color: #4D3E29;
+    background-color: $brown;
     @include background-image(radial-gradient(transparent, rgba(black, 0.5)));
   }
 

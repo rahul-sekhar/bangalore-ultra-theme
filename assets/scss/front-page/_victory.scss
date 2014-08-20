@@ -1,6 +1,10 @@
 #victory {
   background-color: transparent;
 
+  .inner {
+    @include texture;
+  }
+
   .text {
     @include fit('victory/text2.png');
 

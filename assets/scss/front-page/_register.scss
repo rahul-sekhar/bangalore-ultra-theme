@@ -1,6 +1,8 @@
 #register {
+  @include texture;
+
   &, .inner {
-    background-color: #302a2a;
+    background-color: $brown-2;
   }
 
   p {
@@ -20,7 +22,9 @@
   }
 
   .button.register {
+    position: relative;
     margin-top: 20px;
+    @include above-texture;
   }
 
   .sponsors-container {
@@ -46,13 +50,15 @@
 
   @media (max-width: 800px), (max-height: 600px) {
     .sponsors-container {
-      background-color: #302a2a;
+      background-color: $brown-2;
+      @include texture;
     }
 
     .sponsors {
       bottom: auto;
       top: 50%;
       @include transform(translateY(-50%));
+      @include above-texture;
     }
   }
 }

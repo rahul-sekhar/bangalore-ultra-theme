@@ -1,6 +1,10 @@
 #bamboo {
   background-color: transparent;
 
+  .inner {
+    @include texture;
+  }
+
   .text-container {
     position: absolute;
     bottom: 0;

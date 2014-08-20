@@ -4,13 +4,11 @@
   $(document).ready(function () {
     $('body.home section').on('enter-down start-down leave-up', function () {
       $(this).find('video').each(function () {
-        console.log('play', this);
         this.play();
       });
 
     }).on('leave-down enter-up', function () {
       $(this).find('video').each(function () {
-        console.log('pause', this);
         this.pause();
       });
     });

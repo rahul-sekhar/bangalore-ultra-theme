@@ -1,6 +1,8 @@
 #start {
-  & {
-    background-color: transparent;
+  background-color: transparent;
+
+  .inner {
+    @include texture;
   }
 
   .text {
