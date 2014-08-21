@@ -24,7 +24,7 @@
   .button.register {
     position: relative;
     margin-top: 20px;
-    @include above-texture;
+    z-index: 110;
   }
 
   .sponsors-container {
@@ -41,6 +41,7 @@
     bottom: 10%;
     @include reset-list;
     text-align: center;
+    z-index: 130;
 
     li {
       display: inline-block;
@@ -52,13 +53,13 @@
     .sponsors-container {
       background-color: $brown-2;
       @include texture;
+      z-index: 120;
     }
 
     .sponsors {
       bottom: auto;
       top: 50%;
       @include transform(translateY(-50%));
-      @include above-texture;
     }
   }
 }
