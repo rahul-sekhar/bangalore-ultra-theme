@@ -129,9 +129,9 @@ $page = ultra_front_page();
 >
   <div class="inner">
     <div class="video-container">
-      <video loop>
+      <div class="video-placeholder">
         <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
-      </video>
+      </div>
       <div class="text-container">
         <div class="text fit">
           <img src="<?php image_path('victory/text2.png'); ?>" alt="experienced your own kind of triumph" />

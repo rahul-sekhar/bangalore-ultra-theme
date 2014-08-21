@@ -28,6 +28,6 @@
 
   $(window).load(init);
   $(document).ready(function () {
-    setTimeout(init, 8000);
+    setTimeout(init, 15000);
   });
 })(jQuery);
