@@ -55,14 +55,15 @@ function ultra_front_page() {
 
     ->event('dates', 'wait:end')
       ->add(200)
-      ->add(400);
-
-  $page->section('register', 200, 0)
-    ->event('wait')
       ->add(400)
       ->section()
 
-    ->event('sponsors', 'wait:end')
+    ->event('register', 'dates:end')
+      ->add(200)
+      ->add(400)
+      ->section()
+
+    ->event('sponsors', 'register:end')
       ->add(200);
 
   return $page;

@@ -1,6 +1,6 @@
 body.home {
   #loading {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
@@ -26,6 +26,7 @@ body.home {
   }
 
   &.loaded {
+
     section {
       display: block;
     }

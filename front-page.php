@@ -244,58 +244,63 @@ $page = ultra_front_page();
       <div class="dates-container"
         <?php $start->point('dates', 0); ?>="left: -100%;"
         <?php $start->point('dates', 1); ?>="left: 0%;"
+        <?php $start->point('register', 0); ?>="left: 0%;"
+        <?php $start->point('register', 1); ?>="left: 100%;"
         data-marker="<?php echo $start->raw_point('dates', 1); ?>"
       >
         <p class="dates"><?php the_field('dates', 'options'); ?></p>
       </div>
-    </div>
-  </div>
-</section>
 
-
-<?php $register = $page->sections['register']; ?>
-<section id="register"
-  <?php $register->section_point('enter'); ?>="top: 100%;"
-  <?php $register->section_point('start'); ?>="top: 0%;"
-  data-marker="<?php echo $register->start(); ?>"
->
-  <div class="inner center">
-    <div class="center-inner">
-      <p class="title">Bangalore ultra.</p>
-      <p class="subtitle">It's tough. Are you?</p>
-      <a class="register button" href="">Register now</a>
-
-      <div class="sponsors-container"
-        <?php $register->point('sponsors', 0); ?>="top: 100%;"
-        <?php $register->point('sponsors', 1); ?>="top: 0%;"
-        data-marker="<?php echo $register->raw_point('sponsors', 1); ?>"
+      <div class="register-container"
+        <?php $start->point('register', 0); ?>="left: -100%;"
+        <?php $start->point('register', 1); ?>="left: 0%;"
+        <?php $start->point('sponsors', 0); ?>="background-color: rgba(0,0,0,0);"
+        <?php $start->point('sponsors', 1); ?>="background-color: rgba(0,0,0,0.8);"
+        data-marker="<?php echo $start->raw_point('register', 1); ?>"
       >
-        <ul class="sponsors">
-          <?php
-          $logoColor = 'ffffff';
-          $logoArea = 8000;
-          ?>
-          <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
-            <li>
-              <?php if( $sponsor['url'] ) : ?>
-                <a href="<?php echo $sponsor['url']; ?>" target="_blank">
-              <?php endif; ?>
-                <img
-                  src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
-                  alt="<?php echo $sponsor['name']; ?>"
-                />
-              <?php if( $sponsor['url'] ) : ?>
-                </a>
-              <?php endif; ?>
-            </li>
-          <?php endforeach; ?>
-        </ul>
+        <div class="center"
+          <?php $start->point('sponsors', 0); ?>="height: 100%;"
+          <?php $start->point('sponsors', 1); ?>="height: 70%;"
+        >
+          <div class="center-inner">
+            <p class="title">Bangalore ultra.</p>
+            <p class="subtitle">It's tough. Are you?</p>
+            <a class="register button" href="">Register now</a>
+          </div>
+
+          <div class="sponsors-container"
+            <?php $start->point('sponsors', 0); ?>="top: 100%;"
+            <?php $start->point('sponsors', 1); ?>="top: 0%;"
+            data-marker="<?php echo $start->raw_point('sponsors', 1); ?>"
+          >
+            <ul class="sponsors">
+              <?php
+              $logoColor = 'ffffff';
+              $logoArea = 8000;
+              ?>
+              <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
+                <li>
+                  <?php if( $sponsor['url'] ) : ?>
+                    <a href="<?php echo $sponsor['url']; ?>" target="_blank">
+                  <?php endif; ?>
+                    <img
+                      src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
+                      alt="<?php echo $sponsor['name']; ?>"
+                    />
+                  <?php if( $sponsor['url'] ) : ?>
+                    </a>
+                  <?php endif; ?>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <a href="#" id="scroll-button"
-  <?php $register->point('sponsors', 0); ?>="opacity: 1;"
-  <?php $register->point('sponsors', 1); ?>="opacity: 0;"
+  <?php $start->point('sponsors', 0); ?>="opacity: 1;"
+  <?php $start->point('sponsors', 1); ?>="opacity: 0;"
 >Scroll</a>
