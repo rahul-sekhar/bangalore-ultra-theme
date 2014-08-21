@@ -10,6 +10,7 @@ Designed by Shalini Sekhar
 @import "settings/layout";
 @import "settings/z-indices";
 @import "settings/icons";
+@import "settings/animated-icons";
 
 @import "base/normalize";
 @import "base/functions";
@@ -33,6 +34,7 @@ Designed by Shalini Sekhar
 @import "front-page/start";
 @import "front-page/register";
 @import "front-page/scroll-button";
+@import "front-page/loading";
 
 @import "content/page";
 @import "content/records";

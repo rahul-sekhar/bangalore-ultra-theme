@@ -1,7 +1,7 @@
 'use strict';
 
 (function($) {
-  $(document).ready(function () {
+  window.ultraInitScroll = function () {
     var s = window.skrollr.init({
       keyframe: function (element, name, direction) {
         var el = $(element);
@@ -10,8 +10,6 @@
         // This requires that the section has a data element called dataStart, with a value data-[number],
         // where number is the scroll value of that point
 
-        console.log(name, direction);
-
         $.each(['enter', 'start', 'end', 'leave'], function () {
           if (containsString(el.data(this + 'Mark'), name)) {
             el.trigger(this + '-' + direction);
@@ -19,19 +17,18 @@
         });
       }
     });
+  };
 
-    var scrollPoints = $('[data-marker]');
+  var scrollPoints = $('[data-marker]');
+  $(document).on('click', '#scroll-button', function (e) {
+    e.preventDefault();
 
-    $('#scroll-button').on('click', function (e) {
-      e.preventDefault();
-
-      var currentPos = $(window).scrollTop();
-      scrollPoints.each(function () {
-        if ($(this).data('marker') > currentPos) {
-          $(window).scrollTop($(this).data('marker'));
-          return false;
-        }
-      });
+    var currentPos = $(window).scrollTop();
+    scrollPoints.each(function () {
+      if ($(this).data('marker') > currentPos) {
+        $(window).scrollTop($(this).data('marker'));
+        return false;
+      }
     });
   });
 

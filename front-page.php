@@ -191,9 +191,9 @@ $page = ultra_front_page();
 >
   <div class="inner">
     <div class="video-container">
-      <video loop>
+      <div class="video-placeholder">
         <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
-      </video>
+      </div>
       <div class="overlay"></div>
       <div class="text-container">
         <div class="text fit">
@@ -220,9 +220,9 @@ $page = ultra_front_page();
 >
   <div class="inner">
     <div class="video-container">
-      <video loop>
+      <div class="video-placeholder">
         <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
-      </video>
+      </div>
       <div class="text-container"
         <?php $start->point('dates', 0); ?>="left: 0%;"
         <?php $start->point('dates', 1); ?>="left: 100%;"
@@ -290,3 +290,12 @@ $page = ultra_front_page();
   <?php $register->point('sponsors', 0); ?>="opacity: 1;"
   <?php $register->point('sponsors', 1); ?>="opacity: 0;"
 >Scroll</a>
+
+<div id="loading">
+  <div class="center">
+    <div class="center-inner">
+      <img src="<?php image_path('logo.png'); ?>" alt="Bangalore Ultra" />
+      <i class="icon icon-spin6 animate-spin"></i>
+    </div>
+  </div>
+</div>

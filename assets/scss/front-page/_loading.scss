@@ -1,0 +1,33 @@
+body.home {
+  #loading {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $red;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    i {
+      font-size: 40px;
+      color: white;
+    }
+  }
+
+  section {
+    display: none;
+  }
+
+  &.loaded {
+    section {
+      display: block;
+    }
+  }
+}
