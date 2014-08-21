@@ -15,9 +15,25 @@ function get_logo_image($image_path, $maxArea, $targetColor = null) {
     $ratio = sqrt($maxArea / $currArea);
     $img->resize($size['width'] * $ratio, $size['height'] * $ratio);
     $img->save($cached_image);
+
+    optimize_cached_image($cached_image);
   }
 
   return CACHE_URI . '/' . $image_name . '.png';
+}
+
+function optimize_cached_image($cached_image) {
+  if (`which pngquant`) {
+      shell_exec('pngquant --ext .png --force ' . $cached_image);
+  }
+
+  if (`which optipng`) {
+      shell_exec('optipng ' . $cached_image);
+  }
+
+  if (`which advpng`) {
+      shell_exec('advpngpng -z3 ' . $cached_image);
+  }
 }
 
 
