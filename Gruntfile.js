@@ -105,7 +105,8 @@ module.exports = function(grunt) {
         },
         files: {
           'lib/scripts.php': 'assets/{css,js,js}/{main,scripts,front-page}.{css,min.js,.min.js}',
-          'lib/bib-tagging.php': 'assets/{css,js}/bib-tagging.{css,min.js}'
+          'lib/bib-tagging.php': 'assets/{css,js}/bib-tagging.{css,min.js}',
+          'lib/caching.php': 'assets/css/bib-tagging.css'
         }
       }
     },

@@ -49,6 +49,8 @@ $roots_includes = array(
   'map-type',           // Maps
   'image-handling',     // Image manipulation to make logos uniform
   'cache',              // Setup cache directory
+  'caching',            // Setup options page to clear cache
+  'admin-cleanup',      // Cleanup the admin interface
 );
 
 foreach ($roots_includes as $file) {

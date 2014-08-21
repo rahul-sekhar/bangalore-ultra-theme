@@ -48,6 +48,11 @@ class BibTagging {
     );
   }
 
+  function add_script_and_style() {
+    wp_enqueue_script( 'bib-tagging' );
+    wp_enqueue_style( 'bib-tagging' );
+  }
+
   function page() {
     ?>
     <div class="wrap">
@@ -135,11 +140,6 @@ class BibTagging {
       </div>
     </div>
     <?php
-  }
-
-  function add_script_and_style() {
-    wp_enqueue_script( 'bib-tagging' );
-    wp_enqueue_style( 'bib-tagging' );
   }
 
   function save_bib_tags() {

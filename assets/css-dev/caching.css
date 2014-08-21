@@ -1,0 +1,11 @@
+/* line 2, ../scss/caching.scss */
+#wp-admin-bar-cache-notification .ab-label {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 782px) {
+  /* line 8, ../scss/caching.scss */
+  #wpadminbar li#wp-admin-bar-cache-notification {
+    display: block;
+  }
+}

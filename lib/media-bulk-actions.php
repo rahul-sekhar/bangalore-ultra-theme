@@ -111,6 +111,8 @@ class Ultra_Media_Bulk_Actions {
 
     }
 
+    do_action('media_bulk_actions');
+
     wp_redirect($sendback);
     exit();
   }

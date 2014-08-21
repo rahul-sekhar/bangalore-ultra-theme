@@ -1,0 +1,11 @@
+#wp-admin-bar-cache-notification {
+  .ab-label {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  #wpadminbar li#wp-admin-bar-cache-notification {
+    display: block;
+  }
+}
