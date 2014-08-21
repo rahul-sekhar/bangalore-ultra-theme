@@ -19,6 +19,7 @@ function ultra_cache_action() {
     'method' => 'BAN'
   ));
 
+  var_dump($response);
   if( is_wp_error($response) ) {
     $_POST['clear'] = 'error';
     return;
