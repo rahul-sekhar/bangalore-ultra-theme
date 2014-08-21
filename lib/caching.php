@@ -57,7 +57,7 @@ function ultra_caching_page() {
     endif;
   endif; ?>
 
-  <p>The cache must be cleared when you have made changes to the content of the site. Users may or may not see the changes until the cache is cleared.</p>
+  <p>The cache must be cleared when you have made changes to the content of the site. If this is not done, users may not see these changes.</p>
 
   <p>Clear the cache only as often as you need to&mdash;clearing it too often will impede performance.</p>
 
