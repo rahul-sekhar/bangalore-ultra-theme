@@ -26,6 +26,7 @@ $roots_includes = array(
   'fields/gallery',
   'fields/maps',
   'fields/records',
+  'fields/dates',
   'fields/sponsors',
 
   'assets',             // Asset helpers (paths, etc)

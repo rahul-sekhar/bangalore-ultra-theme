@@ -237,7 +237,7 @@ $page = ultra_front_page();
         <?php $start->point('dates', 1); ?>="left: 0%;"
         data-marker="<?php echo $start->raw_point('dates', 1); ?>"
       >
-        <p class="dates">8th &amp; 9th November 2014</p>
+        <p class="dates"><?php the_field('dates', 'options'); ?></p>
       </div>
     </div>
   </div>
