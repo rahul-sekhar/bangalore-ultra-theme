@@ -1,5 +1,10 @@
 (function($) {
-  $(window).load(function () {
+  var initialized = false;
+  function init() {
+    if (initialized) {
+      return;
+    }
+    initialized = true;
 
     // Hide the loading screen
     $('body').addClass('loaded');
@@ -15,9 +20,14 @@
 
     // Hide loading screen
     $('#loading').fadeOut(500);
-  });
+  }
 
   function loadVideos() {
     $('.video-placeholder').wrapInner('<video loop></video>');
   }
+
+  $(window).load(init);
+  $(document).ready(function () {
+    setTimeout(init, 8000);
+  });
 })(jQuery);
