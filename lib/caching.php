@@ -19,13 +19,12 @@ function ultra_cache_action() {
     'method' => 'BAN'
   ));
 
-  var_dump($response);
   if( is_wp_error($response) ) {
     $_POST['clear'] = 'error';
     return;
   }
 
-  $code = $response['response']['code'];
+  $code = (int)$response['response']['code'];
   if ($code !== 200 && $code !== 204 ) {
     $_POST['clear'] = 'error';
     return;
