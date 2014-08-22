@@ -24,9 +24,14 @@
     e.preventDefault();
 
     var currentPos = $(window).scrollTop();
+    var windowHeight = $(window).height() / 100;
+
+    console.log(currentPos);
     scrollPoints.each(function () {
-      if ($(this).data('marker') > currentPos) {
-        $(window).scrollTop($(this).data('marker'));
+      var point = Math.floor($(this).data('marker') * windowHeight);
+      if (point > currentPos + 5) {
+        console.log(point);
+        $(window).scrollTop(point);
         return false;
       }
     });

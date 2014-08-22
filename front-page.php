@@ -15,14 +15,13 @@ $page = ultra_front_page();
   <?php $exhaustion->section_point('start'); ?>="top: 0%;"
   <?php $exhaustion->section_point('leave'); ?>="top: 0%;"
   <?php $exhaustion->section_point('leave', 1); ?>="top: -100%;"
-  data-marker="<?php echo $exhaustion->start(); ?>"
+  data-marker="<?php echo $exhaustion->raw_section_point('start'); ?>"
 >
   <div class="inner">
     <img src="<?php image_path('exhaustion/background-shape.png'); ?>" class="background-shape" alt="" />
     <div class="illustration-container fit">
       <div class="illustration"
         <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%); opacity: 1;"
-        <?php $exhaustion->point('form-letters', 3); ?>xx="transform:translate(0%,-100%); opacity: 0;"
       >
         <img src="<?php image_path('exhaustion/figure-drinking.png'); ?>" alt="" />
         <img src="<?php image_path('exhaustion/figure-highfive-1.png'); ?>" alt="" />
@@ -121,11 +120,11 @@ $page = ultra_front_page();
   <?php $victory->section_point('start'); ?>="top: 0%;"
   <?php $victory->section_point('end'); ?>="top: 0%;"
   <?php $victory->section_point('leave'); ?>="top: -100%;"
-  data-enter-mark="<?php echo 'data' . $victory->enter(); ?>,<?php echo 'data' . $victory->enter() - 1; ?>"
-  data-start-mark="<?php echo 'data' . $victory->start(); ?>"
-  data-leave-mark="<?php echo 'data' . $victory->leave(); ?>"
+  data-enter-mark="<?php echo 'data' . $victory->raw_section_point('enter') . 'p'; ?>,<?php echo 'data' . $victory->raw_section_point('enter', -1) . 'p'; ?>"
+  data-start-mark="<?php echo 'data' . $victory->raw_section_point('start') . 'p'; ?>"
+  data-leave-mark="<?php echo 'data' . $victory->raw_section_point('leave') . 'p'; ?>"
   data-emit-events
-  data-marker="<?php echo $victory->start(); ?>"
+  data-marker="<?php echo $victory->raw_section_point('start'); ?>"
 >
   <div class="inner">
     <div class="video-container">
@@ -150,12 +149,12 @@ $page = ultra_front_page();
   <?php $despair->section_point('end'); ?>="top: 0%;"
   <?php $despair->section_point('leave'); ?>="top: 0%;"
   <?php $despair->section_point('leave', 1); ?>="top: -100%;"
-  data-enter-mark="<?php echo 'data' . $despair->enter(); ?>"
-  data-start-mark="<?php echo 'data' . $despair->start(); ?>"
-  data-end-mark="<?php echo 'data' . $despair->end(); ?>"
-  data-leave-mark="<?php echo 'data' . $despair->leave(); ?>"
+  data-enter-mark="<?php echo 'data' . $despair->raw_section_point('enter') . 'p'; ?>"
+  data-start-mark="<?php echo 'data' . $despair->raw_section_point('start') . 'p'; ?>"
+  data-end-mark="<?php echo 'data' . $despair->raw_section_point('end') . 'p'; ?>"
+  data-leave-mark="<?php echo 'data' . $despair->raw_section_point('leave') . 'p'; ?>"
   data-emit-events
-  data-marker="<?php echo $despair->start() + 1; ?>"
+  data-marker="<?php echo $despair->raw_section_point('start', 1); ?>"
 >
   <div class="inner">
     <div class="runners fit">
@@ -192,11 +191,11 @@ $page = ultra_front_page();
   <?php $bamboo->section_point('end'); ?>="top: 0%;"
   <?php $bamboo->section_point('leave'); ?>="top: 0%;"
   <?php $bamboo->section_point('leave', 1); ?>="top: -100%;"
-  data-enter-mark="<?php echo 'data' . $bamboo->enter(); ?>,<?php echo 'data' . $bamboo->enter() - 1; ?>"
-  data-start-mark="<?php echo 'data' . $bamboo->start(); ?>"
-  data-leave-mark="<?php echo 'data' . $bamboo->leave(); ?>"
+  data-enter-mark="<?php echo 'data' . $bamboo->raw_section_point('enter') . 'p'; ?>,<?php echo 'data' . $bamboo->raw_section_point('enter', -1) . 'p'; ?>"
+  data-start-mark="<?php echo 'data' . $bamboo->raw_section_point('start') . 'p'; ?>"
+  data-leave-mark="<?php echo 'data' . $bamboo->raw_section_point('leave') . 'p'; ?>"
   data-emit-events
-  data-marker="<?php echo $bamboo->start(); ?>"
+  data-marker="<?php echo $bamboo->raw_section_point('start'); ?>"
 >
   <div class="inner">
     <div class="video-container">
@@ -221,11 +220,11 @@ $page = ultra_front_page();
   <?php $start->section_point('start'); ?>="top: 0%;"
   <?php $start->section_point('end'); ?>="top: 0%;"
   <?php $start->section_point('leave'); ?>="top: 0%;"
-  data-enter-mark="<?php echo 'data' . $start->enter(); ?>"
-  data-start-mark="<?php echo 'data' . $start->start(); ?>"
-  data-leave-mark="<?php echo 'data' . $start->leave(); ?>"
+  data-enter-mark="<?php echo 'data' . $start->raw_section_point('enter') . 'p'; ?>"
+  data-start-mark="<?php echo 'data' . $start->raw_section_point('start') . 'p'; ?>"
+  data-leave-mark="<?php echo 'data' . $start->raw_section_point('leave') . 'p'; ?>"
   data-emit-events
-  data-marker="<?php echo $start->start(); ?>"
+  data-marker="<?php echo $start->raw_section_point('start'); ?>"
 >
   <div class="inner">
     <div class="video-container">

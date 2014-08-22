@@ -4,7 +4,7 @@
 class UltraFrontPage {
   public $sections = [];
 
-  function section($name, $enter_time=200, $leave_time=200) {
+  function section($name, $enter_time=20, $leave_time=20) {
     $last_section = end($this->sections);
     $start = $last_section ? $last_section->leave() : 0;
     $this->sections[$name] = new FPSection($start, $enter_time, $leave_time);
@@ -15,6 +15,7 @@ class UltraFrontPage {
 
 // Page section class
 class FPSection {
+  const MULTIPLIER = 2;
   private $enter_time, $start, $leave_time;
   public $events = [];
 
@@ -59,15 +60,19 @@ class FPSection {
   }
 
   function section_point($section_event, $offset=0) {
-    echo 'data-' . ($this->{ $section_event }() + $offset);
+    echo 'data-' . ($this->raw_section_point($section_event, $offset)) . 'p';
   }
 
   function point($event, $point) {
-    echo 'data-' . $this->raw_point($event, $point);
+    echo 'data-' . $this->raw_point($event, $point) . 'p';
+  }
+
+  function raw_section_point($section_event, $offset=0) {
+    return ($this->{ $section_event }() + $offset) * self::MULTIPLIER;
   }
 
   function raw_point($event, $point) {
-    return $this->start() + $this->events[$event]->points[$point];
+    return ($this->start() + $this->events[$event]->points[$point]) * self::MULTIPLIER;
   }
 }
 

@@ -27,7 +27,7 @@
   }
 
   $(window).load(init);
-  $(document).ready(function () {
-    setTimeout(init, 15000);
-  });
+  // $(document).ready(function () {
+  //   setTimeout(init, 15000);
+  // });
 })(jQuery);
