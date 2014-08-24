@@ -157,21 +157,20 @@ $page = ultra_front_page();
   data-marker="<?php echo $despair->raw_section_point('start', 1); ?>"
 >
   <div class="inner">
-    <div class="runners fit">
-      <img class="ground" src="<?php image_path('despair/ground.png'); ?>" alt="" />
-      <img class="cloud" src="<?php image_path('despair/cloud.png'); ?>" alt="" />
-      <img class="dragonfly-1" src="<?php image_path('despair/dragonfly-1.png'); ?>" alt="" />
-      <img class="dragonfly-2" src="<?php image_path('despair/dragonfly-2.png'); ?>" alt="" />
+    <div class="ground"></div>
 
-      <img class="runner drinking" src="<?php image_path('despair/runner-drinking.png'); ?>" alt="" />
-      <img class="runner african" src="<?php image_path('despair/runner-african.png'); ?>" alt="" />
-      <img class="runner lady" src="<?php image_path('despair/runner-lady.png'); ?>" alt="" />
+    <img class="fixed" src="<?php image_path('despair/cloud.png'); ?>" alt="" />
+    <img class="fixed" src="<?php image_path('despair/dragonfly-1.png'); ?>" alt="" />
+    <img class="fixed" src="<?php image_path('despair/dragonfly-2.png'); ?>" alt="" />
 
-      <img class="person" src="<?php image_path('despair/person.png'); ?>" alt="" />
+    <img class="runner drinking" src="<?php image_path('despair/runner-drinking.png'); ?>" alt="" />
+    <img class="runner lady-2" src="<?php image_path('despair/runner-lady-2.png'); ?>" alt="" />
 
-      <img class="runner lady-2" src="<?php image_path('despair/runner-lady-2.png'); ?>" alt="" />
-      <img class="runner towel" src="<?php image_path('despair/runner-towel.png'); ?>" alt="" />
-    </div>
+    <img class="person fixed" src="<?php image_path('despair/person.png'); ?>" alt="" />
+
+    <img class="runner african" src="<?php image_path('despair/runner-african.png'); ?>" alt="" />
+    <img class="runner lady" src="<?php image_path('despair/runner-lady.png'); ?>" alt="" />
+    <img class="runner towel" src="<?php image_path('despair/runner-towel.png'); ?>" alt="" />
 
     <div class="text-container">
       <div class="text fit">

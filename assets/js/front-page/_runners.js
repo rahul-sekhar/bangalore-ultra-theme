@@ -4,11 +4,11 @@
   var runners = [
     {
       name: 'drinking',
-      speed: 1.1
+      speed: 0.9
     },
     {
       name: 'african',
-      speed: 1.4
+      speed: 1.7
     },
     {
       name: 'lady',
@@ -23,7 +23,7 @@
       speed: 1.1
     }
   ];
-  var speedMultiplier = 1.2;
+  var speedMultiplier = 0.6;
 
 
   $(document).ready(function () {

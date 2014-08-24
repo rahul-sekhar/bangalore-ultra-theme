@@ -5,7 +5,7 @@ add_action( 'admin_menu', 'ultra_caching_menu' );
 // Cache menu and options hooks
 function ultra_caching_menu() {
   $hook_suffix = add_object_page( 'Cache', 'Cache', 'manage_options', 'ultra-cache', 'ultra_caching_page' );
-  add_option('cache_dirty', 'false');
+  // add_option('cache_dirty', 'false');
 
   add_action('load-' . $hook_suffix, 'ultra_cache_action');
 }
@@ -30,7 +30,7 @@ function ultra_cache_action() {
     return;
   }
 
-  update_option('cache_dirty', 'false');
+  // update_option('cache_dirty', 'false');
 }
 
 
@@ -59,6 +59,15 @@ function ultra_caching_page() {
 
   <p>The cache must be cleared when you have made changes to the content of the site. If this is not done, users may not see these changes.</p>
 
+  <p>
+    <?php if (get_field('clear_cache_automatically', 'options')) : ?>
+      The cache will be cleared automatically when any updates are made.
+    <?php else : ?>
+      The cache will not be cleared automatically and must be cleared manually when any updates are made.
+    <?php endif; ?>
+    <a href="/wp-admin/admin.php?page=acf-options">Change this behaviour</a>.
+  </p>
+
   <form method="post">
     <input type="hidden" name="clear" value="true" />
     <p class="submit">
@@ -78,28 +87,34 @@ add_action( 'edit_attachment', 'ultra_cache_dirty' );
 add_action( 'media_bulk_actions', 'ultra_cache_dirty' );
 
 function ultra_cache_dirty() {
-  update_option('cache_dirty', 'true');
+  if (get_field('clear_cache_automatically', 'options')) {
+    wp_remote_request(CACHE_BAN_URL, array(
+      'method' => 'BAN'
+    ));
+  }
+
+  // update_option('cache_dirty', 'true');
 }
 
 // Admin bar notification for cache
-add_action( 'admin_bar_menu', 'cache_notification', 999 );
+// add_action( 'admin_bar_menu', 'cache_notification', 999 );
 
-function cache_notification( $wp_admin_bar ) {
-  if( get_option('cache_dirty') !== 'true' ) {
-    return;
-  }
+// function cache_notification( $wp_admin_bar ) {
+//   if( get_option('cache_dirty') !== 'true' ) {
+//     return;
+//   }
 
-  $title = 'Updates may not be visible';
-  $args = array(
-    'id'    => 'cache-notification',
-    'title' => '<span class="ab-icon dashicons-info"></span><span class="ab-label">' . $title . '</span>',
-    'href'  => '/wp-admin/admin.php?page=ultra-cache',
-    'meta'  => array(
-      'title' => $title
-    )
-  );
-  $wp_admin_bar->add_node( $args );
-}
+//   $title = 'Updates may not be visible';
+//   $args = array(
+//     'id'    => 'cache-notification',
+//     'title' => '<span class="ab-icon dashicons-info"></span><span class="ab-label">' . $title . '</span>',
+//     'href'  => '/wp-admin/admin.php?page=ultra-cache',
+//     'meta'  => array(
+//       'title' => $title
+//     )
+//   );
+//   $wp_admin_bar->add_node( $args );
+// }
 
 add_action( 'admin_init', 'ultra_cache_styles');
 

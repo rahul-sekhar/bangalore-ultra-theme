@@ -26,6 +26,7 @@ $roots_includes = array(
   'fields/gallery',
   'fields/maps',
   'fields/records',
+  'fields/cache',
   'fields/dates',
   'fields/sponsors',
 
