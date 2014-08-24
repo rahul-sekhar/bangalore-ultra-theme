@@ -7,6 +7,8 @@ while (have_posts()) : the_post();
   $annual_record_years = get_field('annual_record_years');
 ?>
   <div id="records">
+    <h2>Hall of Fame</h2>
+
     <ul class="filters">
       <li class="current course"><span>Course records</span></li>
 
@@ -36,7 +38,7 @@ while (have_posts()) : the_post();
         <?php foreach($route['events'] as $event) : ?>
           <tr>
             <td class="event"><?php echo $event['name']; ?></td>
-            <td class="winner"><?php echo $event['winner']; ?></td>
+            <td class="winner"><?php echo ucwords(strtolower($event['winner'])); ?></td>
             <td class="time"><?php echo $event['time']; ?></td>
           </tr>
         <?php endforeach; ?>
@@ -49,7 +51,7 @@ while (have_posts()) : the_post();
         <?php foreach(to_array($year['routes']) as $route) : ?>
           <tr class="heading">
             <td colspan="4">
-              <h4><?php echo $route['name']; ?></h4>
+              <h4><span><?php echo $route['name']; ?></span></h4>
             </td>
           </tr>
 
@@ -62,7 +64,7 @@ while (have_posts()) : the_post();
                 <tr>
               <?php endif; ?>
 
-                <td class="person"><?php echo ($index + 1) . '. ' . $winner['name']; ?></td>
+                <td class="person"><?php echo ($index + 1) . '. ' . ucwords(strtolower($winner['name'])); ?></td>
                 <td class="time"><?php echo $winner['time']; ?></td>
               </tr>
             <?php endforeach;

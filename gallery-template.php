@@ -6,6 +6,8 @@ while (have_posts()) : the_post();
 $ultra_gallery = new Ultra_Gallery(get_query_var('gallery-year'), get_query_var('show'), 60, get_query_var('pageno'));
 ?>
 <div id="gallery">
+  <h2>Gallery</h2>
+
   <div id="filters">
     <ul class="year">
     <?php foreach($ultra_gallery->get_all_years() as $year) { ?>
