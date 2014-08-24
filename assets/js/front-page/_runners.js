@@ -1,7 +1,7 @@
 'use strict';
 
 (function($) {
-  var runners = [
+  window.runners = [
     {
       name: 'drinking',
       speed: 0.9
@@ -23,14 +23,14 @@
       speed: 1.1
     }
   ];
-  var speedMultiplier = 0.6;
+  window.speedMultiplier = 0.6;
 
 
   $(document).ready(function () {
     var inProgress = false;
     var section = $('#despair');
 
-    $.each(runners, function (index, runner) {
+    $.each(window.runners, function (index, runner) {
       runner.element = section.find('.' + runner.name + '.runner');
     });
 
@@ -45,7 +45,7 @@
     });
 
     function instantChange() {
-      $.each(runners, function (index, runner) {
+      $.each(window.runners, function (index, runner) {
         runner.element
           .css('transition-delay', '0ms')
           .css('transition-duration', '0ms');
@@ -59,9 +59,9 @@
     function prepareAnimation() {
       var maxTime = 0;
 
-      $.each(runners, function (index, runner) {
+      $.each(window.runners, function (index, runner) {
         var distance = section.find('.runners').width() + runner.element.width();
-        var time = distance / (runner.speed * speedMultiplier);
+        var time = distance / (runner.speed * window.speedMultiplier);
         runner.element
           .css('transition-delay', '0ms')
           .css('transition-duration', time + 'ms');
