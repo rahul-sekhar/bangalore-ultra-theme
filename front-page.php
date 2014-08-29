@@ -19,26 +19,27 @@ $page = ultra_front_page();
 >
   <div class="inner">
     <img src="<?php image_path('exhaustion/background-shape.png'); ?>" class="background-shape" alt="" />
-    <div class="illustration-container fit">
-      <div class="illustration"
-        <?php $exhaustion->point('form-letters', 0); ?>="transform:translate(0%,0%); opacity: 1;"
-      >
-        <img src="<?php image_path('exhaustion/figure-drinking.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/figure-highfive-1.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/figure-highfive-2.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/figure-hugging.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/figure-stretching-1.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/figure-stretching-2.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/figure-up-arms.png'); ?>" alt="" />
 
-        <img src="<?php image_path('exhaustion/banana.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/bottle.png'); ?>" alt="" />
+    <div class="figures">
+      <img src="<?php image_path('exhaustion/figure-drinking.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/figure-highfive-1.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/figure-highfive-2.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/figure-hugging.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/figure-stretching-1.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/figure-stretching-2.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/figure-up-arms.png'); ?>" alt="" />
+    </div>
 
-        <img src="<?php image_path('exhaustion/shadow.png'); ?>" alt="" />
-        <img src="<?php image_path('exhaustion/chap.png'); ?>" alt="" />
+    <div class="ground"></div>
 
-        <img src="<?php image_path('exhaustion/shoes.png'); ?>" alt="" />
-      </div>
+    <div class="illustration">
+      <img src="<?php image_path('exhaustion/banana.png'); ?>" alt="" />
+      <img src="<?php image_path('exhaustion/bottle.png'); ?>" alt="" />
+
+      <img src="<?php image_path('exhaustion/shadow.png'); ?>" alt="" />
+      <img class="chap" src="<?php image_path('exhaustion/chap.png'); ?>" alt="" />
+
+      <img src="<?php image_path('exhaustion/shoes.png'); ?>" alt="" />
 
       <div class="z"
         <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"
@@ -46,7 +47,7 @@ $page = ultra_front_page();
         <?php $exhaustion->point('z1', 2); ?>="transform:translate(160px,-160px);"
       >
         <img
-          <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
+          <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:70px; height:70px;"
           <?php $exhaustion->point('z1', 2); ?>="opacity: 0;"
           src="<?php image_path('exhaustion/z.png'); ?>" alt="Z" />
