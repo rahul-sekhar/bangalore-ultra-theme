@@ -29,7 +29,9 @@ $roots_includes = array(
   'fields/cache',
   'fields/dates',
   'fields/sponsors',
+  'fields/register-button',
 
+  'options',            // Advanced custom fields options pages
   'assets',             // Asset helpers (paths, etc)
   'utils',              // Utility functions
   'init',               // Initial theme setup and constants

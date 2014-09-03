@@ -266,7 +266,7 @@ $page = ultra_front_page();
           <div class="center-inner">
             <p class="title">Bangalore ultra.</p>
             <p class="subtitle">It's tough. Are you?</p>
-            <a class="register button" href="">Register now</a>
+            <?php echo do_shortcode('[register]'); ?>
           </div>
 
           <div class="sponsors-container"

@@ -23,23 +23,36 @@ function clean_shortcode_content($content) {
 }
 
 
+function register_shortcode() {
+  return button_shortcode(
+    array(
+      'url' => get_field('register_link', 'options'),
+      'disabled' => !get_field('register_enabled', 'options'),
+      'class' => 'register'
+    ),
+    get_field('register_text', 'options')
+  );
+}
+add_shortcode('register', 'register_shortcode');
+
+
 function button_shortcode($atts, $content) {
   extract( shortcode_atts( array (
     'url' => '',
-    'external' => 'true',
-    'disabled' => ''
+    'disabled' => '',
+    'class' => null
   ), $atts ));
 
   $output = '<a class="button';
+
+  if ($class) {
+    $output .= ' ' . $class;
+  }
 
   if ($disabled) {
     $output .= ' disabled"';
   } else {
     $output .= '" href="' . htmlspecialchars($url) . '"';
-
-    if ($external !== "false") {
-      $output .= ' target="_blank"';
-    }
   }
 
   $output .= '>' . clean_shortcode_content($content) . '</a>';
