@@ -5,21 +5,25 @@
   left: 50%;
   @include transform(translateX(-50%));
   z-index: 200;
-  @include border-radius(50% 50% 0 0);
 
-  padding: 10px 10px 0 10px;
+  background: image-url('scroll.png') no-repeat;
+  width: image-width('scroll.png');
+  height: image-height('scroll.png');
+  // @include border-radius(50% 50% 0 0);
 
-  background-color: $red;
-  color: white;
-  text-transform: lowercase;
+  // padding: 10px 10px 0 10px;
 
-  &:after {
-    @include icon;
-    content: '\e802';
-    display: block;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
+  // background-color: $red;
+  // color: white;
+  // text-transform: lowercase;
+
+  // &:after {
+  //   @include icon;
+  //   content: '\e802';
+  //   display: block;
+  //   text-align: center;
+  //   margin: 0;
+  //   padding: 0;
+  //   width: 100%;
+  // }
 }
