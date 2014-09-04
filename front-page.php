@@ -20,28 +20,20 @@ $page = ultra_front_page();
   data-marker="<?php echo $exhaustion->raw_section_point('start'); ?>"
 >
   <div class="inner">
-    <img src="<?php image_path('exhaustion/background-shape.png'); ?>" class="background-shape" alt="" />
-
-    <div class="figures">
-      <img src="<?php image_path('exhaustion/figure-drinking.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/figure-highfive-1.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/figure-highfive-2.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/figure-hugging.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/figure-stretching-1.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/figure-stretching-2.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/figure-up-arms.png'); ?>" alt="" />
-    </div>
 
     <div class="ground"></div>
 
-    <div class="illustration">
-      <img src="<?php image_path('exhaustion/banana.png'); ?>" alt="" />
-      <img src="<?php image_path('exhaustion/bottle.png'); ?>" alt="" />
+    <img class="cloud" src="<?php image_path('exhaustion/cloud.png'); ?>" alt="" />
 
-      <img src="<?php image_path('exhaustion/shadow.png'); ?>" alt="" />
-      <img class="chap" src="<?php image_path('exhaustion/chap.png'); ?>" alt="" />
+    <div class="silhouettes"></div>
 
-      <img src="<?php image_path('exhaustion/shoes.png'); ?>" alt="" />
+    <div class="person">
+      <img class="person-img" src="<?php image_path('exhaustion/person.png'); ?>" alt="" />
+
+      <img
+        <?php $exhaustion->point('static-z', 0); ?>="opacity: 1;"
+        <?php $exhaustion->point('static-z', 1); ?>="opacity: 0;"
+        class="static-z" src="<?php image_path('exhaustion/static-z.png'); ?>" alt="" />
 
       <div class="z"
         <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"
@@ -85,30 +77,32 @@ $page = ultra_front_page();
       </div>
     </div>
 
-    <div class="text-container"
-      <?php $exhaustion->point('form-letters', 2); ?>="background-color: rgba(0,0,0,0.4); opacity: 0;"
-      <?php $exhaustion->point('form-letters', 3); ?>="background-color: rgba(0,0,0,0.4); opacity: 1;"
-      <?php $exhaustion->point('text', 1); ?>="background-color: rgba(0,0,0,0.4);"
-      <?php $exhaustion->point('text', 2); ?>="background-color: rgba(0,0,0,0.6);"
-    >
-      <div class="text-wrapper"
-        <?php $exhaustion->point('text', 1); ?>="left: 0%;"
-        <?php $exhaustion->point('text', 2); ?>="left: 100%;"
-        data-marker="<?php echo $exhaustion->raw_point('text', 0); ?>"
-      >
-        <div class="text1 fit">
-          <img src="<?php image_path('exhaustion/text1.png'); ?>" alt="The sweetest exhaustion" />
-        </div>
-      </div>
+    <img class="shoes" src="<?php image_path('exhaustion/shoes.png'); ?>" alt="" />
+  </div>
 
-      <div class="text-wrapper"
-        <?php $exhaustion->point('text', 1); ?>="left: -100%;"
-        <?php $exhaustion->point('text', 2); ?>="left: 0%;"
-        data-marker="<?php echo $exhaustion->raw_point('text', 2); ?>"
-      >
-        <div class="text2 fit">
-          <img src="<?php image_path('exhaustion/text3.png'); ?>" alt="...when you've pushed your limits" />
-        </div>
+  <div class="text-container"
+    <?php $exhaustion->point('form-letters', 2); ?>="background-color: rgba(0,0,0,0.4); opacity: 0;"
+    <?php $exhaustion->point('form-letters', 3); ?>="background-color: rgba(0,0,0,0.4); opacity: 1;"
+    <?php $exhaustion->point('text', 1); ?>="background-color: rgba(0,0,0,0.4);"
+    <?php $exhaustion->point('text', 2); ?>="background-color: rgba(0,0,0,0.6);"
+  >
+    <div class="text-wrapper"
+      <?php $exhaustion->point('text', 1); ?>="left: 0%;"
+      <?php $exhaustion->point('text', 2); ?>="left: 100%;"
+      data-marker="<?php echo $exhaustion->raw_point('text', 0); ?>"
+    >
+      <div class="text1 fit">
+        <img src="<?php image_path('exhaustion/text1.png'); ?>" alt="The sweetest exhaustion" />
+      </div>
+    </div>
+
+    <div class="text-wrapper"
+      <?php $exhaustion->point('text', 1); ?>="left: -100%;"
+      <?php $exhaustion->point('text', 2); ?>="left: 0%;"
+      data-marker="<?php echo $exhaustion->raw_point('text', 2); ?>"
+    >
+      <div class="text2 fit">
+        <img src="<?php image_path('exhaustion/text3.png'); ?>" alt="...when you've pushed your limits" />
       </div>
     </div>
   </div>
