@@ -126,7 +126,7 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="video-container">
       <div class="video-placeholder">
-        <source src="<?php video_path('clip1.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('triumph-v2.webm'); ?>" type="video/webm">
       </div>
       <div class="text-container">
         <div class="text fit">
@@ -232,7 +232,7 @@ $page = ultra_front_page();
         <?php $start->point('dates', 1); ?>="left: 100%;"
       >
         <div class="text fit">
-          <img src="<?php image_path('start/text-alt.png'); ?>" alt="the journey begins" />
+          <img src="<?php image_path('start/text4.png'); ?>" alt="the journey begins" />
         </div>
       </div>
 
