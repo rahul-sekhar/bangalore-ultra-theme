@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 45%;
+    height: 55%;
 
     &:after {
       content: '';
@@ -20,10 +20,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      top: image-height('exhaustion/ground.png');
+      top: image-height('exhaustion/ground-16.png');
       background: #2a1e0c;
     }
-    background: image-url('exhaustion/ground.png') top repeat-x;
+    background: image-url('exhaustion/ground-16.png') top repeat-x;
   }
 
   .cloud {
@@ -38,10 +38,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 30%;
-    bottom: 30%;
+    top: 22%;
+    bottom: 49%;
 
-    background: image-url('exhaustion/silhouettes.png') repeat-x;
+    background: image-url('exhaustion/silhouettes-16.png') repeat-x;
     @include background-size(auto 100%);
   }
 
@@ -83,11 +83,11 @@
   }
 
   .text1 {
-    @include fit('exhaustion/text1.png');
+    @include fit('exhaustion/texta2-2.png');
   }
 
   .text2 {
-    @include fit('exhaustion/text3.png');
+    @include fit('exhaustion/textb2-2.png');
   }
 
   .text-container {

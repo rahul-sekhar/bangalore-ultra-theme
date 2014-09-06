@@ -21,88 +21,102 @@ $page = ultra_front_page();
 >
   <div class="inner">
 
-    <div class="ground"></div>
-
-    <img class="cloud" src="<?php image_path('exhaustion/cloud.png'); ?>" alt="" />
+    <img class="cloud" src="<?php image_path('exhaustion/cloud-64.png'); ?>" alt="" />
 
     <div class="silhouettes"></div>
 
-    <div class="person">
-      <img class="person-img" src="<?php image_path('exhaustion/person.png'); ?>" alt="" />
+    <div class="ground"></div>
 
-      <img
-        <?php $exhaustion->point('static-z', 0); ?>="opacity: 1;"
-        <?php $exhaustion->point('static-z', 1); ?>="opacity: 0;"
-        class="static-z" src="<?php image_path('exhaustion/static-z.png'); ?>" alt="" />
+    <div class="person">
+      <img class="person-img" src="<?php image_path('exhaustion/person-64.png'); ?>" alt="" />
 
       <div class="z"
         <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z1', 1); ?>="transform:translate(100px,-100px);"
-        <?php $exhaustion->point('z1', 2); ?>="transform:translate(160px,-160px);"
+        <?php $exhaustion->point('z1', 1); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z1', 2); ?>="transform:translate(180px,-180px);"
       >
         <img
           <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:70px; height:70px;"
-          <?php $exhaustion->point('z1', 2); ?>="opacity: 0;"
-          src="<?php image_path('exhaustion/z.png'); ?>" alt="Z" />
+          <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:50px; height:50px;"
+          <?php $exhaustion->point('z1', 2); ?>="opacity: 0; width:75px; height:75px;"
+          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
         <?php $exhaustion->point('z2', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z2', 1); ?>="transform:translate(70px,-100px);"
-        <?php $exhaustion->point('z2', 2); ?>="transform:translate(100px,-140px);"
-        <?php $exhaustion->point('form-letters', 3); ?>="transform:translate(-170px,-220px);"
+        <?php $exhaustion->point('z2', 1); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z2', 2); ?>="transform:translate(180px,-180px);"
       >
         <img
           <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z2', 1); ?>="width:70px; height:70px;"
-          <?php $exhaustion->point('form-letters', 1); ?>="transform:rotateY(0deg);"
-          <?php $exhaustion->point('form-letters', 2); ?>="transform:rotateY(-90deg); opacity: 1;"
-          <?php $exhaustion->point('form-letters', 3); ?>="transform:rotateY(-180deg); opacity: 0;"
-        src="<?php image_path('exhaustion/z.png'); ?>" alt="Z" />
+          <?php $exhaustion->point('z2', 1); ?>="opacity:1; width:50px; height:50px;"
+          <?php $exhaustion->point('z2', 2); ?>="opacity: 0; width:75px; height:75px;"
+          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
       </div>
 
-      <div class="z x"
+      <div class="z"
         <?php $exhaustion->point('z3', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z3', 1); ?>="transform:translate(20px,-20px);"
-        <?php $exhaustion->point('form-letters', 3); ?>="transform:translate(-250px,-120px);"
+        <?php $exhaustion->point('z3', 1); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z3', 2); ?>="transform:translate(180px,-180px);"
       >
         <img
           <?php $exhaustion->point('z3', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z3', 1); ?>="width:70px; height:70px;"
-          <?php $exhaustion->point('form-letters', 1); ?>="width:100px; height:100px;"
-          <?php $exhaustion->point('form-letters', 2); ?>="opacity: 1;"
-          <?php $exhaustion->point('form-letters', 3); ?>="opacity: 0;"
-        src="<?php image_path('exhaustion/z.png'); ?>" alt="Z" />
+          <?php $exhaustion->point('z3', 1); ?>="opacity:1; width:50px; height:50px;"
+          <?php $exhaustion->point('z3', 2); ?>="opacity: 0; width:75px; height:75px;"
+          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+      </div>
+
+      <div class="z"
+        <?php $exhaustion->point('z4', 0); ?>="transform:translate(0px,0px);"
+        <?php $exhaustion->point('z4', 1); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z4', 2); ?>="transform:translate(180px,-180px);"
+      >
+        <img
+          <?php $exhaustion->point('z4', 0); ?>="width:0px; height: 0px"
+          <?php $exhaustion->point('z4', 1); ?>="opacity:1; width:50px; height:50px;"
+          <?php $exhaustion->point('z4', 2); ?>="opacity: 0; width:75px; height:75px;"
+          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+      </div>
+
+      <div class="z"
+        <?php $exhaustion->point('z5', 0); ?>="transform:translate(0px,0px);"
+        <?php $exhaustion->point('z5', 1); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z5', 2); ?>="transform:translate(180px,-180px);"
+      >
+        <img
+          <?php $exhaustion->point('z5', 0); ?>="width:0px; height: 0px"
+          <?php $exhaustion->point('z5', 1); ?>="opacity:1; width:50px; height:50px;"
+          <?php $exhaustion->point('z5', 2); ?>="opacity: 0; width:75px; height:75px;"
+          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
       </div>
     </div>
 
-    <img class="shoes" src="<?php image_path('exhaustion/shoes.png'); ?>" alt="" />
+    <img class="shoes" src="<?php image_path('exhaustion/shoes-128.png'); ?>" alt="" />
   </div>
 
   <div class="text-container"
-    <?php $exhaustion->point('form-letters', 2); ?>="background-color: rgba(0,0,0,0.4); opacity: 0;"
-    <?php $exhaustion->point('form-letters', 3); ?>="background-color: rgba(0,0,0,0.4); opacity: 1;"
-    <?php $exhaustion->point('text', 1); ?>="background-color: rgba(0,0,0,0.4);"
-    <?php $exhaustion->point('text', 2); ?>="background-color: rgba(0,0,0,0.6);"
+    <?php $exhaustion->point('text', 0); ?>="background-color: rgba(0,0,0,0.4); opacity: 0;"
+    <?php $exhaustion->point('text', 1); ?>="background-color: rgba(0,0,0,0.4); opacity: 1;"
+    <?php $exhaustion->point('text', 2); ?>="background-color: rgba(0,0,0,0.4);"
+    <?php $exhaustion->point('text', 3); ?>="background-color: rgba(0,0,0,0.6);"
   >
     <div class="text-wrapper"
-      <?php $exhaustion->point('text', 1); ?>="left: 0%;"
-      <?php $exhaustion->point('text', 2); ?>="left: 100%;"
+      <?php $exhaustion->point('text', 2); ?>="left: 0%;"
+      <?php $exhaustion->point('text', 3); ?>="left: 100%;"
       data-marker="<?php echo $exhaustion->raw_point('text', 0); ?>"
     >
       <div class="text1 fit">
-        <img src="<?php image_path('exhaustion/text1.png'); ?>" alt="The sweetest exhaustion" />
+        <img src="<?php image_path('exhaustion/texta2-2.png'); ?>" alt="The sweetest exhaustion" />
       </div>
     </div>
 
     <div class="text-wrapper"
-      <?php $exhaustion->point('text', 1); ?>="left: -100%;"
-      <?php $exhaustion->point('text', 2); ?>="left: 0%;"
+      <?php $exhaustion->point('text', 2); ?>="left: -100%;"
+      <?php $exhaustion->point('text', 3); ?>="left: 0%;"
       data-marker="<?php echo $exhaustion->raw_point('text', 2); ?>"
     >
       <div class="text2 fit">
-        <img src="<?php image_path('exhaustion/text3.png'); ?>" alt="...when you've pushed your limits" />
+        <img src="<?php image_path('exhaustion/textb2-2.png'); ?>" alt="...when you've pushed your limits" />
       </div>
     </div>
   </div>
@@ -130,7 +144,7 @@ $page = ultra_front_page();
       </div>
       <div class="text-container">
         <div class="text fit">
-          <img src="<?php image_path('victory/text2.png'); ?>" alt="experienced your own kind of triumph" />
+          <img src="<?php image_path('victory/text3.png'); ?>" alt="experienced your own kind of triumph" />
         </div>
       </div>
     </div>
@@ -171,7 +185,7 @@ $page = ultra_front_page();
 
     <div class="text-container">
       <div class="text fit">
-        <img src="<?php image_path('despair/text2.png'); ?>" alt="achieved what seemed impossible" />
+        <img src="<?php image_path('despair/text3.png'); ?>" alt="achieved what seemed impossible" />
       </div>
     </div>
   </div>
@@ -201,7 +215,7 @@ $page = ultra_front_page();
       <div class="overlay"></div>
       <div class="text-container">
         <div class="text fit">
-          <img src="<?php image_path('bamboo/text1.png'); ?>" alt="and experienced a trail through bamboo" />
+          <img src="<?php image_path('bamboo/text2.png'); ?>" alt="and experienced a trail through bamboo" />
         </div>
       </div>
     </div>
