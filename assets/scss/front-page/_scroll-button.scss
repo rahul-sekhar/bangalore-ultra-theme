@@ -9,21 +9,27 @@
   background: image-url('scroll.png') no-repeat;
   width: image-width('scroll.png');
   height: image-height('scroll.png');
-  // @include border-radius(50% 50% 0 0);
+}
 
-  // padding: 10px 10px 0 10px;
+body.plain #scroll-button {
+  background: #2b1e13;
+  height: image-height('scroll.png');
+  width: 2 * image-height('scroll.png');
+  @include border-radius(2 * image-height('scroll.png') 2 * image-height('scroll.png') 0 0);
 
-  // background-color: $red;
-  // color: white;
-  // text-transform: lowercase;
+  padding-top: 15px;
 
-  // &:after {
-  //   @include icon;
-  //   content: '\e802';
-  //   display: block;
-  //   text-align: center;
-  //   margin: 0;
-  //   padding: 0;
-  //   width: 100%;
-  // }
+  color: white;
+  text-transform: lowercase;
+
+  &:after {
+    font-size: 60px;
+    @include icon;
+    content: '\e80b';
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 }
