@@ -114,3 +114,14 @@ function sharan_map_shortcode( $atts ) {
   return $output;
 }
 add_shortcode( 'map', 'sharan_map_shortcode' );
+
+//Google Maps Shortcode
+function ultra_googlemap_shortcode($atts, $content = null) {
+   extract(shortcode_atts(array(
+      'width' => '640',
+      'height' => '480',
+      'src' => ''
+   ), $atts));
+   return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'&amp;output=embed"></iframe>';
+}
+add_shortcode("googlemap", "ultra_googlemap_shortcode");

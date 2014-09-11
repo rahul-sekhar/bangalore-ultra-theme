@@ -4,32 +4,32 @@ function ultra_front_page() {
   $page = new UltraFrontPage();
 
   $page->section('exhaustion')
-    ->event('z1', -50)
-      ->add(50)
-      ->add(25)
+    ->event('z1', -75)
+      ->add(75)
+      ->add(30)
       ->section()
 
-    ->event('z2', 'z1:1', -25)
-      ->add(50)
-      ->add(25)
+    ->event('z2', 'z1:1', -35)
+      ->add(75)
+      ->add(35)
       ->section()
 
-    ->event('z3', 'z2:1', -25)
-      ->add(50)
-      ->add(25)
+    ->event('z3', 'z2:1', -35)
+      ->add(75)
+      ->add(35)
       ->section()
 
-    ->event('z4', 'z3:1', -25)
-      ->add(50)
-      ->add(25)
+    ->event('z4', 'z3:1', -35)
+      ->add(75)
+      ->add(35)
       ->section()
 
-    ->event('z5', 'z4:1', -25)
-      ->add(50)
-      ->add(25)
+    ->event('z5', 'z4:1', -35)
+      ->add(75)
+      ->add(35)
       ->section()
 
-    ->event('text', 'z5:end', -30)
+    ->event('text', 'z5:end', -45)
       ->add(20)
       ->add(40)
       ->add(20)
@@ -62,7 +62,12 @@ function ultra_front_page() {
       ->add(40)
       ->section()
 
-    ->event('sponsors', 'register:end')
+    ->event('feeds', 'register:end')
+      ->add(20)
+      ->add(40)
+      ->section()
+
+    ->event('sponsors', 'feeds:end')
       ->add(20);
 
   return $page;

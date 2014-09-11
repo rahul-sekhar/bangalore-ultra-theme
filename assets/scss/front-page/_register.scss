@@ -1,9 +1,7 @@
 #start .register-container {
-  position: absolute;
-  left: 0;
   width: 100%;
-  top: 0;
-  height: 100%;
+  position: absolute;
+  z-index: 110;
 
   p {
     margin: 0;
@@ -15,6 +13,12 @@
     font-weight: 400;
   }
 
+  .subtitle {
+    height: 200px;
+    width: auto;
+    margin: 20px auto;
+  }
+
   .title {
     font-size: 50px;
     text-transform: uppercase;
@@ -24,48 +28,5 @@
   .button.register {
     position: relative;
     margin-top: 20px;
-    z-index: 110;
-  }
-
-  .sponsors-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-  }
-
-  .sponsors {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20%;
-    @include reset-list;
-    text-align: center;
-    z-index: 130;
-
-    li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-  }
-
-  @media (max-width: 800px), (max-height: 600px) {
-    background-color: transparent !important;
-
-    .center {
-      height: 100% !important;
-    }
-
-    .sponsors-container {
-      background-color: $brown-2;
-      @include texture;
-      z-index: 120;
-    }
-
-    .sponsors {
-      bottom: auto;
-      top: 50%;
-      @include transform(translateY(-50%));
-    }
   }
 }

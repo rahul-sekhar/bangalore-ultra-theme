@@ -34,3 +34,17 @@ function to_array($array) {
     return $array;
   }
 }
+
+function ultra_shorten_text($string, $length, $more = '&hellip;') {
+  if (strlen($string) <= $length) {
+    return $string;
+  }
+
+  return substr($string, 0, $length) . $more;
+}
+
+function ultra_trim_urls($string) {
+  $pattern = '/(https?:\/\/\S{50})\S*/i';
+  $replacement = '$1&hellip;';
+  return preg_replace($pattern, $replacement, $string);
+}

@@ -30,6 +30,11 @@ $roots_includes = array(
   'fields/dates',
   'fields/sponsors',
   'fields/register-button',
+  'fields/feeds',
+
+  // Classes
+  'classes/SimpleCache',
+  'classes/FacebookGraphApi',
 
   'options',            // Advanced custom fields options pages
   'assets',             // Asset helpers (paths, etc)
@@ -54,6 +59,7 @@ $roots_includes = array(
   'cache',              // Setup cache directory
   'caching',            // Setup options page to clear cache
   'admin-cleanup',      // Cleanup the admin interface
+  'feeds',              // Facebook feeds
 );
 
 foreach ($roots_includes as $file) {

@@ -9,3 +9,5 @@ The theme is based on the roots starter theme, and uses the roots wrapper for te
 Setup
 -----
 `WP_ENV` must be defined in the `wp-config.php` file of your wordpress install, and set to either `development` or `production`. `CACHE_BAN_URL` must also be set. This URL will be sent a `BAN` request when the cache is to be cleared.
+
+To obtain facebook feeds, a facebook app ID and secret should be obtained and defined as `FACEBOOK_APPID` and `FACEBOOK_SECRET` in `wp-config.php`.

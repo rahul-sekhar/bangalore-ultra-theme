@@ -16,6 +16,7 @@ body {
   @include transition(height $header-transition-time ease);
 
   h1 {
+    z-index: 500;
     position: fixed;
     left: $page-side-padding;
     top: 0;

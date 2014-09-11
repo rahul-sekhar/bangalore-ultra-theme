@@ -39,7 +39,7 @@ $page = ultra_front_page();
           <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:50px; height:50px;"
           <?php $exhaustion->point('z1', 2); ?>="opacity: 0; width:75px; height:75px;"
-          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
@@ -51,7 +51,7 @@ $page = ultra_front_page();
           <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z2', 1); ?>="opacity:1; width:50px; height:50px;"
           <?php $exhaustion->point('z2', 2); ?>="opacity: 0; width:75px; height:75px;"
-          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
@@ -63,7 +63,7 @@ $page = ultra_front_page();
           <?php $exhaustion->point('z3', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z3', 1); ?>="opacity:1; width:50px; height:50px;"
           <?php $exhaustion->point('z3', 2); ?>="opacity: 0; width:75px; height:75px;"
-          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
@@ -75,7 +75,7 @@ $page = ultra_front_page();
           <?php $exhaustion->point('z4', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z4', 1); ?>="opacity:1; width:50px; height:50px;"
           <?php $exhaustion->point('z4', 2); ?>="opacity: 0; width:75px; height:75px;"
-          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
@@ -87,7 +87,7 @@ $page = ultra_front_page();
           <?php $exhaustion->point('z5', 0); ?>="width:0px; height: 0px"
           <?php $exhaustion->point('z5', 1); ?>="opacity:1; width:50px; height:50px;"
           <?php $exhaustion->point('z5', 2); ?>="opacity: 0; width:75px; height:75px;"
-          src="<?php image_path('exhaustion/z1-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
     </div>
 
@@ -232,7 +232,6 @@ $page = ultra_front_page();
   <?php $start->section_point('leave'); ?>="top: 0%;"
   data-enter-mark="<?php echo 'data' . $start->raw_section_point('enter') . 'p'; ?>"
   data-start-mark="<?php echo 'data' . $start->raw_section_point('start') . 'p'; ?>"
-  data-leave-mark="<?php echo 'data' . $start->raw_section_point('leave') . 'p'; ?>"
   data-emit-events
   data-marker="<?php echo $start->raw_section_point('start'); ?>"
 >
@@ -246,7 +245,7 @@ $page = ultra_front_page();
         <?php $start->point('dates', 1); ?>="left: 100%;"
       >
         <div class="text fit">
-          <img src="<?php image_path('start/text4.png'); ?>" alt="the journey begins" />
+          <img src="<?php image_path('start/texta-1-2.png'); ?>" alt="the journey begins" />
         </div>
       </div>
 
@@ -260,49 +259,80 @@ $page = ultra_front_page();
         <p class="dates"><?php the_field('dates', 'options'); ?></p>
       </div>
 
-      <div class="register-container"
+      <div class="info-container"
         <?php $start->point('register', 0); ?>="left: -100%;"
         <?php $start->point('register', 1); ?>="left: 0%;"
-        <?php $start->point('sponsors', 0); ?>="background-color: rgba(0,0,0,0);"
-        <?php $start->point('sponsors', 1); ?>="background-color: rgba(0,0,0,0.8);"
+        <?php $start->point('feeds', 0); ?>="background-color: rgba(0,0,0,0);"
+        <?php $start->point('feeds', 1); ?>="background-color: rgba(0,0,0,0.8);"
         data-marker="<?php echo $start->raw_point('register', 1); ?>"
       >
-        <div class="center"
-          <?php $start->point('sponsors', 0); ?>="height: 100%;"
-          <?php $start->point('sponsors', 1); ?>="height: 70%;"
+        <div class="register-container"
+          <?php $start->point('feeds', 0); ?>="bottom: 50%; transform: translateY(50%);"
+          <?php $start->point('feeds', 1); ?>="bottom: 100%; transform: translateY(0%);"
         >
-          <div class="center-inner">
-            <p class="title">Bangalore ultra.</p>
-            <p class="subtitle">It's tough. Are you?</p>
+          <p class="title">Bangalore ultra.</p>
+          <img class="subtitle" src="<?php image_path('start/textb-1-2.png'); ?>" alt="It's tough. Are you?" />
+          <div
+            <?php $start->point('feeds', 0); ?>="bottom: 50%; transform: translateY(0px);"
+            <?php $start->point('feeds', 1); ?>="bottom: 100%; transform: translateY(100px);"
+          >
             <?php echo do_shortcode('[register]'); ?>
           </div>
+        </div>
 
-          <div class="sponsors-container"
-            <?php $start->point('sponsors', 0); ?>="top: 100%;"
-            <?php $start->point('sponsors', 1); ?>="top: 0%;"
-            data-marker="<?php echo $start->raw_point('sponsors', 1); ?>"
-          >
-            <ul class="sponsors">
-              <?php
-              $logoColor = 'ffffff';
-              $logoArea = 8000;
-              ?>
-              <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
-                <li>
-                  <?php if( $sponsor['url'] ) : ?>
-                    <a href="<?php echo $sponsor['url']; ?>" target="_blank">
-                  <?php endif; ?>
-                    <img
-                      src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
-                      alt="<?php echo $sponsor['name']; ?>"
-                    />
-                  <?php if( $sponsor['url'] ) : ?>
-                    </a>
-                  <?php endif; ?>
-                </li>
-              <?php endforeach; ?>
-            </ul>
+        <div class="feeds-container"
+          <?php $start->point('feeds', 0); ?>="bottom: -100%;"
+          <?php $start->point('feeds', 1); ?>="bottom: 0%;"
+          <?php $start->point('sponsors', 0); ?>="bottom: 0%;"
+          <?php $start->point('sponsors', 1); ?>="bottom: 100%;"
+          data-marker="<?php echo $start->raw_point('feeds', 1); ?>"
+        >
+          <div class="feeds">
+            <div class="feed-1">
+              <h3>
+                <a href="https://facebook.com/<?php the_field('feed_1_id', 'options'); ?>/">
+                  <?php the_field('feed_1_title', 'options'); ?>
+                </a>
+              </h3>
+              <?php ultra_display_facebook_feed( get_field('feed_1_id', 'options') ); ?>
+            </div>
+
+            <div class="feed-2">
+              <h3>
+                <a href="https://facebook.com/<?php the_field('feed_2_id', 'options'); ?>/">
+                  <?php the_field('feed_2_title', 'options'); ?>
+                </a>
+              </h3>
+              <?php ultra_display_facebook_feed( get_field('feed_2_id', 'options') ); ?>
+            </div>
           </div>
+        </div>
+
+        <div class="sponsors-container"
+          <?php $start->point('sponsors', 0); ?>="bottom: -100%;"
+          <?php $start->point('sponsors', 1); ?>="bottom: 0%;"
+          data-marker="<?php echo $start->raw_point('sponsors', 1); ?>"
+        >
+          <ul class="sponsors">
+            <?php
+            $logoColor = 'ffffff';
+            $logoArea = 8000;
+            ?>
+            <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
+              <li>
+                <?php if( $sponsor['url'] ) : ?>
+                  <a href="<?php echo $sponsor['url']; ?>" target="_blank">
+                <?php endif; ?>
+                  <img
+                    src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
+                    alt="<?php echo $sponsor['name']; ?>"
+                  />
+                <?php if( $sponsor['url'] ) : ?>
+                  </a>
+                <?php endif; ?>
+              </li>
+            <?php endforeach; ?>
+          </ul>
         </div>
       </div>
     </div>

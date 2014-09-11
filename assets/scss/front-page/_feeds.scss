@@ -1,0 +1,63 @@
+#start .feeds-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+
+  padding-top: 120px;
+
+  color: white;
+
+  .feeds {
+    display: inline-block;
+  }
+
+  .feed-1, .feed-2 {
+    float: left;
+    width: 400px;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+
+    a {
+      @include link-colors(white);
+
+      &:before {
+        content: '\e80a';
+        @include icon;
+      }
+    }
+  }
+
+  ul {
+    @include reset-list;
+
+    p {
+      text-transform: none;
+      font-family: 'freight-sans-pro';
+      font-size: 16px;
+      line-height: 120%;
+      font-weight: normal;
+      text-transform: none;
+
+      color: white;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid $grey-1;
+    }
+
+    a {
+      display: block;
+      padding: 20px 0;
+    }
+
+  }
+}

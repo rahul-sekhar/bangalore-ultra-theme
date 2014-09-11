@@ -6,7 +6,7 @@
   }
 
   .text {
-    @include fit('start/text4.png');
+    @include fit('start/texta-1-2.png');
 
     img {
       position: absolute;
@@ -45,5 +45,13 @@
     top: 0;
     width: 100%;
     bottom: 0;
+  }
+
+  .info-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
   }
 }

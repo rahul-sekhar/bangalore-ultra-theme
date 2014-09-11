@@ -1,0 +1,22 @@
+#start .sponsors-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+
+  .sponsors {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    @include transform(translateY(-50%));
+    @include reset-list;
+    text-align: center;
+    z-index: 130;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
