@@ -51,6 +51,10 @@
           .css('transition-duration', '0ms');
       });
 
+      section.find('.tears')
+        .css('transition-delay', '0ms')
+        .css('transition-duration', '0ms');
+
       section.find('.text-container')
         .css('transition-delay', '0ms')
         .css('transition-duration', '0ms');
@@ -71,8 +75,12 @@
         }
       });
 
+      section.find('.tears')
+        .css('transition-delay', (maxTime - 500) + 'ms')
+        .css('transition-duration', '200ms, 1000ms');
+
       section.find('.text-container')
-        .css('transition-delay', maxTime + 'ms')
+        .css('transition-delay', (maxTime + 250) + 'ms')
         .css('transition-duration', '500ms');
     }
   });

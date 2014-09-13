@@ -38,10 +38,23 @@
     @include transition-timing-function(linear);
   }
 
+  .tears {
+    opacity: 0;
+    left: 50%;
+    @include transform(translate(-50%, -5%));
+    @include transition-property(opacity, transform);
+    @include transition-timing-function(linear);
+  }
+
   &.run {
     .runner {
       left: 100%;
       @include transform(translateX(0%));
+    }
+
+    .tears {
+      opacity: 1;
+      @include transform(translate(-50%, 50%));
     }
 
     .text-container {
@@ -61,8 +74,6 @@
     opacity: 0;
     @include transition-property(opacity);
     @include transition-timing-function(ease);
-    @include transition-delay(5s);
-    @include transition-duration(1000ms);
   }
 
   .text {

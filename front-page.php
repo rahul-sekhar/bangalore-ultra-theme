@@ -178,6 +178,7 @@ $page = ultra_front_page();
     <img class="runner lady-2" src="<?php image_path('despair/runner-lady-2.png'); ?>" alt="" />
 
     <img class="person fixed" src="<?php image_path('despair/person.png'); ?>" alt="" />
+    <img class="tears" src="<?php image_path('despair/tears.png'); ?>" alt="" />
 
     <img class="runner african" src="<?php image_path('despair/runner-african.png'); ?>" alt="" />
     <img class="runner lady" src="<?php image_path('despair/runner-lady.png'); ?>" alt="" />
