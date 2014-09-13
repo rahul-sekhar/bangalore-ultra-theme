@@ -41,7 +41,7 @@
   .tears {
     opacity: 0;
     left: 50%;
-    @include transform(translate(-50%, -5%));
+    @include transform(translate(-53.5%, -5%));
     @include transition-property(opacity, transform);
     @include transition-timing-function(linear);
   }
@@ -54,7 +54,7 @@
 
     .tears {
       opacity: 1;
-      @include transform(translate(-50%, 50%));
+      @include transform(translate(-53.5%, 50%));
     }
 
     .text-container {
@@ -63,6 +63,7 @@
   }
 
   .text-container {
+    display: none;
     @include box-sizing(content-box);
     padding-top: $top-space + 1px;
     margin-top: -1 * ($top-space + 1px);
