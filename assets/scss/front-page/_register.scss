@@ -28,5 +28,6 @@
   .button.register {
     position: relative;
     margin-top: 20px;
+    @include border-radius(10px);
   }
 }
