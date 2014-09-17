@@ -68,19 +68,8 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  &:after {
-    @include icon;
-    font-size: 50px;
-    content: '\e800';
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    height: $top-bar-height;
-    width: 50px;
-    line-height: $top-bar-height;
-    top: 0;
-    right: 0;
-  }
+  padding-right: image-width('menu-icon.png') + 8px;
+  background: image-url('menu-icon.png') no-repeat right;
 }
 
 body.plain #header {
