@@ -4,23 +4,33 @@
   window.runners = [
     {
       name: 'drinking',
-      speed: 0.9
+      speed: 1,
+      delay: 300
     },
     {
       name: 'african',
-      speed: 1.7
+      speed: 1.3,
+      delay: 0
     },
     {
-      name: 'lady',
-      speed: 1.2
+      name: 'lady-1',
+      speed: 1.2,
+      delay: 200
     },
     {
       name: 'lady-2',
-      speed: 1.05
+      speed: 1.05,
+      delay: 700
     },
     {
       name: 'towel',
-      speed: 1.1
+      speed: 1.1,
+      delay: 500
+    },
+    {
+      name: 'fat',
+      speed: 0.9,
+      delay: 800
     }
   ];
   window.speedMultiplier = 0.6;
@@ -67,11 +77,11 @@
         var distance = section.find('.runners').width() + runner.element.width();
         var time = distance / (runner.speed * window.speedMultiplier);
         runner.element
-          .css('transition-delay', '0ms')
+          .css('transition-delay', runner.delay + 'ms')
           .css('transition-duration', time + 'ms');
 
-        if (time > maxTime) {
-          maxTime = time;
+        if (time + runner.delay > maxTime) {
+          maxTime = time + runner.delay;
         }
       });
 

@@ -27,7 +27,7 @@
     right: 0;
     bottom: 0;
     height: 25%;
-    background-image: image-url('despair/ground.png');
+    background-image: image-url('despair/ground-32.png');
     @include background-size(auto 100%);
   }
 
@@ -41,7 +41,7 @@
   .tears {
     opacity: 0;
     left: 50%;
-    @include transform(translate(-53.5%, -5%));
+    @include transform(translate(-50%, -5%));
     @include transition-property(opacity, transform);
     @include transition-timing-function(linear);
   }
@@ -54,7 +54,7 @@
 
     .tears {
       opacity: 1;
-      @include transform(translate(-53.5%, 50%));
+      @include transform(translate(-50%, 50%));
     }
 
     .text-container {
@@ -77,7 +77,7 @@
   }
 
   .text {
-    @include fit('despair/text3.png');
+    @include fit('despair/text3-2.png');
 
     img {
       position: absolute;

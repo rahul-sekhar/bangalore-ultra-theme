@@ -170,23 +170,24 @@ $page = ultra_front_page();
   <div class="inner">
     <div class="ground"></div>
 
-    <img class="fixed" src="<?php image_path('despair/cloud.png'); ?>" alt="" />
-    <img class="fixed" src="<?php image_path('despair/dragonfly-1.png'); ?>" alt="" />
-    <img class="fixed" src="<?php image_path('despair/dragonfly-2.png'); ?>" alt="" />
+    <img class="fixed" src="<?php image_path('despair/cloud-32.png'); ?>" alt="" />
+    <img class="fixed" src="<?php image_path('despair/dragonflies-16.png'); ?>" alt="" />
 
-    <img class="runner drinking" src="<?php image_path('despair/runner-drinking.png'); ?>" alt="" />
-    <img class="runner lady-2" src="<?php image_path('despair/runner-lady-2.png'); ?>" alt="" />
+    <img class="runner drinking" src="<?php image_path('despair/runner-drinking-32.png'); ?>" alt="" />
+    <img class="runner lady-2" src="<?php image_path('despair/runner-lady-2-32.png'); ?>" alt="" />
+    <img class="runner towel" src="<?php image_path('despair/runner-towel-32.png'); ?>" alt="" />
 
-    <img class="person fixed" src="<?php image_path('despair/person.png'); ?>" alt="" />
-    <img class="tears" src="<?php image_path('despair/tears.png'); ?>" alt="" />
+    <img class="person fixed" src="<?php image_path('despair/person-128.png'); ?>" alt="" />
+    <img class="tears" src="<?php image_path('despair/person-tears-16.png'); ?>" alt="" />
 
-    <img class="runner african" src="<?php image_path('despair/runner-african.png'); ?>" alt="" />
-    <img class="runner lady" src="<?php image_path('despair/runner-lady.png'); ?>" alt="" />
-    <img class="runner towel" src="<?php image_path('despair/runner-towel.png'); ?>" alt="" />
+    <img class="runner african" src="<?php image_path('despair/runner-african-32.png'); ?>" alt="" />
+    <img class="runner fat" src="<?php image_path('despair/runner-fat-32.png'); ?>" alt="" />
+    <img class="runner lady-1" src="<?php image_path('despair/runner-lady-1-32.png'); ?>" alt="" />
+
 
     <div class="text-container">
       <div class="text fit">
-        <img src="<?php image_path('despair/text3.png'); ?>" alt="achieved what seemed impossible" />
+        <img src="<?php image_path('despair/text3-2.png'); ?>" alt="achieved what seemed impossible" />
       </div>
     </div>
   </div>
