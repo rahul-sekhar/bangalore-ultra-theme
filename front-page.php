@@ -315,26 +315,36 @@ $page = ultra_front_page();
           <?php $start->point('sponsors', 1); ?>="bottom: 0%;"
           data-marker="<?php echo $start->raw_point('sponsors', 1); ?>"
         >
-          <ul class="sponsors">
+          <div class="sponsors-inner">
             <?php
             $logoColor = 'ffffff';
             $logoArea = 8000;
-            ?>
-            <?php foreach(get_field('sponsors', 'options') as $sponsor) : ?>
-              <li>
-                <?php if( $sponsor['url'] ) : ?>
-                  <a href="<?php echo $sponsor['url']; ?>" target="_blank">
-                <?php endif; ?>
-                  <img
-                    src="<?php echo get_logo_image(get_attached_file($sponsor['logo']['id']), $logoArea, $logoColor) ?>"
-                    alt="<?php echo $sponsor['name']; ?>"
-                  />
-                <?php if( $sponsor['url'] ) : ?>
-                  </a>
-                <?php endif; ?>
-              </li>
-            <?php endforeach; ?>
-          </ul>
+
+            for($i = 1; $i <= 2; $i++) : ?>
+              <div class="sponsors sponsors-<?php echo $i; ?>">
+                <p><?php the_field('sponsors_title_' . $i, 'options'); ?></p>
+
+                <ul class="logos">
+                  <?php
+                  $logos = get_field('sponsors_logos_' . $i, 'options');
+                  foreach(to_array($logos) as $logo) : ?>
+                    <li>
+                      <?php if( $logo['link'] ) : ?>
+                        <a href="<?php echo $logo['link']; ?>" target="_blank">
+                      <?php endif; ?>
+                        <img
+                          src="<?php echo get_logo_image(get_attached_file($logo['image']['id']), $logoArea, $logoColor) ?>"
+                          alt="<?php echo $logo['name']; ?>"
+                        />
+                      <?php if( $logo['link'] ) : ?>
+                        </a>
+                      <?php endif; ?>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+            <?php endfor; ?>
+          </div>
         </div>
       </div>
     </div>

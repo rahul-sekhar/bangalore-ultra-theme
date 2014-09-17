@@ -4,19 +4,42 @@
   right: 0;
   height: 100%;
 
-  .sponsors {
+  .sponsors-inner {
     position: absolute;
     left: 50%;
     top: 50%;
     @include transform(translate(-50%, -50%));
-    @include reset-list;
-    text-align: center;
-    z-index: 130;
-    max-width: 400px;
+  }
 
-    li {
-      display: inline-block;
-      margin: 0 10px;
-    }
+  ul {
+    @include reset-list;
+    z-index: 130;
+  }
+
+  li {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  img {
+    opacity: 0.6;
+    @include transition(opacity 250ms ease);
+  }
+
+  a:hover img {
+    opacity: 1;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .sponsors-2 {
+    margin-top: 60px;
   }
 }
