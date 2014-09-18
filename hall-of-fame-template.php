@@ -6,7 +6,7 @@ while (have_posts()) : the_post();
   $course_record_routes = get_field('course_record_routes');
   $annual_record_years = get_field('annual_record_years');
 ?>
-  <div id="records">
+  <div id="records" class="content">
     <h2>Hall of Fame</h2>
 
     <ul class="filters">

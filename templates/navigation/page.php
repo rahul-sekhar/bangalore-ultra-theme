@@ -1,3 +1,5 @@
+<a href="#" class="side-nav-pull"></a>
+
 <nav class="page">
   <p class="title"><a href="#top"><?php the_title(); ?></a></p>
   <ul>

@@ -1,9 +1,6 @@
 nav.page {
   font-family: 'brandon-grotesque';
   position: fixed;
-  top: $page-top-padding + $top-space;
-  right: $page-nav-margin;
-  width: $page-nav-width;
   border-top: 4px solid $red;
   border-bottom: 4px solid $red;
   padding: 10px 20px 10px 0;
@@ -27,6 +24,56 @@ nav.page {
   }
 }
 
-.content.page.nav {
-  margin-right: $page-nav-width + $page-nav-margin;
+.side-nav-pull {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+  .side-nav-pull {
+    position: fixed;
+    display: block;
+    background-color: black;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $side-nav-pull-width;
+
+    &:before {
+      @include icon;
+      content: '\e803';
+      color: $off-white;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      line-height: 50px;
+      margin-top: -25px;
+    }
+  }
+
+  nav.page {
+    display: none;
+  }
+
+  body.side-nav-shown {
+    .content {
+      display: none;
+    }
+
+    nav.page {
+      display: block;
+      position: static;
+      margin-left: $side-nav-pull-width;
+      width: auto;
+      border-bottom: none;
+      padding: 20px;
+    }
+
+    .side-nav-pull:before {
+      content: '\e804';
+    }
+  }
 }

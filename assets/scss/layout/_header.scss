@@ -9,16 +9,14 @@ body {
   right: 0;
   background: image-url('top-bar.png') repeat-x;
   z-index: 400;
-  padding: 0 $page-side-padding;
   text-align: right;
 
   @include transition(height $header-transition-time ease);
 
   h1 {
     z-index: 500;
-    position: fixed;
-    left: $page-side-padding;
-    top: 0;
+    position: relative;
+    float: left;
 
     margin: 0;
     @include transform(scale(0.9));
@@ -55,7 +53,7 @@ body {
   }
 }
 
-#pull-nav {
+#header #pull-nav {
   position: relative;
   z-index: 500;
   display: block;
@@ -68,8 +66,10 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  padding-right: image-width('menu-icon.png') + 8px;
-  background: image-url('menu-icon.png') no-repeat right;
+  padding-right: image-width('menu.png') + 8px;
+  background: image-url('menu.png') no-repeat right;
+
+  color: black;
 }
 
 body.plain #header {

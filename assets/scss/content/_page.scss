@@ -1,11 +1,8 @@
 body.page {
-  background-color: #fffeef;
+  background-color: $off-white;
 }
 
 .content.page {
-  padding: $page-top-padding $page-side-padding $page-bottom-padding $page-side-padding;
-  max-width: $page-width + ($page-side-padding * 2);
-
   section {
     padding-top: $top-space;
     margin-top: -20px;
