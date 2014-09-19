@@ -23,12 +23,7 @@
   }
 
   img {
-    opacity: 0.6;
     @include transition(opacity 250ms ease);
-  }
-
-  a:hover img {
-    opacity: 1;
   }
 
   p {
