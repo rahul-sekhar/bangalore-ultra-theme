@@ -31,6 +31,7 @@ $roots_includes = array(
   'fields/sponsors',
   'fields/register-button',
   'fields/feeds',
+  'fields/alternate-page',
 
   // Classes
   'classes/SimpleCache',
@@ -60,6 +61,7 @@ $roots_includes = array(
   'caching',            // Setup options page to clear cache
   'admin-cleanup',      // Cleanup the admin interface
   'feeds',              // Facebook feeds
+  'alternate-page',     // Alternate page
 );
 
 foreach ($roots_includes as $file) {

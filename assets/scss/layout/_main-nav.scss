@@ -38,22 +38,6 @@
       padding: 5px 0;
     }
   }
-
-  #home-link {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    font-size: 30px;
-
-    &:before {
-      @include icon;
-      content: '\e80b';
-      line-height: $top-bar-height;
-      margin: 0;
-      padding: 0;
-    }
-  }
 }
 
 body.nav-shown {
