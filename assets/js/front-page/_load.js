@@ -9,6 +9,11 @@
     // Hide the loading screen
     $('body').addClass('loaded');
 
+    // The remaining tasks are only for the front page
+    if (!$('body').hasClass('home')) {
+      return;
+    }
+
     // Initialise skrollr
     window.ultraInitScroll();
 

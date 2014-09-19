@@ -26,11 +26,9 @@
     var currentPos = $(window).scrollTop();
     var windowHeight = $(window).height() / 100;
 
-    console.log(currentPos);
     scrollPoints.each(function () {
       var point = Math.floor($(this).data('marker') * windowHeight);
       if (point > currentPos + 5) {
-        console.log(point);
         $(window).scrollTop(point);
         return false;
       }
