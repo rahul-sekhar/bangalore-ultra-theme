@@ -131,7 +131,7 @@
 
         span {
           display: block;
-          @include link-colors(white, white);
+          color: $off-white;
         }
 
         li {

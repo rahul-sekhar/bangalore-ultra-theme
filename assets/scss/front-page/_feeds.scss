@@ -7,7 +7,7 @@
 
   padding-top: 120px;
 
-  color: white;
+  color: $off-white;
 
   .feeds {
     display: inline-block;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
 
     a {
-      @include link-colors(white);
+      color: $off-white;
 
       &:before {
         content: '\e80a';
@@ -44,7 +44,7 @@
       font-weight: normal;
       text-transform: none;
 
-      color: white;
+      color: $off-white;
       text-align: left;
       margin: 0;
       padding: 0;

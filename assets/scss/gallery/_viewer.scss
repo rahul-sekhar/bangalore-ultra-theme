@@ -13,7 +13,7 @@
     }
 
     a {
-      @include link-colors(white, white);
+      color: $off-white;
     }
 
     .close {

@@ -27,7 +27,7 @@
     left: 0;
     right: 0;
     @include transform(translateY(-50%));
-    color: white;
+    color: $off-white;
     font-size: 90px;
   }
 

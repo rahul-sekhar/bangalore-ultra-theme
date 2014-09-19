@@ -29,31 +29,9 @@ body {
     width: $logo-width;
     height: image-height('logo-256.png') / image-width('logo-256.png') * $logo-width;
   }
-
-  a {
-    color: white;
-  }
-
-  .register {
-    display: block;
-    float: right;
-    line-height: $top-bar-height;
-    height: $top-bar-height;
-    margin-right: 20px;
-  }
-
-  .dates {
-    text-transform: uppercase;
-    color: white;
-    display: block;
-    float: right;
-    line-height: $top-bar-height;
-    height: $top-bar-height;
-    margin-right: 20px;
-  }
 }
 
-#header #pull-nav {
+#pull-nav {
   position: relative;
   z-index: 500;
   display: block;
@@ -62,13 +40,11 @@ body {
   height: $top-bar-height;
   vertical-align: middle;
   font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: lowercase;
 
-  padding-right: image-width('menu.png') + 50px;
+  padding-right: 50px;
   background: image-url('menu.png') no-repeat right;
 
-  color: black;
+  color: $grey-2;
 }
 
 body.plain #header {

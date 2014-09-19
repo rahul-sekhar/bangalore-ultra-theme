@@ -21,6 +21,10 @@
   letter-spacing: 1px;
   text-align: center;
 
+  a {
+    color: $off-white;
+  }
+
   .inner {
     display: table-cell;
     vertical-align: middle;
@@ -37,6 +41,10 @@
       display: inline-block;
       padding: 5px 0;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 32px;
   }
 }
 

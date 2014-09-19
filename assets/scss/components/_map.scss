@@ -9,7 +9,7 @@
 
   .close {
     position: absolute;
-    @include link-colors(white, lighten(white, 20));
+    color: $off-white;
     font-size: 38px;
     top: 10px;
     right: 10px;
@@ -75,7 +75,7 @@
     }
 
     .current a {
-      color: white;
+      color: $off-white;
     }
   }
 
@@ -105,7 +105,7 @@
       border: $border solid #666;
       width: $radius * 2;
       height: $radius * 2;
-      background-color: white;
+      background-color: $off-white;
       @include transition(background-color 250ms ease);
       border-radius: 50%;
       margin-left: -1 * ($radius + $border);
@@ -120,7 +120,7 @@
       visibility: hidden;
       opacity: 0;
       @include transition(opacity 250ms ease, visibility 250ms ease);
-      background-color: white;
+      background-color: $off-white;
       @include border-radius(10px);
       padding: 12px 16px;
       text-align: center;
@@ -149,7 +149,7 @@
         top: -40px;
         left: 116px;
         border-right: 4px solid transparent;
-        border-bottom: 40px solid white;
+        border-bottom: 40px solid $off-white;
         border-left: 4px solid transparent;
       }
 
@@ -160,7 +160,7 @@
         &:before {
           top: auto;
           bottom: -40px;
-          border-top: 40px solid white;
+          border-top: 40px solid $off-white;
           border-right: 4px solid transparent;
           border-left: 4px solid transparent;
           border-bottom: none;
@@ -185,7 +185,7 @@
       display: block;
       margin-left: -18px;
       margin-top: -18px;
-      color: white;
+      color: $off-white;
 
       i {
         font-size: 36px;
@@ -217,7 +217,7 @@
       vertical-align: middle;
 
       font-size: 14px;
-      color: white;
+      color: $off-white;
 
       span {
         background-color: rgba(#666, 0.5);
@@ -270,7 +270,7 @@
       text-transform: uppercase;
       font-size: 25px;
       letter-spacing: 2px;
-      color: white;
+      color: $off-white;
     }
   }
 
