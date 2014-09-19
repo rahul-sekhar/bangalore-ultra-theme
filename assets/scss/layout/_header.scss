@@ -61,12 +61,11 @@ body {
   line-height: $top-bar-height;
   height: $top-bar-height;
   vertical-align: middle;
-  padding-right: 50px + 10px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 
-  padding-right: image-width('menu.png') + 8px;
+  padding-right: image-width('menu.png') + 50px;
   background: image-url('menu.png') no-repeat right;
 
   color: black;

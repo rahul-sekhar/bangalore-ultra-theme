@@ -1,3 +1,5 @@
+'use strict';
+
 (function($) {
   var initialized = false;
   function init() {

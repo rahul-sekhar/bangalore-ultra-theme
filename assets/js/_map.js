@@ -1,3 +1,5 @@
+'use strict';
+
 (function($) {
   $(document).ready(function () {
 
@@ -36,7 +38,7 @@
       var newWidth = 'full';
       var widths = [400, 800, 1024, 1280, 1600];
 
-      screenWidth = Math.max( $(window).width(), window.innerWidth );
+      var screenWidth = Math.max( $(window).width(), window.innerWidth );
       $.each(widths, function (i, width) {
         if (width >= screenWidth) {
           newWidth = width;

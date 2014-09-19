@@ -1,3 +1,5 @@
+'use strict';
+
 (function($) {
   $(document).ready(function () {
     if (!$('body').hasClass('page-template-gallery-template-php')) {
@@ -8,7 +10,7 @@
     var imagesSection = $('#images');
     imagesSection.find('img').unveil(200, function () {
       var image = this;
-      imagesLoaded(image, function (imgs) {
+      window.imagesLoaded(image, function (imgs) {
         $(image).parent('.thumb').addClass('loaded');
       });
     });
@@ -16,9 +18,9 @@
 
     /* Bib number search */
     var bibSearch = $('li.bib-number');
-    bibSearchLink = bibSearch.find('a');
-    bibSearchInput = bibSearch.find('input');
-    bibSearchForm = bibSearch.find('form');
+    var bibSearchLink = bibSearch.find('a');
+    var bibSearchInput = bibSearch.find('input');
+    var bibSearchForm = bibSearch.find('form');
 
     function hideBibSearchIfEmpty() {
       if (!bibSearchInput.val()) {

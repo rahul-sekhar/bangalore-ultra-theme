@@ -1,3 +1,5 @@
+'use strict';
+
 jQuery(document).ready(function ($) {
   var galleryYear, photoNo, imageSize, container, tags, loading;
 
@@ -101,7 +103,7 @@ jQuery(document).ready(function ($) {
       tags: tagString
     };
 
-    $.post(ajaxurl, params, function (data) {
+    $.post(window.ajaxurl, params, function (data) {
       if (data !== '1') {
         photoNo = params.n;
         closePhotos('Tags could not be saved');
@@ -118,7 +120,7 @@ jQuery(document).ready(function ($) {
     };
 
     loading.fadeIn();
-    $.get(ajaxurl, params, function (data) {
+    $.get(window.ajaxurl, params, function (data) {
       if (data === '0') {
         photoNo = 1;
         closePhotos('No more photos found');
@@ -142,7 +144,7 @@ jQuery(document).ready(function ($) {
         tags.focus();
         tags[0].select();
 
-        imagesLoaded(image, function() {
+        window.imagesLoaded(image, function() {
           loading.fadeOut();
         });
       }
