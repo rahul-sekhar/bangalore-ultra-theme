@@ -317,7 +317,7 @@ $page = ultra_front_page();
         >
           <div class="sponsors-inner">
             <?php
-            $logoColor = 'ffffff';
+            $logoColor = 'fffeef';
             $logoArea = 8000;
 
             for($i = 1; $i <= 2; $i++) : ?>

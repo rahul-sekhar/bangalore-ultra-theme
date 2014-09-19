@@ -1,6 +1,7 @@
 $side-space: 100px;
 $side-space-1200: 60px;
 $side-space-1100: 40px;
+$side-space-500: 20px;
 
 $nav-width: 250px;
 
@@ -74,5 +75,22 @@ nav.page {
       margin-right: 0;
       margin-left: $side-nav-pull-width;
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    padding-left: $side-space-500;
+    padding-right: $side-space-500;
+  }
+
+  #header {
+    padding: 0 $side-space-500;
   }
 }

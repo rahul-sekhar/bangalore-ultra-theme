@@ -26,4 +26,8 @@ img {
 
 p, ul, ol {
   line-height: 150%;
+
+  @media screen and (max-width: 750px) {
+    line-height: 120%;
+  }
 }

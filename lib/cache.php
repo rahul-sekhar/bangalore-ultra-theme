@@ -1,6 +1,6 @@
 <?php
 
-define('CACHE_VERSION', '3');
+define('CACHE_VERSION', '4');
 define('CACHE_DIRECTORY', get_template_directory() . '/cache/' . CACHE_VERSION);
 define('CACHE_URI', get_template_directory_uri() . '/cache/' . CACHE_VERSION);
 

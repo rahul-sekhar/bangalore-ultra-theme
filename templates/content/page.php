@@ -4,7 +4,10 @@
   if ($section['visible']) :
   ?>
     <section id="<?php echo sanitize_title($section['title']); ?>">
-      <header><h3><?php echo $section['title']; ?></h3></header>
+      <?php if($section['title']) : ?>
+        <header><h3><?php echo $section['title']; ?></h3></header>
+      <?php endif; ?>
+
       <?php echo $section['content']; ?>
     </section>
   <?php
