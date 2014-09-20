@@ -8,24 +8,21 @@ body.alt {
 
   nav.alt-nav {
     margin: 20px 0;
-    text-align: center;
 
     ul {
       @include reset-list;
-      display: inline-block;
+      text-align: center;
     }
 
     li {
-      float: left;
-      margin-right: 20px;
-
-      &:first-child {
-        margin-left: 20px;
-      }
+      display: inline-block;
+      padding: 0 10px;
     }
 
     a {
       color: $red;
+      display: block;
+      line-height: 40px;
     }
   }
 }
