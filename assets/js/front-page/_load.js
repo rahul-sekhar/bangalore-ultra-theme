@@ -25,12 +25,21 @@
     // Load videos that haven't yet been loaded
     loadVideos();
 
+    // Load feeds
+    loadFeeds();
+
     // Hide loading screen
     $('#loading').fadeOut(500);
   }
 
   function loadVideos() {
     $('.video-placeholder').wrapInner('<video loop></video>');
+  }
+
+  function loadFeeds() {
+    $.get('/wp-admin/admin-ajax.php', { action: 'feeds' }, function(response) {
+      $('#feeds').html(response);
+    });
   }
 
   $(window).load(init);

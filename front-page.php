@@ -291,25 +291,9 @@ $page = ultra_front_page();
           <?php $start->point('sponsors', 1); ?>="bottom: 100%;"
           data-marker="<?php echo $start->raw_point('feeds', 1); ?>"
         >
-          <div class="feeds">
-            <div class="feed-1">
-              <h3>
-                <a href="https://facebook.com/<?php the_field('feed_1_id', 'options'); ?>/">
-                  <?php the_field('feed_1_title', 'options'); ?>
-                </a>
-              </h3>
-              <?php ultra_display_facebook_feed( get_field('feed_1_id', 'options') ); ?>
-            </div>
 
-            <div class="feed-2">
-              <h3>
-                <a href="https://facebook.com/<?php the_field('feed_2_id', 'options'); ?>/">
-                  <?php the_field('feed_2_title', 'options'); ?>
-                </a>
-              </h3>
-              <?php ultra_display_facebook_feed( get_field('feed_2_id', 'options') ); ?>
-            </div>
-          </div>
+          <div id="feeds"></div>
+
         </div>
 
         <div class="sponsors-container"

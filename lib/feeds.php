@@ -78,3 +78,31 @@ function ultra_format_facebook($facebook_data, $name) {
 
   return $output;
 }
+
+
+function ultra_display_feeds() {
+?>
+<div class="feed-1">
+  <h3>
+    <a href="https://facebook.com/<?php the_field('feed_1_id', 'options'); ?>/">
+      <?php the_field('feed_1_title', 'options'); ?>
+    </a>
+  </h3>
+  <?php ultra_display_facebook_feed( get_field('feed_1_id', 'options') ); ?>
+</div>
+
+<div class="feed-2">
+  <h3>
+    <a href="https://facebook.com/<?php the_field('feed_2_id', 'options'); ?>/">
+      <?php the_field('feed_2_title', 'options'); ?>
+    </a>
+  </h3>
+  <?php ultra_display_facebook_feed( get_field('feed_2_id', 'options') ); ?>
+</div>
+<?php
+
+die();
+}
+
+add_action( 'wp_ajax_nopriv_feeds', 'ultra_display_feeds' );
+add_action( 'wp_ajax_feeds', 'ultra_display_feeds' );
