@@ -33,7 +33,9 @@ add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
 // add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
 // Define this in wp-config
-// define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+if (!defined('GOOGLE_ANALYTICS_ID')) {
+  define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+}
 
 /**
  * .main classes
