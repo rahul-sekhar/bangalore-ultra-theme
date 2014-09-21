@@ -5,7 +5,7 @@
     {
       name: 'drinking',
       speed: 1,
-      delay: 300
+      delay: 0
     },
     {
       name: 'african',
@@ -15,22 +15,22 @@
     {
       name: 'lady-1',
       speed: 1.2,
-      delay: 200
+      delay: 0
     },
     {
       name: 'lady-2',
       speed: 1.05,
-      delay: 700
+      delay: 0
     },
     {
       name: 'towel',
       speed: 1.1,
-      delay: 500
+      delay: 0
     },
     {
       name: 'fat',
       speed: 0.9,
-      delay: 800
+      delay: 0
     }
   ];
   window.speedMultiplier = 0.6;
@@ -90,7 +90,7 @@
         .css('transition-duration', '200ms, 1000ms');
 
       section.find('.text-container')
-        .css('transition-delay', (maxTime + 250) + 'ms')
+        .css('transition-delay', (maxTime + 500) + 'ms')
         .css('transition-duration', '500ms');
     }
   });
