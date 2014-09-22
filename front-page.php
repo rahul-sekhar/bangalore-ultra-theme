@@ -6,7 +6,7 @@
         <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
       </div>
 
-      <a href="/alt" class="alt-link">Alternate page (for slow connections)</a>
+      <a href="/alt" class="alt-link">Load basic home page (for slow connections)</a>
     </div>
   </div>
 </div>
@@ -270,66 +270,64 @@ $page = ultra_front_page();
         <?php $start->point('feeds', 1); ?>="background-color: rgba(0,0,0,0.8);"
         data-marker="<?php echo $start->raw_point('register', 1); ?>"
       >
-        <div class="register-container"
-          <?php $start->point('feeds', 0); ?>="bottom: 50%; transform: translateY(50%);"
-          <?php $start->point('feeds', 1); ?>="bottom: 100%; transform: translateY(0%);"
-        >
-          <p class="title">Bangalore ultra.</p>
-          <img class="subtitle" src="<?php image_path('start/textb-1-2.png'); ?>" alt="It's tough. Are you?" />
-          <div
-            <?php $start->point('feeds', 0); ?>="bottom: 50%; transform: translateY(0px);"
-            <?php $start->point('feeds', 1); ?>="bottom: 100%; transform: translateY(100px);"
+        <?php echo do_shortcode('[register]'); ?>
+
+        <div class="info">
+          <div class="tagline"
+            <?php $start->point('feeds', 0); ?>="left: 0%"
+            <?php $start->point('feeds', 1); ?>="left: 100%"
           >
-            <?php echo do_shortcode('[register]'); ?>
+            <p class="title">Bangalore ultra.</p>
+            <img class="subtitle" src="<?php image_path('start/textb-1-2.png'); ?>" alt="It's tough. Are you?" />
           </div>
-        </div>
 
-        <div class="feeds-container"
-          <?php $start->point('feeds', 0); ?>="bottom: -100%;"
-          <?php $start->point('feeds', 1); ?>="bottom: 0%;"
-          <?php $start->point('sponsors', 0); ?>="bottom: 0%;"
-          <?php $start->point('sponsors', 1); ?>="bottom: 100%;"
-          data-marker="<?php echo $start->raw_point('feeds', 1); ?>"
-        >
+          <div class="feeds"
+            <?php $start->point('feeds', 0); ?>="left: -100%;"
+            <?php $start->point('feeds', 1); ?>="left: 0%;"
+            <?php $start->point('sponsors', 0); ?>="left: 0%;"
+            <?php $start->point('sponsors', 1); ?>="left: 100%;"
+            data-marker="<?php echo $start->raw_point('feeds', 1); ?>"
+          >
 
-          <div id="feeds"></div>
+            <div id="feeds"></div>
 
-        </div>
+          </div>
 
-        <div class="sponsors-container"
-          <?php $start->point('sponsors', 0); ?>="bottom: -100%;"
-          <?php $start->point('sponsors', 1); ?>="bottom: 0%;"
-          data-marker="<?php echo $start->raw_point('sponsors', 1); ?>"
-        >
-          <div class="sponsors-inner">
-            <?php
-            $logoColor = 'fffeef';
-            $logoArea = 8000;
+          <div class="sponsors-container"
+            <?php $start->point('sponsors', 0); ?>="left: -100%;"
+            <?php $start->point('sponsors', 1); ?>="left: 0%;"
+            data-marker="<?php echo $start->raw_point('sponsors', 1); ?>"
+          >
+            <div class="sponsors-inner">
+              <?php
+              $logoColor = 'fffeef';
+              $logoArea = 8000;
 
-            for($i = 1; $i <= 2; $i++) : ?>
-              <div class="sponsors sponsors-<?php echo $i; ?>">
-                <p><?php the_field('sponsors_title_' . $i, 'options'); ?></p>
+              for($i = 1; $i <= 2; $i++) : ?>
+                <div class="sponsors sponsors-<?php echo $i; ?>">
+                  <p><?php the_field('sponsors_title_' . $i, 'options'); ?></p>
 
-                <ul class="logos">
-                  <?php
-                  $logos = get_field('sponsors_logos_' . $i, 'options');
-                  foreach(to_array($logos) as $logo) : ?>
-                    <li>
-                      <?php if( $logo['link'] ) : ?>
-                        <a href="<?php echo $logo['link']; ?>" target="_blank">
-                      <?php endif; ?>
-                        <img
-                          src="<?php echo get_logo_image(get_attached_file($logo['image']['id']), $logoArea, $logoColor) ?>"
-                          alt="<?php echo $logo['name']; ?>"
-                        />
-                      <?php if( $logo['link'] ) : ?>
-                        </a>
-                      <?php endif; ?>
-                    </li>
-                  <?php endforeach; ?>
-                </ul>
-              </div>
-            <?php endfor; ?>
+                  <ul class="logos">
+                    <?php
+                    $logos = get_field('sponsors_logos_' . $i, 'options');
+                    foreach(to_array($logos) as $logo) : ?>
+                      <li>
+                        <?php if( $logo['link'] ) : ?>
+                          <a href="<?php echo $logo['link']; ?>" target="_blank">
+                        <?php endif; ?>
+                          <img
+                            src="<?php echo get_logo_image(get_attached_file($logo['image']['id']), $logoArea, $logoColor) ?>"
+                            alt="<?php echo $logo['name']; ?>"
+                          />
+                        <?php if( $logo['link'] ) : ?>
+                          </a>
+                        <?php endif; ?>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              <?php endfor; ?>
+            </div>
           </div>
         </div>
       </div>

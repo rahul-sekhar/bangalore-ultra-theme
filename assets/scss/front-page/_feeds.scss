@@ -1,16 +1,17 @@
-#start .feeds-container {
+#start .feeds {
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
   overflow: hidden;
-
-  padding-top: 120px;
+  padding: 20px 0;
 
   color: $off-white;
 
   #feeds {
     display: inline-block;
+    height: 100%;
+    overflow: hidden;
   }
 
   .feed-1, .feed-2 {

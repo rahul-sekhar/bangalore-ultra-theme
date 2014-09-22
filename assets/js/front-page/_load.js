@@ -36,9 +36,27 @@
     $('.video-placeholder').wrapInner('<video loop></video>');
   }
 
+  function resizeFeeds() {
+    var feeds = $('#feeds');
+    var feedsBottom = feeds.offset().top + feeds.outerHeight();
+
+    feeds.children().each(function () {
+      $(this).find('li').show().each(function () {
+        var li = $(this);
+        if((li.offset().top + li.outerHeight()) > feedsBottom) {
+          li.nextAll().andSelf().hide();
+          return false;
+        }
+      });
+    });
+  }
+
   function loadFeeds() {
     $.get('/wp-admin/admin-ajax.php', { action: 'feeds' }, function(response) {
       $('#feeds').html(response);
+
+      resizeFeeds();
+      $(window).on('resize', resizeFeeds);
     });
   }
 

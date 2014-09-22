@@ -1,0 +1,28 @@
+#start .tagline {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: $off-white;
+    font-size: 40px;
+    font-family: 'brandon-grotesque';
+    line-height: 150%;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    height: 200px;
+    width: auto;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

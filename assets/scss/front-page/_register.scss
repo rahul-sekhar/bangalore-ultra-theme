@@ -1,33 +1,7 @@
-#start .register-container {
-  width: 100%;
+#start .button.register {
   position: absolute;
-  z-index: 110;
-
-  p {
-    margin: 0;
-    padding: 0;
-    color: $off-white;
-    font-size: 40px;
-    font-family: 'brandon-grotesque';
-    line-height: 150%;
-    font-weight: 400;
-  }
-
-  .subtitle {
-    height: 200px;
-    width: auto;
-    margin: 20px auto;
-  }
-
-  .title {
-    font-size: 50px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  .button.register {
-    position: relative;
-    margin-top: 20px;
-    @include border-radius(10px);
-  }
+  bottom: 80px;
+  left: 50%;
+  @include transform(translateX(-50%));
+  @include border-radius(10px);
 }
