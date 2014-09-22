@@ -62,12 +62,12 @@ function ultra_front_page() {
       ->add(40)
       ->section()
 
-    ->event('feeds', 'register:end')
+    ->event('sponsors', 'register:end')
       ->add(20)
       ->add(40)
       ->section()
 
-    ->event('sponsors', 'feeds:end')
+    ->event('feeds', 'sponsors:end')
       ->add(20);
 
   return $page;
