@@ -2,7 +2,7 @@
 
 function ultra_display_facebook_feed($name) {
   $cache_file = CACHE_DIRECTORY . '/feed-' . $name . '.json';
-  $cache_interval = 10;
+  $cache_interval = 0;
   $cachedFeed = new SimpleCache('ultra_facebook_feed', array($name), $cache_file, $cache_interval);
 
   $data = json_decode($cachedFeed->get());
@@ -29,6 +29,9 @@ function ultra_facebook_feed($name) {
   $result = $facebook->setUrl($name . '/posts')
     ->setFields($fields)
     ->performRequest();
+
+  echo 'final feed: ';
+  var_dump($result);
 
   $result = json_decode($result);
   if (isset($result->data)) {
