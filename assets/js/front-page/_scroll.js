@@ -26,13 +26,20 @@
     var currentPos = $(window).scrollTop();
     var windowHeight = $(window).height() / 100;
 
+    var pointFound = false;
     scrollPoints.each(function () {
       var point = Math.floor($(this).data('marker') * windowHeight);
       if (point > currentPos + 5) {
         $(window).scrollTop(point);
+        pointFound = true;
         return false;
       }
     });
+
+    // Handle the last point
+    if (!pointFound) {
+      $(window).scrollTop(0);
+    }
   });
 
   function containsString(container, contained) {

@@ -6,7 +6,35 @@
   @include transform(translateX(-50%) translateY(25%) scale(0.5));
   z-index: 200;
 
-  background: image-url('scroll.png') no-repeat;
+  // background: image-url('scroll.png') no-repeat;
   width: image-width('scroll.png');
   height: image-height('scroll.png');
+}
+
+#scroll-button {
+  background: #2b1e13;
+  height: image-height('scroll.png');
+  width: 2 * image-height('scroll.png');
+  @include border-radius(2 * image-height('scroll.png') 2 * image-height('scroll.png') 0 0);
+
+  padding-top: 15px;
+
+  color: $off-white;
+  text-transform: lowercase;
+
+  span {
+    display: block;
+    position: relative;
+
+    &:before {
+      font-size: 60px;
+      @include icon;
+      content: '\e80b';
+      display: block;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
 }
