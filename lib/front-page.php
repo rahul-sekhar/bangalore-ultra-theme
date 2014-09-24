@@ -22,25 +22,7 @@ function ultra_front_page() {
       ->add(35)
       ->section()
 
-    ->event('z4', 'z3:2', 40)
-      ->add(10)
-      ->add(70)
-      ->add(35)
-      ->section()
-
-    ->event('z5', 'z4:2', -40)
-      ->add(10)
-      ->add(70)
-      ->add(35)
-      ->section()
-
-    ->event('z6', 'z5:2', -40)
-      ->add(10)
-      ->add(70)
-      ->add(35)
-      ->section()
-
-    ->event('text', 'z6:end', -45)
+    ->event('text', 'z3:end', 10)
       ->add(20)
       ->add(40)
       ->add(20)
