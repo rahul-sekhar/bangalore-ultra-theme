@@ -89,7 +89,7 @@
     <div class="text-wrapper"
       <?php $exhaustion->point('text', 2); ?>="left: 0%;"
       <?php $exhaustion->point('text', 3); ?>="left: 100%;"
-      data-marker="<?php echo $exhaustion->raw_point('text', 0); ?>"
+      data-marker="<?php echo $exhaustion->raw_point('text', 1); ?>"
     >
       <div class="text1 fit">
         <img src="<?php image_path('exhaustion/texta2-2.png'); ?>" alt="The sweetest exhaustion" />
@@ -99,7 +99,7 @@
     <div class="text-wrapper"
       <?php $exhaustion->point('text', 2); ?>="left: -100%;"
       <?php $exhaustion->point('text', 3); ?>="left: 0%;"
-      data-marker="<?php echo $exhaustion->raw_point('text', 2); ?>"
+      data-marker="<?php echo $exhaustion->raw_point('text', 3); ?>"
     >
       <div class="text2 fit">
         <img src="<?php image_path('exhaustion/textb2-2.png'); ?>" alt="...when you've pushed your limits" />
