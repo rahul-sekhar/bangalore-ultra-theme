@@ -14,7 +14,7 @@
   <div class="inner">
     <div class="video-container">
       <div class="video-placeholder">
-        <source src="<?php video_path('triumph-v2.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('triumph-v3.webm'); ?>" type="video/webm">
       </div>
       <div class="text-container">
         <div class="text fit">

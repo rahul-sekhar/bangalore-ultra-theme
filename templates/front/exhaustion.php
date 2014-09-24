@@ -17,62 +17,86 @@
       <img class="person-img" src="<?php image_path('exhaustion/person-64.png'); ?>" alt="" />
 
       <div class="z"
-        <?php $exhaustion->point('z1', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z1', 1); ?>="transform:translate(120px,-120px);"
-        <?php $exhaustion->point('z1', 2); ?>="transform:translate(180px,-180px);"
+        <?php $exhaustion->point('z1', 0); ?>="transform:translate(40px,-40px);"
+        <?php $exhaustion->point('z1', 1); ?>="transform:translate(50px,-50px);"
+        <?php $exhaustion->point('z1', 2); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z1', 3); ?>="transform:translate(200px,-200px);"
       >
         <img
-          <?php $exhaustion->point('z1', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z1', 1); ?>="opacity:1; width:50px; height:50px;"
-          <?php $exhaustion->point('z1', 2); ?>="opacity: 0; width:75px; height:75px;"
+          <?php $exhaustion->point('z1', 0); ?>="opacity:0;width:10px;height:10px"
+          <?php $exhaustion->point('z1', 1); ?>="opacity:1;width:15px;height:15px"
+          <?php $exhaustion->point('z1', 2); ?>="opacity:1;width:50px;height:50px;"
+          <?php $exhaustion->point('z1', 3); ?>="opacity:0;width:80px;height:80px;"
           src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
-        <?php $exhaustion->point('z2', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z2', 1); ?>="transform:translate(120px,-120px);"
-        <?php $exhaustion->point('z2', 2); ?>="transform:translate(180px,-180px);"
+        <?php $exhaustion->point('z2', 0); ?>="transform:translate(40px,-40px);"
+        <?php $exhaustion->point('z2', 1); ?>="transform:translate(50px,-50px);"
+        <?php $exhaustion->point('z2', 2); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z2', 3); ?>="transform:translate(200px,-200px);"
       >
         <img
-          <?php $exhaustion->point('z2', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z2', 1); ?>="opacity:1; width:50px; height:50px;"
-          <?php $exhaustion->point('z2', 2); ?>="opacity: 0; width:75px; height:75px;"
+          <?php $exhaustion->point('z2', 0); ?>="opacity:0;width:10px;height:10px"
+          <?php $exhaustion->point('z2', 1); ?>="opacity:1;width:15px;height:15px"
+          <?php $exhaustion->point('z2', 2); ?>="opacity:1;width:50px;height:50px;"
+          <?php $exhaustion->point('z2', 3); ?>="opacity:0;width:80px;height:80px;"
           src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
-        <?php $exhaustion->point('z3', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z3', 1); ?>="transform:translate(120px,-120px);"
-        <?php $exhaustion->point('z3', 2); ?>="transform:translate(180px,-180px);"
+        <?php $exhaustion->point('z3', 0); ?>="transform:translate(40px,-40px);"
+        <?php $exhaustion->point('z3', 1); ?>="transform:translate(50px,-50px);"
+        <?php $exhaustion->point('z3', 2); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z3', 3); ?>="transform:translate(200px,-200px);"
       >
         <img
-          <?php $exhaustion->point('z3', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z3', 1); ?>="opacity:1; width:50px; height:50px;"
-          <?php $exhaustion->point('z3', 2); ?>="opacity: 0; width:75px; height:75px;"
+          <?php $exhaustion->point('z3', 0); ?>="opacity:0;width:10px;height:10px"
+          <?php $exhaustion->point('z3', 1); ?>="opacity:1;width:15px;height:15px"
+          <?php $exhaustion->point('z3', 2); ?>="opacity:1;width:50px;height:50px;"
+          <?php $exhaustion->point('z3', 3); ?>="opacity:0;width:80px;height:80px;"
           src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
-        <?php $exhaustion->point('z4', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z4', 1); ?>="transform:translate(120px,-120px);"
-        <?php $exhaustion->point('z4', 2); ?>="transform:translate(180px,-180px);"
+        <?php $exhaustion->point('z4', 0); ?>="transform:translate(40px,-40px);"
+        <?php $exhaustion->point('z4', 1); ?>="transform:translate(50px,-50px);"
+        <?php $exhaustion->point('z4', 2); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z4', 3); ?>="transform:translate(200px,-200px);"
       >
         <img
-          <?php $exhaustion->point('z4', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z4', 1); ?>="opacity:1; width:50px; height:50px;"
-          <?php $exhaustion->point('z4', 2); ?>="opacity: 0; width:75px; height:75px;"
+          <?php $exhaustion->point('z4', 0); ?>="opacity:0;width:10px;height:10px"
+          <?php $exhaustion->point('z4', 1); ?>="opacity:1;width:15px;height:15px"
+          <?php $exhaustion->point('z4', 2); ?>="opacity:1;width:50px;height:50px;"
+          <?php $exhaustion->point('z4', 3); ?>="opacity:0;width:80px;height:80px;"
           src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
-        <?php $exhaustion->point('z5', 0); ?>="transform:translate(0px,0px);"
-        <?php $exhaustion->point('z5', 1); ?>="transform:translate(120px,-120px);"
-        <?php $exhaustion->point('z5', 2); ?>="transform:translate(180px,-180px);"
+        <?php $exhaustion->point('z5', 0); ?>="transform:translate(40px,-40px);"
+        <?php $exhaustion->point('z5', 1); ?>="transform:translate(50px,-50px);"
+        <?php $exhaustion->point('z5', 2); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z5', 3); ?>="transform:translate(200px,-200px);"
       >
         <img
-          <?php $exhaustion->point('z5', 0); ?>="width:0px; height: 0px"
-          <?php $exhaustion->point('z5', 1); ?>="opacity:1; width:50px; height:50px;"
-          <?php $exhaustion->point('z5', 2); ?>="opacity: 0; width:75px; height:75px;"
+          <?php $exhaustion->point('z5', 0); ?>="opacity:0;width:10px;height:10px"
+          <?php $exhaustion->point('z5', 1); ?>="opacity:1;width:15px;height:15px"
+          <?php $exhaustion->point('z5', 2); ?>="opacity:1;width:50px;height:50px;"
+          <?php $exhaustion->point('z5', 3); ?>="opacity:0;width:80px;height:80px;"
+          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
+      </div>
+
+      <div class="z"
+        <?php $exhaustion->point('z6', 0); ?>="transform:translate(40px,-40px);"
+        <?php $exhaustion->point('z6', 1); ?>="transform:translate(50px,-50px);"
+        <?php $exhaustion->point('z6', 2); ?>="transform:translate(120px,-120px);"
+        <?php $exhaustion->point('z6', 3); ?>="transform:translate(200px,-200px);"
+      >
+        <img
+          <?php $exhaustion->point('z6', 0); ?>="opacity:0;width:10px;height:10px"
+          <?php $exhaustion->point('z6', 1); ?>="opacity:1;width:15px;height:15px"
+          <?php $exhaustion->point('z6', 2); ?>="opacity:1;width:50px;height:50px;"
+          <?php $exhaustion->point('z6', 3); ?>="opacity:0;width:80px;height:80px;"
           src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
       </div>
     </div>
