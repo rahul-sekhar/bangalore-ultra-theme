@@ -31,7 +31,7 @@ while (have_posts()) : the_post();
       <?php foreach(to_array($course_record_routes) as $route) : ?>
         <tr class="heading">
           <td colspan="3">
-            <h4><?php echo $route['name']; ?></h4>
+            <h4><span><?php echo $route['name']; ?></span></h4>
           </td>
         </tr>
 
