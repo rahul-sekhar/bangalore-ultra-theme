@@ -19,7 +19,13 @@
     }
   }
 
-  &.expanded .title a:after {
+  .title.hbutton a {
+    color: white;
+    display: inline-block;
+    @include button;
+  }
+
+  &.expanded p.title a:after {
     content: '\e802';
   }
 
@@ -35,7 +41,7 @@
   }
 }
 
-.csstransforms3d .hideable.expanded .title a:after {
+.csstransforms3d .hideable.expanded p.title a:after {
   content: '\e801';
   @include transform(rotate(90deg));
 }

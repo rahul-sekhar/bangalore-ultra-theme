@@ -93,6 +93,18 @@ function hideable_shortcode($atts, $content) {
 }
 add_shortcode('hideable', 'hideable_shortcode');
 
+function hideable_button_shortcode($atts, $content) {
+  extract( shortcode_atts( array (
+    'title' => 'Expand'
+  ), $atts ));
+
+  $output = '<div class="hideable">';
+  $output .= '<span class="title hbutton">' . $title . '</span>';
+  $output .= '<div class="contents">' . do_shortcode(clean_shortcode_content($content)) . '</div></div>';
+  return $output;
+}
+add_shortcode('hideable_button', 'hideable_button_shortcode');
+
 
 /* shortcode of this form: [map name="Map name"] */
 function sharan_map_shortcode( $atts ) {
