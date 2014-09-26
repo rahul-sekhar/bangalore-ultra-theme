@@ -14,7 +14,7 @@
     <div class="ground"></div>
 
     <div class="person">
-      <img class="person-img" src="<?php image_path('exhaustion/person.64.png'); ?>" alt="" />
+      <img class="person-img" src="<?php image_path('exhaustion/person-old.64.png'); ?>" alt="" />
 
       <div class="z"
         <?php $exhaustion->point('z1', 0); ?>="transform:translate(40px,-40px);"
