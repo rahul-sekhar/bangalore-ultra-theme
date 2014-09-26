@@ -7,14 +7,14 @@
 >
   <div class="inner">
 
-    <img class="cloud" src="<?php image_path('exhaustion/cloud-64.png'); ?>" alt="" />
+    <img class="cloud" src="<?php image_path('exhaustion/cloud.64.png'); ?>" alt="" />
 
     <div class="silhouettes"></div>
 
     <div class="ground"></div>
 
     <div class="person">
-      <img class="person-img" src="<?php image_path('exhaustion/person-64.png'); ?>" alt="" />
+      <img class="person-img" src="<?php image_path('exhaustion/person.64.png'); ?>" alt="" />
 
       <div class="z"
         <?php $exhaustion->point('z1', 0); ?>="transform:translate(40px,-40px);"
@@ -27,7 +27,7 @@
           <?php $exhaustion->point('z1', 1); ?>="opacity:1;width:15px;height:15px"
           <?php $exhaustion->point('z1', 2); ?>="opacity:1;width:50px;height:50px;"
           <?php $exhaustion->point('z1', 3); ?>="opacity:0;width:80px;height:80px;"
-          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3.8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
@@ -41,7 +41,7 @@
           <?php $exhaustion->point('z2', 1); ?>="opacity:1;width:15px;height:15px"
           <?php $exhaustion->point('z2', 2); ?>="opacity:1;width:50px;height:50px;"
           <?php $exhaustion->point('z2', 3); ?>="opacity:0;width:80px;height:80px;"
-          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3.8.png'); ?>" alt="Z" />
       </div>
 
       <div class="z"
@@ -55,11 +55,11 @@
           <?php $exhaustion->point('z3', 1); ?>="opacity:1;width:15px;height:15px"
           <?php $exhaustion->point('z3', 2); ?>="opacity:1;width:50px;height:50px;"
           <?php $exhaustion->point('z3', 3); ?>="opacity:0;width:80px;height:80px;"
-          src="<?php image_path('exhaustion/z3-8.png'); ?>" alt="Z" />
+          src="<?php image_path('exhaustion/z3.8.png'); ?>" alt="Z" />
       </div>
     </div>
 
-    <img class="shoes" src="<?php image_path('exhaustion/shoes-128.png'); ?>" alt="" />
+    <img class="shoes" src="<?php image_path('exhaustion/shoes.128.png'); ?>" alt="" />
   </div>
 
   <div class="text-container"
@@ -74,7 +74,7 @@
       data-marker="<?php echo $exhaustion->raw_point('text', 1); ?>"
     >
       <div class="text1 fit">
-        <img src="<?php image_path('exhaustion/texta2-2.png'); ?>" alt="The sweetest exhaustion" />
+        <img src="<?php image_path('exhaustion/texta2.2.png'); ?>" alt="The sweetest exhaustion" />
       </div>
     </div>
 
@@ -84,7 +84,7 @@
       data-marker="<?php echo $exhaustion->raw_point('text', 3); ?>"
     >
       <div class="text2 fit">
-        <img src="<?php image_path('exhaustion/textb2-2.png'); ?>" alt="...when you've pushed your limits" />
+        <img src="<?php image_path('exhaustion/textb2.2.png'); ?>" alt="...when you've pushed your limits" />
       </div>
     </div>
   </div>

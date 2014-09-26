@@ -21,7 +21,7 @@
       <div class="overlay"></div>
       <div class="text-container">
         <div class="text fit">
-          <img src="<?php image_path('bamboo/text2.png'); ?>" alt="and experienced a trail through bamboo" />
+          <img src="<?php image_path('bamboo/text2.2.png'); ?>" alt="and experienced a trail through bamboo" />
         </div>
       </div>
     </div>

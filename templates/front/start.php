@@ -21,7 +21,7 @@
         <?php $start->point('dates', 1); ?>="left: 100%;"
       >
         <div class="text fit">
-          <img src="<?php image_path('start/texta-1-2.png'); ?>" alt="the journey begins" />
+          <img src="<?php image_path('start/texta-1.2.png'); ?>" alt="the journey begins" />
         </div>
       </div>
 

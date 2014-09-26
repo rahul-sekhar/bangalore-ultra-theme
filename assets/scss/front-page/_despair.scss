@@ -27,7 +27,7 @@
     right: 0;
     bottom: 0;
     height: 25%;
-    background-image: image-url('despair/ground-32.png');
+    background-image: image-url('despair/ground.32.png');
     @include background-size(auto 100%);
   }
 
@@ -77,7 +77,7 @@
   }
 
   .text {
-    @include fit('despair/text3-2.png');
+    @include fit('despair/text3.2.png');
 
     img {
       position: absolute;

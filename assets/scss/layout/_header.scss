@@ -22,12 +22,12 @@ body {
     @include transform(scale(0.9));
 
     @include hide-text;
-    background: image-url('logo-v2.png') no-repeat center;
+    background: image-url('logo-v2.8.png') no-repeat center;
     background-size: 100% 100%;
 
     $logo-width: 140px;
     width: $logo-width;
-    height: image-height('logo-v2.png') / image-width('logo-v2.png') * $logo-width;
+    height: image-height('logo-v2.8.png') / image-width('logo-v2.8.png') * $logo-width;
   }
 }
 

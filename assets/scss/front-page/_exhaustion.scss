@@ -32,10 +32,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      top: image-height('exhaustion/ground-v3-16.png');
+      top: image-height('exhaustion/ground-v3.16.png');
       background: #352816;
     }
-    background: image-url('exhaustion/ground-v3-16.png') top repeat-x;
+    background: image-url('exhaustion/ground-v3.16.png') top repeat-x;
   }
 
   .cloud {
@@ -54,7 +54,7 @@
     top: 22%;
     bottom: 49%;
 
-    background: image-url('exhaustion/silhouettes-16.png') repeat-x;
+    background: image-url('exhaustion/silhouettes.16.png') repeat-x;
     @include background-size(auto 100%);
   }
 
@@ -113,11 +113,11 @@
   }
 
   .text1 {
-    @include fit('exhaustion/texta2-2.png');
+    @include fit('exhaustion/texta2.2.png');
   }
 
   .text2 {
-    @include fit('exhaustion/textb2-2.png');
+    @include fit('exhaustion/textb2.2.png');
   }
 
   .text-container {

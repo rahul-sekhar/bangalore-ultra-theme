@@ -19,7 +19,7 @@
       </div>
       <div class="text-container">
         <div class="text fit">
-          <img src="<?php image_path('victory/text3.png'); ?>" alt="experienced your own kind of triumph" />
+          <img src="<?php image_path('victory/text3.2.png'); ?>" alt="experienced your own kind of triumph" />
         </div>
       </div>
     </div>
