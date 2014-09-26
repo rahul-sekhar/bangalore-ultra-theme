@@ -60,11 +60,7 @@ $ultra_gallery = new Ultra_Gallery(get_query_var('gallery-year'), get_query_var(
   foreach($ultra_gallery->get_images() as $image) {
   ?>
     <a class="thumb" href="<?php echo $image['url']; ?>" target="_blank"
-      <?php
-        foreach($widths as $width) {
-          echo ' data-w' . $width . '="' . $image['sizes']['w' . $width] . '"';
-        }
-      ?> data-width="<?php echo $image['width'] ?>" data-height="<?php echo $image['height'] ?>">
+      data-width="<?php echo $image['width'] ?>" data-height="<?php echo $image['height'] ?>">
       <img src="<?php image_path('clear.gif') ?>" data-src="<?php echo $image['sizes']['gallery-thumb'] ?>" alt="" />
       <noscript>
         <img src="<?php echo $image['sizes']['gallery-thumb'] ?>" alt="" />

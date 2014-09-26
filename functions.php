@@ -53,7 +53,6 @@ $roots_includes = array(
   'gallery-type',       // Gallery type and taxonomies
   'gallery-page',       // Gallery page helpers
   'media-bulk-actions', // Bulk media operations - setting year, rotating
-  'responsive-images',  // Responsive image sizes
   'bib-tagging',        // Bib tagging
   'map-type',           // Maps
   'image-handling',     // Image manipulation to make logos uniform
@@ -62,6 +61,7 @@ $roots_includes = array(
   'admin-cleanup',      // Cleanup the admin interface
   'feeds',              // Facebook feeds
   'alternate-page',     // Alternate page
+  'maps',     // Maps
 );
 
 foreach ($roots_includes as $file) {

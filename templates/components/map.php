@@ -8,12 +8,11 @@ if ($map_bg['height']) {
 }
 $labels = get_field('map_labels');
 $routes = get_field('routes');
-$widths = array(1600, 1280, 1024, 800, 400);
 ?>
 <div class="small-map">
-  <img class="bg" style="background-color: <?php echo $map_color; ?>" src="<?php echo $map_bg['sizes']['w800']; ?>" alt="" />
+  <img class="bg" style="background-color: <?php echo $map_color; ?>" src="<?php echo $map_bg['sizes']['map_thumb']; ?>" alt="" />
   <?php foreach($routes as $route) : ?>
-    <img class="route" src="<?php echo $route['route_image']['sizes']['w800']; ?>" alt="" />
+    <img class="route" src="<?php echo $route['route_image']['sizes']['map_thumb']; ?>" alt="" />
   <?php endforeach; ?>
 
   <div class="overlay">
@@ -26,13 +25,8 @@ $widths = array(1600, 1280, 1024, 800, 400);
 
   <div class="wrapper">
     <div class="inner" data-ratio="<?php echo $ratio ?>">
-      <div class="picture main background"
-        <?php
-          echo ' data-wfull="' . $map_bg['url'] . '"';
-          foreach($widths as $width) :
-            echo ' data-w' . $width . '="' . $map_bg['sizes']['w' . $width] . '"';
-          endforeach;
-        ?>>
+      <div class="picture main background">
+        <img src="<?php echo $map_bg['url']; ?>" alt="" />
       </div>
 
       <?php
@@ -49,13 +43,8 @@ $widths = array(1600, 1280, 1024, 800, 400);
       if($routes) : foreach($routes as $route) :
       ?>
       <div class="<?php echo 'route-' . sanitize_title($route['name']); ?> route">
-        <div class="picture background"
-          <?php
-            echo ' data-wfull="' . $route['route_image']['url'] . '"';
-            foreach($widths as $width) :
-              echo ' data-w' . $width . '="' . $route['route_image']['sizes']['w' . $width] . '"';
-            endforeach;
-          ?>>
+        <div class="picture background">
+          <img src="<?php echo $route['route_image']['url']; ?>" alt="" />
           </div>
 
         <?php

@@ -110,22 +110,13 @@
     }).appendTo(imageViewer);
 
     function loadImage(thumb) {
-      var image, url, screenWidth, widths = [400, 800, 1024, 1280, 1600];
+      var image, url;
 
       currentImage = thumb;
       imageViewer.find('img').remove();
 
-      screenWidth = Math.max( $(window).width(), window.innerWidth );
-      $.each(widths, function (i, width) {
-        if (width >= screenWidth) {
-          url = currentImage.data('w' + width);
-          return false;
-        }
-      });
+      url = currentImage.attr('href');
 
-      if (!url) {
-        url = currentImage.attr('href');
-      }
       image = $('<img src="' + url + '" />');
       image.data('width', currentImage.data('width'));
       image.data('height', currentImage.data('height'));
