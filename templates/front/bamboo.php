@@ -15,7 +15,8 @@
   <div class="inner">
     <div class="video-container">
       <div class="video-placeholder">
-        <source src="<?php video_path('clip2.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('bamboo.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('bamboo.mp4'); ?>" type="video/mp4">
       </div>
       <div class="overlay"></div>
       <div class="text-container">

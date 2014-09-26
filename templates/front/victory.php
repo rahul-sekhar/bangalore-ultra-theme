@@ -15,6 +15,7 @@
     <div class="video-container">
       <div class="video-placeholder">
         <source src="<?php video_path('triumph-v3.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('triumph-v3.mp4'); ?>" type="video/mp4">
       </div>
       <div class="text-container">
         <div class="text fit">

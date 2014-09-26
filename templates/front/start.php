@@ -13,7 +13,8 @@
   <div class="inner">
     <div class="video-container">
       <div class="video-placeholder">
-        <source src="<?php video_path('clip3.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('start.webm'); ?>" type="video/webm">
+        <source src="<?php video_path('start.mp4'); ?>" type="video/mp4">
       </div>
       <div class="text-container"
         <?php $start->point('dates', 0); ?>="left: 0%;"
