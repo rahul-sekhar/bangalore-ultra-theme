@@ -60,7 +60,9 @@ function roots_scripts() {
   wp_enqueue_script('jquery');
 
   wp_enqueue_script('js', get_template_directory_uri() . $assets['js'], array(), null, true);
-  wp_enqueue_script('front-page-js', get_template_directory_uri() . $assets['front-page-js'], array(), null, true);
+  if (is_home() && !get_query_var( 'alt' )) {
+    wp_enqueue_script('front-page-js', get_template_directory_uri() . $assets['front-page-js'], array(), null, true);
+  }
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 
