@@ -1,9 +1,13 @@
+<?php
+$sections = get_field('sections');
+if ($sections && sizeof($sections) > 1) : ?>
+
 <a href="#" class="side-nav-pull"></a>
 
 <nav class="page">
   <p class="title"><a href="#top"><?php the_title(); ?></a></p>
   <ul>
-  <?php foreach(get_field('sections') as $section) :
+  <?php foreach($sections as $section) :
     if ($section['visible'] && $section['title']) :
     ?>
       <li>
@@ -16,3 +20,5 @@
   endforeach; ?>
   </ul>
 </nav>
+
+<?php endif; ?>
