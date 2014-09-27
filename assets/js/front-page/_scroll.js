@@ -2,7 +2,7 @@
 
 (function($) {
   window.ultraInitScroll = function () {
-    var s = window.skrollr.init({
+    window.skrollrObj = window.skrollr.init({
       keyframe: function (element, name, direction) {
         var el = $(element);
 
@@ -23,14 +23,14 @@
   $(document).on('click', '#scroll-button', function (e) {
     e.preventDefault();
 
-    var currentPos = $(window).scrollTop();
+    var currentPos = window.skrollrObj.getScrollTop();
     var windowHeight = $(window).height() / 100;
 
     var pointFound = false;
     scrollPoints.each(function () {
       var point = Math.floor($(this).data('marker') * windowHeight);
       if (point > currentPos + 5) {
-        $(window).scrollTop(point);
+        window.skrollrObj.setScrollTop(point);
         pointFound = true;
         return false;
       }
@@ -38,7 +38,7 @@
 
     // Handle the last point
     if (!pointFound) {
-      $(window).scrollTop(0);
+      window.skrollrObj.setScrollTop(0);
     }
   });
 
