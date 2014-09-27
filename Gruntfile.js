@@ -88,6 +88,7 @@ module.exports = function(grunt) {
             ['assets/css/main.css']
           ]
         },
+        tests: ['csstransforms'],
         uglify: true,
         parseFiles: true
       }
