@@ -8,11 +8,13 @@
     }
     initialized = true;
 
+    var body = $('body');
+
     // Hide the loading screen
-    $('body').addClass('loaded');
+    body.addClass('loaded');
 
     // The remaining tasks are only for the front page
-    if (!$('body').hasClass('home')) {
+    if (!body.hasClass('home') || body.hasClass('alt')) {
       return;
     }
 
