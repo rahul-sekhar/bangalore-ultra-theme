@@ -21,6 +21,7 @@
     });
 
     maps.find('.route').first().show();
+    maps.find('.options li').first().addClass('current');
 
     maps.find('.options').on('click', 'a', function(e) {
       e.preventDefault();
