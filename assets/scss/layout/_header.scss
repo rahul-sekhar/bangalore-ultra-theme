@@ -7,6 +7,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  height: $top-bar-height;
   background: image-url('top-bar-v2.png') repeat-x;
   z-index: 400;
   text-align: right;
@@ -19,15 +20,15 @@ body {
     float: left;
 
     margin: 0;
-    @include transform(scale(0.9));
-
     @include hide-text;
-    background: image-url('logo-v2.8.png') no-repeat center;
-    background-size: 100% 100%;
+  }
 
-    $logo-width: 140px;
-    width: $logo-width;
-    height: image-height('logo-v2.8.png') / image-width('logo-v2.8.png') * $logo-width;
+  img.logo {
+    display: block;
+    float: left;
+    height: 74%;
+    width: auto;
+    margin-top: 4px;
   }
 }
 

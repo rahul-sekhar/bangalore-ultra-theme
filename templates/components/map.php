@@ -20,67 +20,67 @@ $routes = get_field('routes');
   </div>
 </div>
 
-<div class="full-map" style="background-color: <?php echo $map_color; ?>">
+<div class="full-map" style="background-color: <?php echo $map_color; ?>" data-ratio="<?php echo $ratio ?>">
   <a href="#" class="icon-cancel close"></a>
 
   <div class="wrapper">
-    <div class="inner" data-ratio="<?php echo $ratio ?>">
-      <div class="picture main background">
-        <img src="<?php echo $map_bg['url']; ?>" alt="" />
-      </div>
+    <img class="bg" src="<?php echo $map_bg['url']; ?>" alt="" />
+
+    <?php
+    if($labels) : foreach($labels as $label) :
+    ?>
+    <div class="label" style="left: <?php echo $label['position_x']; ?>%; top: <?php echo $label['position_y']; ?>%;">
+      <p><span><?php echo $label['text']; ?></span></p>
+    </div>
+    <?php
+    endforeach; endif;
+    ?>
+
+    <?php
+    if($routes) : foreach($routes as $route) :
+    ?>
+    <div class="<?php echo 'route-' . sanitize_title($route['name']); ?> route">
+      <img src="<?php echo $route['route_image']['url']; ?>" alt="" />
 
       <?php
-      if($labels) : foreach($labels as $label) :
+      foreach($route['markers'] as $marker) :
       ?>
-      <div class="label" style="left: <?php echo $label['position_x']; ?>%; top: <?php echo $label['position_y']; ?>%;">
-        <p><span><?php echo $label['text']; ?></span></p>
-      </div>
-      <?php
-      endforeach; endif;
-      ?>
-
-      <?php
-      if($routes) : foreach($routes as $route) :
-      ?>
-      <div class="<?php echo 'route-' . sanitize_title($route['name']); ?> route">
-        <div class="picture background">
-          <img src="<?php echo $route['route_image']['url']; ?>" alt="" />
-          </div>
-
-        <?php
-        foreach($route['markers'] as $marker) :
-        ?>
-        <div class="point" style="left: <?php echo $marker['position_x']; ?>%; top: <?php echo $marker['position_y']; ?>%;">
-          <div class="balloon<?php if($marker['position_y'] > 50) echo ' up'; ?>"><?php echo $marker['balloon_text']; ?></div>
-        </div>
-        <?php
-        endforeach;
-
-        foreach($route['u-turns'] as $uturn) :
-        ?>
-        <div class="u-turn" style="left: <?php echo $uturn['position_x']; ?>%; top: <?php echo $uturn['position_y']; ?>%;">
-          <span class="text"><i class="icon-cw"></i><?php echo $uturn['text']; ?></span>
-        </div>
-        <?php
-        endforeach;
-        ?>
+      <div class="point" style="left: <?php echo $marker['position_x']; ?>%; top: <?php echo $marker['position_y']; ?>%;">
+        <div class="balloon<?php if($marker['position_y'] > 50) echo ' up'; ?>"><?php echo $marker['balloon_text']; ?></div>
       </div>
       <?php
-      endforeach; endif;
+      endforeach;
+
+      foreach($route['u-turns'] as $uturn) :
+      ?>
+      <div class="u-turn" style="left: <?php echo $uturn['position_x']; ?>%; top: <?php echo $uturn['position_y']; ?>%;">
+        <span class="text"><i class="icon-cw"></i><?php echo $uturn['text']; ?></span>
+      </div>
+      <?php
+      endforeach;
       ?>
     </div>
+    <?php
+    endforeach; endif;
+    ?>
+  </div>
 
+  <?php
+  if($routes && sizeof($routes) > 1) :
+  ?>
     <div class="options">
       <p>View route</p>
       <ul>
       <?php
-      if($routes) : foreach($routes as $route) :
+      foreach($routes as $route) :
       ?>
         <li><a href="#" data-route-class="<?php echo 'route-' . sanitize_title($route['name']); ?>"><?php echo $route['name']; ?></a></li>
       <?php
-      endforeach; endif;
+      endforeach;
       ?>
       </ul>
     </div>
-  </div>
+  <?php
+  endif;
+  ?>
 </div>

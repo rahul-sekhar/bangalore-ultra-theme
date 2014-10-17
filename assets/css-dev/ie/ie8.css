@@ -1,0 +1,58 @@
+/* line 13, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 [class^="icon-"], html.lt-ie9 [class*=" icon-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  /* fix buttons height */
+  line-height: 1em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+/* line 17, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-menu {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;');
+}
+/* line 18, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-right-open {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;');
+}
+/* line 19, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-down-open {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;');
+}
+/* line 20, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-right-open-big {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;');
+}
+/* line 21, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-left-open-big {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;');
+}
+/* line 22, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-cancel {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;');
+}
+/* line 23, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-search {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe806;&nbsp;');
+}
+/* line 24, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-left-open {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;');
+}
+/* line 25, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-cw {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;');
+}
+/* line 26, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-ok-circled {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe809;&nbsp;');
+}
+/* line 27, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-facebook {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;');
+}
+/* line 28, ../../scss/settings/_ie-icons.scss */
+html.lt-ie9 .icon-down-open-big {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80b;&nbsp;');
+}

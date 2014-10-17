@@ -1,0 +1,20 @@
+html.lt-ie8 {
+  #nav .inner {
+    margin-top: $top-bar-height;
+  }
+
+  .item-container {
+    .title {
+      text-align: left;
+      width: auto;
+
+      p {
+        width: auto;
+      }
+    }
+
+    .contents {
+      padding-left: 0;
+    }
+  }
+}

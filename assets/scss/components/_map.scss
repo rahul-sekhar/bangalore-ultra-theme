@@ -16,26 +16,15 @@
     z-index: 200;
   }
 
-  .inner {
-    position: relative;
-  }
-
   .wrapper {
-    overflow: hidden;
-    margin-top: -1px;
-    width: 100%;
-    height: 100%;
+    position: absolute;
   }
 
-  .background img {
+  img.bg {
     display: block;
     width: 100%;
     height: auto;
     position: relative;
-    z-index: 2;
-  }
-
-  .background.main img {
     z-index: 0;
   }
 
@@ -46,6 +35,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    // z-index: 2;
   }
 
   .options {
@@ -277,4 +267,8 @@
   &:hover .overlay {
     background-color: rgba(black, 0.2);
   }
+}
+
+.content.page .small-map .overlay p {
+  margin-top: -25px;
 }

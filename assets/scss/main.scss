@@ -23,7 +23,13 @@ Designed by Shalini Sekhar
 @import "layout/page-nav";
 @import "layout/content";
 
-@import "front-page/fit";
+@import "components/center";
+@import "components/fit";
+@import "components/button";
+@import "components/item-container";
+@import "components/hideable";
+@import "components/map";
+
 @import "front-page/layout";
 @import "front-page/content";
 @import "front-page/skrollr";
@@ -44,12 +50,9 @@ Designed by Shalini Sekhar
 @import "content/page";
 @import "content/records";
 
-@import "components/button";
-@import "components/item-container";
-@import "components/hideable";
-@import "components/map";
-@import "components/center";
-
 @import "gallery/layout";
 @import "gallery/filters";
 @import "gallery/viewer";
+
+@import "ie/ie8";
+@import "ie/ie7";
