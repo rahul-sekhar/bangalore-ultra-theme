@@ -1,6 +1,6 @@
 <header id="header" role="banner">
   <a href="<?php echo home_url('/') ?>">
-    <img class="logo" src="<?php image_path('logo-v3.small.8.png'); ?>" alt="Bangalore Ultra" />
+    <img class="logo" src="<?php image_path('logo-v4-small.16.png'); ?>" alt="Bangalore Ultra" />
     <h1><?php bloginfo('name'); ?></h1>
   </a>
 
