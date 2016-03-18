@@ -32,6 +32,7 @@ $roots_includes = array(
   'fields/register-button',
   'fields/feeds',
   'fields/alternate-page',
+  'fields/logos',
 
   // Classes
   'classes/SimpleCache',

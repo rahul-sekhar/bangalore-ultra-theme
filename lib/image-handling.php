@@ -1,7 +1,39 @@
 <?php
 
+// Get a site logo - resized by height and cached
+function get_site_logo_image($image_object, $new_height) {
+  $image_path = get_attached_file($image_object['id']);
+  if (!file_exists($image_path)) {
+    return null;
+  }
+
+  $image_name = pathinfo($image_path);
+  $image_name = $image_name['filename'];
+  $cached_image = CACHE_DIRECTORY . '/' . $image_name . '.png';
+
+  if (!file_exists($cached_image) || (filemtime($cached_image) < filemtime($image_path))) {
+    copy($image_path, $cached_image);
+
+    $img = wp_get_image_editor($cached_image);
+    $size = $img->get_size();
+
+    if ($new_height < $size['height']) {
+      $new_width = $size['width'] * $new_height / $size['height'];
+      $img->resize($new_width, $new_height);
+      $img->save($cached_image);
+    }
+
+    optimize_cached_image($cached_image);
+  }
+
+  return CACHE_URI . '/' . $image_name . '.png';
+}
+
+// Get a sponsor logo - cached and with transparency
 function get_logo_image($image_path, $maxArea, $targetColor = null) {
-  if (!$image_path) return null;
+  if (!file_exists($image_path)) {
+    return null;
+  }
 
   $image_name = pathinfo($image_path);
   $image_name = $image_name['filename'];
@@ -49,10 +81,10 @@ function convert_white_to_transparency($dest, $source, $targetColor = null) {
 
   // call the appropriate imagecreatefrom function for this image
   if (function_exists("imagecreatefrom" . $mime_type)) {
-      $img = call_user_func("imagecreatefrom" . $mime_type, $source);
+    $img = call_user_func("imagecreatefrom" . $mime_type, $source);
   } else {
-      error_log("imagecreatefrom{$mime_type} doesn't exist");
-      return false;
+    error_log("imagecreatefrom{$mime_type} doesn't exist");
+    return false;
   }
 
   $new_img = imagecreatetruecolor($width, $height);
