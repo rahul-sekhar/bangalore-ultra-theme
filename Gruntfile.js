@@ -47,7 +47,8 @@ module.exports = function(grunt) {
         files: {
           'assets/js/scripts.min.js': [jsFileList],
           'assets/js/front-page.min.js': [jsFrontPageFileList],
-          'assets/js/bib-tagging.min.js': 'assets/js/bib-tagging.js'
+          'assets/js/bib-tagging.min.js': 'assets/js/bib-tagging.js',
+          'assets/js/vendor/modernizr.min.js': 'assets/vendor/modernizr/modernizr.js'
         }
       }
     },
@@ -159,7 +160,6 @@ module.exports = function(grunt) {
     'jshint',
     'compass:build',
     'uglify',
-    'modernizr',
     'version'
   ]);
 };
