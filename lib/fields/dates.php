@@ -18,6 +18,18 @@ if(function_exists("register_field_group"))
         'formatting' => 'none',
         'maxlength' => '',
       ),
+      array (
+        'key' => 'field_53f57adddb8d2',
+        'label' => 'Event title',
+        'name' => 'event_title',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'none',
+        'maxlength' => '',
+      ),
     ),
     'location' => array (
       array (
